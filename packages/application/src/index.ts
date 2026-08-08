@@ -1,11 +1,24 @@
 export type { OrganizationRepository } from './ports/organization-repository.port.js';
 export type { Clock } from './ports/clock.port.js';
 export type { IdGenerator } from './ports/id-generator.port.js';
+export type { CalendarGateway, CalendarEventInput, CalendarEvent } from './ports/calendar-gateway.port.js';
+export type { GmailGateway, GmailMessageInput, GmailMessage } from './ports/gmail-gateway.port.js';
+export type {
+  MilestoneRepository,
+  ScheduledMilestoneRecord,
+} from './ports/milestone-repository.port.js';
+export type {
+  NotificationKind,
+  NotificationRecord,
+  NotificationRepository,
+} from './ports/notification-repository.port.js';
 export {
   DocumentUnavailable,
   DuplicateOrganization,
+  CalendarUnavailable,
   FinancialsUnavailable,
   FunderNotFound,
+  GmailUnavailable,
   ModelOutputInvalid,
   ModelUnavailable,
   OpportunitySourceUnavailable,
@@ -20,6 +33,8 @@ export type {
 } from './use-cases/get-organization/get-organization.use-case.js';
 export { InMemoryOrganizationRepository } from './testing/in-memory-organization.repository.js';
 export { InMemoryProspectRepository } from './testing/in-memory-prospect.repository.js';
+export { InMemoryNotificationRepository } from './testing/in-memory-notification.repository.js';
+export { InMemoryMilestoneRepository } from './testing/in-memory-milestone.repository.js';
 export type { FakeFunder } from './testing/in-memory-prospect.repository.js';
 export { fixedClock, fixedIdGenerator } from './testing/fixed-id-generator.js';
 export type { GrantRepository, IngestCheckpoint } from './ports/grant-repository.port.js';
@@ -134,3 +149,19 @@ export { InMemoryModelCallLog, InMemoryModelResponseCache } from './testing/in-m
 export { InMemoryFunderRepository } from './testing/in-memory-funder.repository.js';
 export type { FakeFunderRecord } from './testing/in-memory-funder.repository.js';
 export { StubFunderFinancialsGateway } from './testing/stub-funder-financials.gateway.js';
+export { StubGmailGateway } from './testing/stub-gmail.gateway.js';
+export { StubCalendarGateway } from './testing/stub-calendar.gateway.js';
+export { SendHighFitAlerts } from './use-cases/send-high-fit-alerts/send-high-fit-alerts.use-case.js';
+export type { HighFitAlertSummary, SendHighFitAlertsInput } from './use-cases/send-high-fit-alerts/send-high-fit-alerts.use-case.js';
+export { PublishMilestones } from './use-cases/publish-milestones/publish-milestones.use-case.js';
+export type { PublishedMilestones, PublishMilestonesInput } from './use-cases/publish-milestones/publish-milestones.use-case.js';
+export { SendDeadlineWarnings } from './use-cases/send-deadline-warnings/send-deadline-warnings.use-case.js';
+export type {
+  DeadlineWarningSummary,
+  SendDeadlineWarningsInput,
+} from './use-cases/send-deadline-warnings/send-deadline-warnings.use-case.js';
+export { SendWeeklyBriefing } from './use-cases/send-weekly-briefing/send-weekly-briefing.use-case.js';
+export type {
+  SendWeeklyBriefingInput,
+  WeeklyBriefingSummary,
+} from './use-cases/send-weekly-briefing/send-weekly-briefing.use-case.js';

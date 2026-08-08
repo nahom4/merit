@@ -69,3 +69,13 @@ export class ModelUnavailable extends DomainError {
 export class ModelOutputInvalid extends DomainError {
   readonly code = 'model_output_invalid';
 }
+
+/** A Calendar API call could not be made. Expected, and the job should report it. */
+export class CalendarUnavailable extends DomainError {
+  readonly code = 'calendar_unavailable';
+}
+
+/** A Gmail API call could not be made. Expected, and the job should report it. */
+export class GmailUnavailable extends DomainError {
+  readonly code = 'gmail_unavailable';
+}

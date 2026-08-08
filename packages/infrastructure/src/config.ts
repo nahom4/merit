@@ -75,6 +75,23 @@ const ConfigSchema = z.object({
   GEMINI_REQUESTS_PER_MINUTE: z.coerce.number().int().positive().default(15),
   GEMINI_REQUESTS_PER_DAY: z.coerce.number().int().positive().default(1_500),
 
+  /** Scheduled work can deliver to Google Calendar and Gmail when OAuth is configured. */
+  GOOGLE_OAUTH_ACCESS_TOKEN: z.string().optional(),
+  GOOGLE_CALENDAR_BASE_URL: z.string().url().default('https://www.googleapis.com/calendar/v3'),
+  GOOGLE_CALENDAR_ID: z.string().default('primary'),
+  GOOGLE_GMAIL_BASE_URL: z.string().url().default('https://gmail.googleapis.com/gmail/v1'),
+  GOOGLE_GMAIL_USER_ID: z.string().default('me'),
+
+  /** Recipients for the scheduled jobs, comma-separated so Cloud Scheduler can stay simple. */
+  SCHEDULED_ALERT_RECIPIENTS: z
+    .string()
+    .default('')
+    .transform((raw) => raw.split(',').map((value) => value.trim()).filter((value) => value.length > 0)),
+  SCHEDULED_BRIEFING_RECIPIENTS: z
+    .string()
+    .default('')
+    .transform((raw) => raw.split(',').map((value) => value.trim()).filter((value) => value.length > 0)),
+
   /** Every outbound call has an explicit timeout. A default is not a policy. */
   HTTP_TIMEOUT_MS: z.coerce.number().int().positive().default(120_000),
 });

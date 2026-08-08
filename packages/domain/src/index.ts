@@ -117,3 +117,5 @@ export type { CriterionCritique, RevisionTarget } from './draft/critique.js';
 
 export { computeProspectScore, COMPONENT_WEIGHTS } from './prospect/prospect-score.js';
 export type { CredibilityReason, ProspectInput, ProspectScore } from './prospect/prospect-score.js';
+export { buildMilestones } from './pursuit/milestone-plan.js';
+export type { MilestoneKind, PlannedMilestone } from './pursuit/milestone-plan.js';

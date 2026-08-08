@@ -54,6 +54,14 @@ export class InMemoryOrganizationRepository implements OrganizationRepository {
     return ok(found ?? null);
   }
 
+  async listAll(): Promise<Result<readonly Organization[], RepositoryUnavailable>> {
+    if (this.readFailsOnce) {
+      this.readFailsOnce = false;
+      return err(new RepositoryUnavailable('read failed', { operation: 'listAll' }));
+    }
+    return ok([...this.organizations.values()]);
+  }
+
   async count(): Promise<number> {
     return this.organizations.size;
   }

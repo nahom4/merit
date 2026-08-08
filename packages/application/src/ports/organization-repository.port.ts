@@ -13,4 +13,5 @@ export interface OrganizationRepository {
   save(organization: Organization): Promise<Result<void, RepositoryUnavailable>>;
   findById(id: OrganizationId): Promise<Result<Organization | null, RepositoryUnavailable>>;
   findByEin(ein: Ein): Promise<Result<Organization | null, RepositoryUnavailable>>;
+  listAll(): Promise<Result<readonly Organization[], RepositoryUnavailable>>;
 }

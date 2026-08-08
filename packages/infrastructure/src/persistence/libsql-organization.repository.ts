@@ -75,6 +75,15 @@ export class LibsqlOrganizationRepository implements OrganizationRepository {
     return this.findOne('SELECT * FROM organizations WHERE ein = ?', [ein as string], 'findByEin');
   }
 
+  async listAll(): Promise<Result<readonly Organization[], RepositoryUnavailable>> {
+    try {
+      const result = await this.db.execute('SELECT * FROM organizations ORDER BY name');
+      return ok(result.rows.map(toDomain));
+    } catch (cause) {
+      return err(repositoryUnavailable('listAll', cause));
+    }
+  }
+
   private async findOne(
     sql: string,
     args: readonly string[],
