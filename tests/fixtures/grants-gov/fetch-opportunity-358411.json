@@ -1,0 +1,83 @@
+{
+  "errorcode": 0,
+  "msg": "Webservice Succeeds",
+  "data": {
+    "id": 358411,
+    "opportunityNumber": "RFA-FD-25-007",
+    "opportunityTitle": "Laboratory Flexible Funding Model (LFFM)",
+    "docType": "synopsis",
+    "ost": "POSTED",
+    "synopsis": {
+      "agencyName": "Stephanie Bogan\nGrantor",
+      "synopsisDesc": "<p><span style=\"color: rgb(51, 51, 51);\">This cooperative agreement is intended to enhance the capacity and capabilities of state human and animal food testing laboratories in support of an integrated food safety system (IFSS). This is achieved through prioritized sample testing and food defense preparedness in the areas of microbiology, chemistry, and radiochemistry, as well as method development and capacity/capability development projects that support and expand food safety and food defense testing.</span></p>",
+      "responseDate": "Jan 11, 2028 12:00:00 AM EST",
+      "postingDate": "Feb 06, 2025 12:00:00 AM EST",
+      "archiveDate": "Feb 10, 2028 12:00:00 AM EST",
+      "awardCeiling": "1500000",
+      "awardFloor": "0",
+      "applicantEligibilityDesc": "Applicant organizations applying for product testing tracks must be accredited to ISO 17025 in at least one human or animal food testing method applicable to the discipline for which they are applying.Applicant organizations applying for tracks other than product testing must be accredited to ISO 17025 or have a quality system that ensures quality assurance and quality control of laboratory testing including but not limited to: validated methods, document control, training programs, and analyst competency requirements.Applicant organizations applying to any track other than Whole Genome Sequencing must have a valid 20.88 agreement with FDA prior to the time of application.",
+      "applicantTypes": [
+        {
+          "id": "04",
+          "description": "Special district governments"
+        },
+        {
+          "id": "01",
+          "description": "County governments"
+        },
+        {
+          "id": "06",
+          "description": "Public and State controlled institutions of higher education"
+        },
+        {
+          "id": "07",
+          "description": "Native American tribal governments (Federally recognized)"
+        },
+        {
+          "id": "20",
+          "description": "Private institutions of higher education"
+        },
+        {
+          "id": "02",
+          "description": "City or township governments"
+        },
+        {
+          "id": "00",
+          "description": "State governments"
+        },
+        {
+          "id": "11",
+          "description": "Native American tribal organizations (other than Federally recognized tribal governments)"
+        }
+      ],
+      "fundingActivityCategories": [
+        {
+          "id": "AG",
+          "description": "Agriculture"
+        },
+        {
+          "id": "CP",
+          "description": "Consumer Protection"
+        },
+        {
+          "id": "FN",
+          "description": "Food and Nutrition"
+        }
+      ],
+      "estimatedFunding": null,
+      "numberOfAwards": "75",
+      "costSharing": false
+    },
+    "cfdas": [
+      {
+        "cfdaNumber": "93.103",
+        "programTitle": "Food and Drug Administration Research"
+      },
+      {
+        "cfdaNumber": null,
+        "programTitle": null
+      }
+    ],
+    "synopsisAttachmentFolders": []
+  }
+}

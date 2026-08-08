@@ -17,3 +17,26 @@ export { streamRegistry, splitCsvLine, BmfSchemaChanged } from './irs/bmf-loader
 export type { RegistryEntity } from './irs/bmf-loader.js';
 export { LibsqlEntityRepository } from './persistence/libsql-entity.repository.js';
 export { LibsqlProspectRepository } from './persistence/libsql-prospect.repository.js';
+export { LibsqlFunderRepository } from './persistence/libsql-funder.repository.js';
+export { ProPublicaFinancialsGateway } from './propublica/propublica-financials.gateway.js';
+export type { ProPublicaGatewayOptions } from './propublica/propublica-financials.gateway.js';
+export { ProPublicaFilingSchema, ProPublicaOrganizationSchema } from './propublica/organization.schema.js';
+
+export { GrantsGovOpportunityGateway } from './grants-gov/grants-gov-opportunity.gateway.js';
+export type { GrantsGovGatewayOptions } from './grants-gov/grants-gov-opportunity.gateway.js';
+export {
+  GrantsGovOpportunitySchema,
+  GrantsGovSearchResponseSchema,
+} from './grants-gov/opportunity.schema.js';
+export type { GrantsGovOpportunityPayload, GrantsGovSearchPayload } from './grants-gov/opportunity.schema.js';
+export { parseGrantsGovDate, toFederalOpportunity } from './grants-gov/opportunity-mapper.js';
+export { LibsqlOpportunityRepository } from './persistence/libsql-opportunity.repository.js';
+export { LibsqlRegistryStatusReader } from './persistence/libsql-registry-status.reader.js';
+export { LibsqlModelCallLog, LibsqlModelResponseCache } from './persistence/libsql-model-telemetry.js';
+export { TokenBucket } from './model/token-bucket.js';
+export type { TokenBucketOptions, TokenGrant } from './model/token-bucket.js';
+export { ModelOrchestrator } from './model/orchestrator.js';
+export type { OrchestratorOptions } from './model/orchestrator.js';
+export { UnavailableModelGateway } from './model/unavailable-model.gateway.js';
+export { GeminiGateway } from './model/gemini.gateway.js';
+export type { GeminiGatewayOptions } from './model/gemini.gateway.js';

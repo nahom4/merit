@@ -1,0 +1,80 @@
+{
+  "errorcode": 0,
+  "msg": "Webservice Succeeds",
+  "data": {
+    "hitCount": 659,
+    "startRecord": 0,
+    "oppHits": [
+      {
+        "id": "362942",
+        "number": "HRSA-26-045",
+        "title": "Delta States Rural Development Network Program",
+        "agency": "Health Resources and Services Administration",
+        "agencyCode": "HHS-HRSA",
+        "openDate": "07/13/2026",
+        "closeDate": "08/12/2026",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+          "93.619"
+        ]
+      },
+      {
+        "id": "363480",
+        "number": "26-DC-MG-SOI-TRX-FALL-2026",
+        "title": "SOI - Rural Transportation Match and Gap Funding Assistance Program",
+        "agency": "Denali Commission",
+        "agencyCode": "DC",
+        "openDate": "08/05/2026",
+        "closeDate": "08/28/2026",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+          "90.100"
+        ]
+      },
+      {
+        "id": "356559",
+        "number": "GR-RCE-25-001",
+        "title": "RESTORE Act Centers of Excellence Research Grants Program",
+        "agency": "U.S. Dept. of Treasury RESTORE Act Program",
+        "agencyCode": "USDOT-GCR",
+        "openDate": "09/26/2024",
+        "closeDate": "10/31/2026",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+          "21.015"
+        ]
+      },
+      {
+        "id": "362798",
+        "number": "EPA-OW-OWM-26-01",
+        "title": "Technical Assistance and Training for Rural, Small and Tribal Municipalities and Wastewater Treatment Systems",
+        "agency": "Environmental Protection Agency",
+        "agencyCode": "EPA",
+        "openDate": "06/15/2026",
+        "closeDate": "08/14/2026",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+          "66.446"
+        ]
+      },
+      {
+        "id": "362746",
+        "number": "USDA-FAS-EMP-2027",
+        "title": "2027 Emerging Markets Program",
+        "agency": "Foreign Agricultural Service",
+        "agencyCode": "USDA-FAS",
+        "openDate": "06/10/2026",
+        "closeDate": "08/14/2026",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+          "10.603"
+        ]
+      }
+    ]
+  }
+}

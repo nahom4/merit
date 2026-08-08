@@ -66,6 +66,9 @@ export const NteeCode = {
   toString: (code: NteeCode): string => code as string,
   majorGroup,
   majorGroupLabel: (code: NteeCode): string => MAJOR_GROUPS[majorGroup(code)] ?? 'Unknown',
+  /** The same label from a bare major-group letter, which is all a grantee row carries once
+   *  the registry code has been reduced to the character peer matching blocks on. */
+  labelForMajorGroup: (letter: string): string => MAJOR_GROUPS[letter.toUpperCase()] ?? 'Unknown',
   /** Peer matching blocks on the major group: B60 and B92 are both education. */
   sharesMajorGroup: (a: NteeCode, b: NteeCode): boolean => majorGroup(a) === majorGroup(b),
 } as const;

@@ -1,0 +1,56 @@
+{
+  "errorcode": 0,
+  "msg": "Webservice Succeeds",
+  "data": {
+    "id": 362746,
+    "opportunityNumber": "USDA-FAS-EMP-2027",
+    "opportunityTitle": "2027 Emerging Markets Program",
+    "docType": "synopsis",
+    "ost": "POSTED",
+    "synopsis": {
+      "agencyName": "Denyse Watson\nGrantor",
+      "synopsisDesc": "<p>The U.S. Department of Agriculture, Foreign Agricultural Service, announces this Notice of Funding Opportunity (NOFO) to support the E (Kika) de la Garza Emerging Markets Program (EMP) by issuing new awards. The purpose of this program is to develop, maintain, or expand markets for exports of United States agricultural commodities and to promote cooperation and exchange of information between agricultural institutions and agribusinesses in the United States and emerging markets. This opportunity is available to U.S. entities to achieve the purposes of this program by: (1) making assessments of food and rural business systems needs; (2) making recommendations on measures necessary to enhance the effectiveness of food and rural business systems, including potential reductions in trade barriers; and (3) identifying and carrying out specific opportunities and projects to enhance the effectiveness of food and rural business systems in emerging markets.</p><p><br></p><p><br></p>",
+      "responseDate": "Aug 14, 2026 12:00:00 AM EDT",
+      "postingDate": "Jun 10, 2026 12:00:00 AM EDT",
+      "archiveDate": "Sep 13, 2026 12:00:00 AM EDT",
+      "awardCeiling": "none",
+      "awardFloor": "none",
+      "applicantEligibilityDesc": "Any United States private or government entity with a demonstrated role or interest in the export of U.S. agricultural commodities or products. Government organizations consist of Federal, State, and local agencies. Private organizations may include non-profit trade associations, colleges and universities, agricultural cooperatives, state regional trade groups, and private companies. Foreign organizations, whether government or private, may participate as subrecipients or in-kind partners for activities carried out by eligible organizations, but are not eligible as recipients under the program.\r\nAll applicants must have an active registration in the U.S. Government System for Award Management (www.sam.gov) before the application submission deadline of the announcement. Applicants with inactive, expired, pending, or excluded listings will be deemed ineligible. Exceptions, waivers, or extensions will not be considered. More information about SAM.gov registration can be found in Section 9, Other Information.",
+      "applicantTypes": [
+        {
+          "id": "25",
+          "description": "Others (see text field entitled \"Additional Information on Eligibility\" for clarification)"
+        }
+      ],
+      "fundingActivityCategories": [
+        {
+          "id": "AG",
+          "description": "Agriculture"
+        }
+      ],
+      "estimatedFunding": "8000000",
+      "numberOfAwards": "40",
+      "costSharing": true
+    },
+    "cfdas": [
+      {
+        "cfdaNumber": "10.603",
+        "programTitle": "Emerging Markets Program"
+      }
+    ],
+    "synopsisAttachmentFolders": [
+      {
+        "folderType": "Full Announcement",
+        "folderName": "2027 EMP NOFO",
+        "synopsisAttachments": [
+          {
+            "id": 352897,
+            "mimeType": "application/pdf",
+            "fileName": "2027 EMP NOFO Final.pdf",
+            "fileDescription": "2027 Emerging Markets Program NOFO"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "errorcode": 0,
+  "msg": "Webservice Succeeds",
+  "data": {
+    "id": 362798,
+    "opportunityNumber": "EPA-OW-OWM-26-01",
+    "opportunityTitle": "Technical Assistance and Training for Rural, Small and Tribal Municipalities and Wastewater Treatment Systems",
+    "docType": "synopsis",
+    "ost": "POSTED",
+    "synopsis": {
+      "agencyName": "Dannell Brown\nGrants Specialist",
+      "synopsisDesc": "<p>The U.S. Environmental Protection Agency (EPA) is soliciting applications under the authority of the Clean Water Act (CWA) section 104(b)(8) to provide Technical Assistance and Training for Rural, Small and Tribal Municipalities and Wastewater Treatment Systems. The program supports small, rural, and Tribal communities’ efforts to identify water challenges, develop plans, build technical, financial, and managerial capacity, comply with CWA requirements, and access water infrastructure funding.</p><p><br></p><p>Through this Notice of Funding Opportunity under the Clean Water Act, EPA will achieve greater protection of public health and the environment through an increase in trained water sector personnel, access to funding and financing for wastewater treatment facilities, and Clean Water Act compliance. This action advances the Administration’s priorities, including to Make America Healthy Again, by improving water quality and reducing exposure risks, and enabling responsible economic growth for small, rural, and tribal communities through improved wastewater infrastructure. In partnership with States, Tribes, and local governments and grounded in sound science and the law, EPA will deliver cleaner water, stronger infrastructure, and long-term environmental stewardship for all Americans.</p><p><br></p><p>The proposed activities support the Agency’s Powering the Great American Comeback Initiative’s Pillar 1: Clean Air, Land, and Water for Every American. Priority Areas identified in this opportunity are:</p><p>(1) Technical assistance and training for rural, small, and Tribal municipalities for planning, developing and acquisition of financing/funding for eligible projects and activities.</p><p>• Technical assistance and training for rural, small, and Tribal publicly owned treatment works and decentralized wastewater systems to help improve water quality and to achieve and maintain compliance.</p><p>(2) Technical assistance and training focused specifically on Tribes for planning, developing and acquisition of financing/funding, to help improve water quality and achieve and maintain compliance, and/or to support emerging contaminants project development.</p><p>(3) Information dissemination, technical assistance and training focused specifically on decentralized wastewater treatment systems to support planning, development and acquisition of financing.</p><p><br></p><p>Eligible entities for this grant program include nonprofit organizations and institutions of higher education that can provide technical assistance and training to rural, small, and Tribal municipalities, publicly owned wastewater treatment works, and decentralized wastewater treatment systems. Assisting systems with their technical, managerial, and financial capacity to achieve long-term compliance is a key priority for the Agency. Infrastructure construction projects such as repairing water or sewer lines, adding new equipment, or upgrading, retrofitting, or rehabilitating existing equipment are not eligible for funding under this announcement.</p>",
+      "responseDate": "Aug 14, 2026 12:00:00 AM EDT",
+      "postingDate": "Jun 15, 2026 12:00:00 AM EDT",
+      "archiveDate": "Sep 13, 2026 12:00:00 AM EDT",
+      "awardCeiling": "3000000",
+      "awardFloor": "none",
+      "applicantEligibilityDesc": "See Section 2 of the Notice of Funding Opportunity for eligibility information.",
+      "applicantTypes": [
+        {
+          "id": "25",
+          "description": "Others (see text field entitled \"Additional Information on Eligibility\" for clarification)"
+        }
+      ],
+      "fundingActivityCategories": [
+        {
+          "id": "ENV",
+          "description": "Environment"
+        }
+      ],
+      "estimatedFunding": "25500000",
+      "numberOfAwards": "12",
+      "costSharing": false
+    },
+    "cfdas": [
+      {
+        "cfdaNumber": "66.446",
+        "programTitle": "Technical Assistance for Treatment Works (Clean Water Act [CWA] Section 104(b)(8))"
+      }
+    ],
+    "synopsisAttachmentFolders": [
+      {
+        "folderType": "Full Announcement",
+        "folderName": "Full Announcement",
+        "synopsisAttachments": [
+          {
+            "id": 353051,
+            "mimeType": "application/pdf",
+            "fileName": "EPA-OW-OWM-26-01_RSTNOFO_final(1).pdf",
+            "fileDescription": "Full Announcement"
+          }
+        ]
+      }
+    ]
+  }
+}

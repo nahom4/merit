@@ -1,0 +1,83 @@
+{
+  "organization": {
+    "ein": 560529965,
+    "name": "Duke Endowment",
+    "state": "NC",
+    "city": "Charlotte"
+  },
+  "filings_with_data": [
+    {
+      "tax_prd_yr": 2022,
+      "formtype": 2,
+      "totrevenue": 497718591,
+      "totfuncexpns": 255056319,
+      "totassetsend": 3619520233,
+      "contrpdpbks": 212293248
+    },
+    {
+      "tax_prd_yr": 2021,
+      "formtype": 2,
+      "totrevenue": 832404504,
+      "totfuncexpns": 220201927,
+      "totassetsend": 3374460396,
+      "contrpdpbks": 174938934
+    },
+    {
+      "tax_prd_yr": 2020,
+      "formtype": 2,
+      "totrevenue": 163153625,
+      "totfuncexpns": 208170047,
+      "totassetsend": 2769856640,
+      "contrpdpbks": 171714056
+    },
+    {
+      "tax_prd_yr": 2019,
+      "formtype": 2,
+      "totrevenue": 244646086,
+      "totfuncexpns": 195702527,
+      "totassetsend": 2808215541,
+      "contrpdpbks": 156487208
+    },
+    {
+      "tax_prd_yr": 2015,
+      "formtype": 2,
+      "totrevenue": 176470598,
+      "totfuncexpns": 150197658,
+      "totassetsend": 2688997387,
+      "contrpdpbks": 122122981
+    },
+    {
+      "tax_prd_yr": 2014,
+      "formtype": 2,
+      "totrevenue": 326212467,
+      "totfuncexpns": 173403261,
+      "totassetsend": 2659102332,
+      "contrpdpbks": 140022719
+    },
+    {
+      "tax_prd_yr": 2013,
+      "formtype": 2,
+      "totrevenue": 262400431,
+      "totfuncexpns": 151278838,
+      "totassetsend": 2565370653,
+      "contrpdpbks": 127752693
+    },
+    {
+      "tax_prd_yr": 2012,
+      "formtype": 2,
+      "totrevenue": 139126158,
+      "totfuncexpns": 146638118,
+      "totassetsend": 2417479855,
+      "contrpdpbks": 120532221
+    },
+    {
+      "tax_prd_yr": 2011,
+      "formtype": 2,
+      "totrevenue": 103029558,
+      "totfuncexpns": 141297682,
+      "totassetsend": 2494122798,
+      "contrpdpbks": 112703398
+    }
+  ],
+  "filings_without_data": []
+}

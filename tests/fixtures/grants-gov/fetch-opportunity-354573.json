@@ -1,0 +1,107 @@
+{
+  "errorcode": 0,
+  "msg": "Webservice Succeeds",
+  "data": {
+    "id": 354573,
+    "opportunityNumber": "PAR-24-216",
+    "opportunityTitle": "Minor Use Minor Species Development of Drugs (R01)",
+    "docType": "synopsis",
+    "ost": "POSTED",
+    "synopsis": {
+      "agencyName": "Terrin  Brown\nGrantor",
+      "synopsisDesc": "<p>This Notice of Funding Opportunity (NOFO) is issued by the Food and Drug Administration (FDA), Center for Veterinary Medicine (CVM), and solicits Research Project (R01) grant applications from institutions or organizations that propose to develop or support the development of designated new animal drugs intended for minor uses in major species or for use in minor species (MUMS).&nbsp;</p>\n<p><br></p>\n<p>The FDA is authorized to provide grants to assist in defraying the costs of qualified safety and effectiveness testing that could be used to satisfy the requirements for FDA approval of MUMS-designated drugs.</p>\n<p><br></p>\n<p>Only entities developing drugs for veterinary use or parties working as research partners with such entities are eligible for grants.</p>\n<p><br></p>\n<p>The organization (or applicant) seeking approval of the new animal drug under investigation must have opened an Investigational New Animal Drug (INAD) file with FDA/CVM and must hold a minor use or minor species \"designation\" granted by FDA/CVM's Office of Minor Use and Minor Species Animal Drug Development (OMUMS) for that drug for a specified intended use, in accordance with the provisions of section 573 of the Food, Drug and Cosmetic Act (21 U.S.C. 360ccc-2) and 21 CFR part 516.</p>\n<p><br></p>\n<p><span style=\"color: black;\">FDA/CVM's Office of New Animal Drug Evaluation (ONADE) must have reviewed and concurred with the proposed study protocol before an applicant can submit a grant application.</span></p>",
+      "responseDate": "Jan 29, 2027 12:00:00 AM EST",
+      "postingDate": "May 29, 2024 12:00:00 AM EDT",
+      "archiveDate": "Feb 28, 2027 12:00:00 AM EST",
+      "awardCeiling": "250000",
+      "awardFloor": "none",
+      "applicantEligibilityDesc": "&bull;\tFaith-based or Community-based Organizations&bull;\tRegional Organizations&bull;\tNon-domestic (non-U.S.) Entities (Foreign Organizations)",
+      "applicantTypes": [
+        {
+          "id": "12",
+          "description": "Nonprofits having a 501(c)(3) status with the IRS, other than institutions of higher education"
+        },
+        {
+          "id": "23",
+          "description": "Small businesses"
+        },
+        {
+          "id": "13",
+          "description": "Nonprofits that do not have a 501(c)(3) status with the IRS, other than institutions of higher education"
+        },
+        {
+          "id": "22",
+          "description": "For profit organizations other than small businesses"
+        },
+        {
+          "id": "11",
+          "description": "Native American tribal organizations (other than Federally recognized tribal governments)"
+        },
+        {
+          "id": "02",
+          "description": "City or township governments"
+        },
+        {
+          "id": "08",
+          "description": "Public housing authorities/Indian housing authorities"
+        },
+        {
+          "id": "00",
+          "description": "State governments"
+        },
+        {
+          "id": "04",
+          "description": "Special district governments"
+        },
+        {
+          "id": "20",
+          "description": "Private institutions of higher education"
+        },
+        {
+          "id": "01",
+          "description": "County governments"
+        },
+        {
+          "id": "07",
+          "description": "Native American tribal governments (Federally recognized)"
+        },
+        {
+          "id": "05",
+          "description": "Independent school districts"
+        },
+        {
+          "id": "06",
+          "description": "Public and State controlled institutions of higher education"
+        },
+        {
+          "id": "25",
+          "description": "Others (see text field entitled \"Additional Information on Eligibility\" for clarification)"
+        }
+      ],
+      "fundingActivityCategories": [
+        {
+          "id": "AG",
+          "description": "Agriculture"
+        },
+        {
+          "id": "CP",
+          "description": "Consumer Protection"
+        },
+        {
+          "id": "FN",
+          "description": "Food and Nutrition"
+        }
+      ],
+      "estimatedFunding": "250000",
+      "numberOfAwards": null,
+      "costSharing": false
+    },
+    "cfdas": [
+      {
+        "cfdaNumber": "93.103",
+        "programTitle": "Food and Drug Administration Research"
+      }
+    ],
+    "synopsisAttachmentFolders": []
+  }
+}

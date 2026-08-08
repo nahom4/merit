@@ -65,6 +65,15 @@ describe('NteeCode', () => {
     expect(isOk(result) && NteeCode.majorGroupLabel(result.value)).toBe('Education');
   });
 
+  it('names the major group from a bare letter, which is all a grantee row carries', () => {
+    expect(NteeCode.labelForMajorGroup('B')).toBe('Education');
+    expect(NteeCode.labelForMajorGroup('p')).toBe('Human Services');
+  });
+
+  it('says Unknown rather than guessing at a letter outside the 26 major groups', () => {
+    expect(NteeCode.labelForMajorGroup('1')).toBe('Unknown');
+  });
+
   it('treats two codes in the same major group as the same program area', () => {
     const literacy = NteeCode.parse('B60');
     const adultEd = NteeCode.parse('B92');

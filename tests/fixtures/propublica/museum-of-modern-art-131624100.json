@@ -1,0 +1,43 @@
+{
+  "organization": {
+    "ein": 131624100,
+    "name": "Museum Of Modern Art",
+    "state": "NY",
+    "city": "New York"
+  },
+  "filings_with_data": [
+    {
+      "tax_prd_yr": 2023,
+      "formtype": 0,
+      "totrevenue": 236680721,
+      "totfuncexpns": 280669509,
+      "totassetsend": 2490307043,
+      "contrpdpbks": null
+    },
+    {
+      "tax_prd_yr": 2022,
+      "formtype": 0,
+      "totrevenue": 265321760,
+      "totfuncexpns": 247824189,
+      "totassetsend": 2507036549,
+      "contrpdpbks": null
+    },
+    {
+      "tax_prd_yr": 2021,
+      "formtype": 0,
+      "totrevenue": 251623479,
+      "totfuncexpns": 236065058,
+      "totassetsend": 2699458083,
+      "contrpdpbks": null
+    },
+    {
+      "tax_prd_yr": 2020,
+      "formtype": 0,
+      "totrevenue": 262144582,
+      "totfuncexpns": 270711724,
+      "totassetsend": 2331703503,
+      "contrpdpbks": null
+    }
+  ],
+  "filings_without_data": []
+}

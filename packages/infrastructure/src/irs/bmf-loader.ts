@@ -22,10 +22,22 @@ export interface RegistryEntity {
   readonly zip: string | null;
   readonly revenueCents: number | null;
   readonly blockingKey: string | null;
+  /** The BMF's SUBSECTION column: 3 is 501(c)(3). Null when the registry states none.
+   *  Federal eligibility screening decides the 501(c)(3) check on this. */
+  readonly subsectionCode: number | null;
 }
 
 /** The header the BMF actually returns, verified live. Column order is not assumed. */
-const REQUIRED_COLUMNS = ['EIN', 'NAME', 'CITY', 'STATE', 'ZIP', 'REVENUE_AMT', 'NTEE_CD'] as const;
+const REQUIRED_COLUMNS = [
+  'EIN',
+  'NAME',
+  'CITY',
+  'STATE',
+  'ZIP',
+  'REVENUE_AMT',
+  'NTEE_CD',
+  'SUBSECTION',
+] as const;
 
 const RowSchema = z.object({
   EIN: z.string().regex(/^\d{1,9}$/),
@@ -35,6 +47,7 @@ const RowSchema = z.object({
   ZIP: z.string(),
   REVENUE_AMT: z.string(),
   NTEE_CD: z.string(),
+  SUBSECTION: z.string(),
 });
 
 export class BmfSchemaChanged extends Error {}
@@ -91,6 +104,7 @@ const toEntity = (row: z.infer<typeof RowSchema>): RegistryEntity | null => {
 
   const state = row.STATE.trim().toUpperCase();
   const revenue = Number(row.REVENUE_AMT.trim());
+  const subsection = Number(row.SUBSECTION.trim());
 
   return {
     ein,
@@ -103,6 +117,7 @@ const toEntity = (row: z.infer<typeof RowSchema>): RegistryEntity | null => {
     zip: row.ZIP.trim().length === 0 ? null : row.ZIP.trim().slice(0, 5),
     revenueCents: Number.isFinite(revenue) && revenue > 0 ? Math.round(revenue * 100) : null,
     blockingKey: state.length === 0 ? null : blockingKey(normalizedName, state),
+    subsectionCode: Number.isInteger(subsection) && subsection > 0 ? subsection : null,
   };
 };
 

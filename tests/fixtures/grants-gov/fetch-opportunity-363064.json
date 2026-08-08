@@ -1,0 +1,64 @@
+{
+  "errorcode": 0,
+  "msg": "Webservice Succeeds",
+  "data": {
+    "id": 363064,
+    "opportunityNumber": "PDS-CAIRO-004-FY26",
+    "opportunityTitle": "Mentor Program for English Educators",
+    "docType": "synopsis",
+    "ost": "POSTED",
+    "synopsis": {
+      "agencyName": "Sally  Wissa\nGrantor",
+      "synopsisDesc": "<p><span style=\"color: rgb(28, 33, 39);\">The U.S. Department of State's Embassy Cairo announces an open competition to implement a comprehensive mentor program for Egyptian English language instructors that will strengthen English education capacity throughout Egypt while advancing U.S.-Egypt educational partnerships and cross-cultural understanding. This program addresses a critical need: Egyptian English instructors face limited access to modern pedagogical training, contemporary teaching methodologies, and professional development in areas such as AI-enhanced instruction, critical thinking pedagogy, and differentiated learning approaches. This capacity gap directly impacts Egypt's ability to prepare its youth for participation in the global economy and limits opportunities for meaningful people-to-people exchanges that strengthen bilateral relations.</span></p>\n<p><span style=\"color: rgb(28, 33, 39);\">The program will train 150 Egyptian English language instructors from all governorates across Egypt through an intensive one-week course (56 hours at 8 hours per day) focused on practical applications and best practices in Teaching English to Speakers of Other Languages (TESOL). Core curriculum includes critical thinking strategies for language learning, effective classroom management techniques, supporting learners with different needs and abilities, 21st century skills integration, and AI-enhanced teaching methods and digital literacy. Participants will gain enhanced English language proficiency, develop a nuanced understanding of American culture, and learn the most up-to-date English language teaching methodologies. The program's innovative mentorship component requires each participant to complete 100 hours of documented volunteer work within their communities, providing peer support and guidance to an estimated 1,500+ fellow English teachers across Egypt. This multiplier effect creates sustainable professional learning communities that continue long after the program concludes, representing 35% of total program hours and ensuring lasting impact.</span></p>\n<p><span style=\"color: rgb(28, 33, 39);\">This program directly advances the Trump Administration's core foreign policy objectives by making America safer, stronger, and more prosperous through strategic educational partnerships. By building English language capacity in Egypt, the program creates lasting partnerships that facilitate trade, cultural exchange, and mutual understanding, all essential components of a prosperous and secure bilateral relationship in a strategically vital region. The program incorporates proven best practices from international education programming: structured mentorship with accountability mechanisms, practical application-focused training, modern pedagogical approaches, geographic representation from across Egypt, and measurable outcomes that demonstrate clear return on investment. Success will be measured through immediate training impact (85% of participants demonstrating measurable improvement in pedagogical knowledge), sustained mentorship impact (100 volunteer hours per participant reaching 1,500+ teachers), enhanced cultural understanding (90% reporting increased knowledge of American educational values), and technology integration (80% implementing AI-enhanced techniques within six months). Eligible applicants include educational organizations, non-governmental organizations, and institutions with demonstrated experience in teacher training and capacity building. This strategic investment in Egypt's human capital will yield dividends for decades through enhanced English proficiency, strengthened U.S.-Egypt educational ties, and sustainable professional development infrastructure that advances shared prosperity and mutual understanding.</span></p>",
+      "responseDate": "Aug 09, 2026 12:00:00 AM EDT",
+      "postingDate": "Jul 07, 2026 12:00:00 AM EDT",
+      "archiveDate": "Sep 08, 2026 12:00:00 AM EDT",
+      "awardCeiling": "150000",
+      "awardFloor": "100000",
+      "applicantEligibilityDesc": "",
+      "applicantTypes": [
+        {
+          "id": "12",
+          "description": "Nonprofits having a 501(c)(3) status with the IRS, other than institutions of higher education"
+        },
+        {
+          "id": "06",
+          "description": "Public and State controlled institutions of higher education"
+        },
+        {
+          "id": "13",
+          "description": "Nonprofits that do not have a 501(c)(3) status with the IRS, other than institutions of higher education"
+        }
+      ],
+      "fundingActivityCategories": [
+        {
+          "id": "ED",
+          "description": "Education"
+        }
+      ],
+      "estimatedFunding": null,
+      "numberOfAwards": null,
+      "costSharing": false
+    },
+    "cfdas": [
+      {
+        "cfdaNumber": "19.022",
+        "programTitle": "Educational and Cultural Exchange Programs Appropriation Overseas Grants"
+      }
+    ],
+    "synopsisAttachmentFolders": [
+      {
+        "folderType": "Full Announcement",
+        "folderName": "NOFO Mentor /Eng. educators",
+        "synopsisAttachments": [
+          {
+            "id": 353615,
+            "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "fileName": "NOFO Mentor 2026-2027 (002).docx",
+            "fileDescription": "NOFO /Mentor Program for English Educators"
+          }
+        ]
+      }
+    ]
+  }
+}

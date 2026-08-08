@@ -19,8 +19,8 @@ export class LibsqlEntityRepository implements EntityRepository {
           for (const entity of entities.slice(start, start + BATCH_SIZE)) {
             await transaction.execute({
               sql: `INSERT INTO entities (ein, canonical_name, normalized_name, ntee_code, city, state, zip,
-                                          revenue_cents, blocking_key)
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                                          revenue_cents, blocking_key, subsection)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                     ON CONFLICT (ein) DO UPDATE SET
                       canonical_name = excluded.canonical_name,
                       normalized_name = excluded.normalized_name,
@@ -29,7 +29,8 @@ export class LibsqlEntityRepository implements EntityRepository {
                       state = excluded.state,
                       zip = excluded.zip,
                       revenue_cents = excluded.revenue_cents,
-                      blocking_key = excluded.blocking_key`,
+                      blocking_key = excluded.blocking_key,
+                      subsection = excluded.subsection`,
               args: [
                 entity.ein,
                 entity.canonicalName,
@@ -40,6 +41,7 @@ export class LibsqlEntityRepository implements EntityRepository {
                 entity.zip,
                 entity.revenueCents,
                 entity.blockingKey,
+                entity.subsectionCode,
               ],
             });
           }

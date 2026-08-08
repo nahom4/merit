@@ -73,6 +73,14 @@ const listing = (overrides: Partial<ProspectListing> = {}): ProspectListing => (
   ...overrides,
 });
 
+describe('the link into the reachability report', () => {
+  it('points at this funder’s report in the context of this organisation', () => {
+    const view = toProspectListView(listing());
+
+    expect(view.rows[0]?.reportHref).toBe('/organizations/org_1/funders/561234567');
+  });
+});
+
 describe('toProspectListView', () => {
   it('renders four score bars, never one number', () => {
     const view = toProspectListView(listing());

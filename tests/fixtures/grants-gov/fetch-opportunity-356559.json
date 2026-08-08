@@ -1,0 +1,43 @@
+{
+  "errorcode": 0,
+  "msg": "Webservice Succeeds",
+  "data": {
+    "id": 356559,
+    "opportunityNumber": "GR-RCE-25-001",
+    "opportunityTitle": "RESTORE Act Centers of Excellence Research Grants Program",
+    "docType": "synopsis",
+    "ost": "POSTED",
+    "synopsis": {
+      "agencyName": "U.S. Dept. of Treasury RESTORE Act Program",
+      "synopsisDesc": "<p>Treasury is publishing multiple funding opportunity notices for its RESTORE Act grant programs. This announcement applies only to the Centers of Excellence Research Grants Program.Trust Fund amounts are available to establish one or more Centers of Excellence through competitive subawards to nongovernmental entities and consortia in the Gulf Coast Region, including institutions of higher education. Funds may be used to establish Centers of Excellence, and by those Centers of Excellence for science, technology, and monitoring in one or more of the following disciplines as described in the RESTORE Act and Treasury’s implementing regulations at 31 CFR 34.704: 1) Coastal and deltaic sustainability, restoration, and protection, including solutions and technology that allow citizens to live in a safe and sustainable manner in a coastal delta in the Gulf Coast Region. 2) Coastal fisheries and wildlife ecosystem research and monitoring in the Gulf Coast Region. 3)\tOffshore energy development, including research and technology to improve the sustainable and safe development of energy resources in the Gulf of Mexico. 4) Sustainable and resilient growth, economic and commercial development in the Gulf Coast Region. 5) Comprehensive observation, monitoring, and mapping of the Gulf of Mexico.Eligible applicants issuing subawards to Center(s) of Excellence must establish and implement a program to monitor compliance with its subaward agreements.</p>",
+      "responseDate": "Oct 31, 2026 12:00:00 AM EDT",
+      "postingDate": "Sep 26, 2024 12:00:00 AM EDT",
+      "archiveDate": "Nov 01, 2026 12:00:00 AM EDT",
+      "awardCeiling": "14518510",
+      "awardFloor": "5710210",
+      "applicantEligibilityDesc": "",
+      "applicantTypes": [
+        {
+          "id": "00",
+          "description": "State governments"
+        }
+      ],
+      "fundingActivityCategories": [
+        {
+          "id": "ST",
+          "description": "Science and Technology and other Research and Development"
+        }
+      ],
+      "estimatedFunding": null,
+      "numberOfAwards": "5",
+      "costSharing": false
+    },
+    "cfdas": [
+      {
+        "cfdaNumber": "21.015",
+        "programTitle": "Resources and Ecosystems Sustainability, Tourist Opportunities, and Revived Economies of the Gulf Coast States"
+      }
+    ],
+    "synopsisAttachmentFolders": []
+  }
+}

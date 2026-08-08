@@ -5,7 +5,7 @@ One slice at a time, each working end to end before the next begins.
 A slice is **not** done because the backend works. It is done when a real user can do the
 thing on a real screen against real data, with tests at every tier proving it.
 
-**Current slice: S2.** S0 and S1 are complete.
+**Current slice: S4.** S0, S1, S2 and S3 are complete.
 
 ---
 
@@ -19,8 +19,8 @@ Everything before it exists to make S1 possible; everything after it is leverage
 |---|---|---|
 | **S0** | Walking skeleton — the architecture and test harness, proven | ☑ |
 | **S1** | **Prospect discovery** — profile in, ranked funders with evidence out | ☑ |
-| **S2** | Funder reachability report — "should we bother" | ☐ |
-| **S3** | Federal sweep, eligibility screening, fit scoring | ☐ |
+| **S2** | Funder reachability report — "should we bother" | ☑ |
+| **S3** | Federal sweep, eligibility screening, fit scoring | ☑ |
 | **S4** | Rubric extraction, drafting, self-critique | ☐ |
 | **S5** | Competitive positioning from award history | ☐ |
 | **S6** | Scheduled jobs, Calendar milestones, Gmail digests | ☐ |
@@ -112,23 +112,72 @@ every one of them regional. `pnpm eval` runs in about a minute.
 
 ## S2 — Funder reachability report
 
-- [ ] Grantee list by year, turnover over time, ask distribution, geographic spread, program mix
-- [ ] Ask-size calibration: recommended amount from first-time grants, filtered to the org's size band
-- [ ] Affinity paths — shared-funder proximity, labelled as exactly that, never as a personal connection
-- [ ] ProPublica financial trend and capacity
-- [ ] Funder brief with a citation on every claim, and an explicit statement of what the evidence does not support
+**Goal:** a funder on the prospect list opens into a report that answers the next question a
+development director asks — *should we bother* — from the same filings, with every claim
+traceable and every gap in the evidence stated.
+
+- [x] Grantee list by year, turnover over time, ask distribution, geographic spread, program mix
+- [x] Ask-size calibration: recommended amount from first-time grants, filtered to the org's size band
+- [x] Affinity paths — shared-funder proximity, labelled as exactly that, never as a personal connection
+- [x] ProPublica financial trend and capacity
+- [x] Funder brief with a citation on every claim, and an explicit statement of what the evidence does not support
+
+**Done when:** a user clicks a funder on the prospect list and gets a report whose every claim
+names the filing behind it — verified by an E2E test that opens each claim and asserts a
+citation, rather than by inspection.
+
+**Decisions this slice forced:** the brief is composed from filing rows rather than generated
+by a model ([ADR 0010](decisions/0010-the-funder-brief-is-composed-not-generated.md)), and
+ProPublica degrades rather than failing the page
+([ADR 0011](decisions/0011-propublica-is-a-degradable-dependency.md)).
+
+**A note on the E2E fixture.** The committed bundle is one year of filings: no funder in it
+appears in two tax years, and exactly one of its entities has more than one funder. Turnover
+over time and shared-funder proximity therefore cannot be exercised end to end against it, and
+E2E asserts only that those sections render honestly — including their empty states. Both
+behaviours are proved at the integration tier in
+`tests/integration/report-funder-reachability.int.test.ts`, against a real libSQL database
+seeded with a multi-year graph shaped exactly as the ingest use case writes one. Replacing the
+fixture with a multi-year slice would let the E2E tier cover them directly.
 
 ---
 
 ## S3 — Federal sweep and fit scoring
 
-- [ ] Grants.gov search ingestion, deduplicated
-- [ ] Deterministic eligibility screening **before any model call** — applicant type, 501(c)(3), geography, country
-- [ ] Every rejection stores a readable reason
-- [ ] Fit score 0–100 with schema-validated rationale, matched program areas, and gaps
-- [ ] LLM orchestrator: token bucket, priority queue, cascade, content-hash cache, repair loop, graceful degradation
-- [ ] Federal opportunity board UI
-- [ ] Run log surface: records processed, parse faults, model spend, cache hits
+**Goal:** the other source of money — posted federal opportunities — with the first model calls
+in the system, arranged so that deterministic rules reject most announcements at zero model cost
+and only survivors reach a model.
+
+- [x] Grants.gov search ingestion, deduplicated
+- [x] Deterministic eligibility screening **before any model call** — applicant type, 501(c)(3), geography, country
+- [x] Every rejection stores a readable reason
+- [x] Fit score 0–100 with schema-validated rationale, matched program areas, and gaps
+- [x] LLM orchestrator: token bucket, priority queue, cascade, content-hash cache, repair loop, graceful degradation
+- [x] Federal opportunity board UI
+- [x] Run log surface: records processed, parse faults, model spend, cache hits
+
+**Done when:** a user opens the federal board and every row either shows a fit score with its
+matched program areas and gaps, or states in a sentence why the organisation cannot apply —
+verified by an E2E test that asserts a real announcement open only to state governments carries
+a reason and no score.
+
+**Result on the live feed:** the fixture set is 15 real announcements recorded from
+`api.grants.gov` on 8 August 2026. For a Wilmington NC literacy organisation, screening rejects
+`PAR-25-003` (state governments only) and `HRSA-26-045` (the Delta States program, limited to
+eight states that do not include North Carolina) without a model call, and scores the survivors.
+
+**Decisions this slice forced:** eligibility is a rule and fit is a judgement, with "undecided"
+as a real third answer ([ADR 0012](decisions/0012-eligibility-is-a-rule-and-fit-is-a-judgement.md)),
+and every model call goes through one orchestrator whose quota exhaustion is a persisted queue
+([ADR 0013](decisions/0013-every-model-call-goes-through-one-orchestrator.md)).
+
+**Two limits, stated rather than hidden.** Grants.gov has no structured field for geography, so
+the geographic check is a conservative scan of the announcement's eligibility prose: it
+under-detects rather than over-rejects, and quotes the phrase it matched. And the Gemini
+envelope the integration and E2E tiers speak is the documented shape rather than a recording —
+Merit is designed to run with no model credential, so the suite must not need one. The live
+half of `tests/contract/gemini.contract.test.ts` runs when `GEMINI_API_KEY` is set and is what
+keeps that shape true.
 
 ---
 

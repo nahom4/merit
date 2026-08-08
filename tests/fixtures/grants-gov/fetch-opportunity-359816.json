@@ -1,0 +1,55 @@
+{
+  "errorcode": 0,
+  "msg": "Webservice Succeeds",
+  "data": {
+    "id": 359816,
+    "opportunityNumber": "PAR-25-003",
+    "opportunityTitle": "Animal Food Regulatory Program Standards Implementation Development and Maintenance, with Mutual Reliance Initiatives Clinical Trials Not Allowed",
+    "docType": "synopsis",
+    "ost": "POSTED",
+    "synopsis": {
+      "agencyName": "Patrick  Johnson\nGrantor",
+      "synopsisDesc": "<p>The purpose of this Notice of Funding Opportunity (NOFO) is to advance efforts for a nationally integrated animal food safety system providing state animal food regulatory programs the ability to achieve full implementation of the Animal Food Regulatory Program Standards (AFRPS) within 5 years and to maintain full implementation. This NOFO will also fund optional projects for state animal food regulatory programs to:</p><p><br></p><p>Advance food safety and protect public health by strengthening partnerships with the FDA and other state animal food regulatory partners through sharing, collaboration, coordination, and leveraging each other’s expertise, work, data, and enforcement actions.</p><p><br></p><p>Develop and standardize processes, procedures, systems, and other methods to integrate federal and state animal food regulatory work resulting in mutual reliance.</p><p>Specific outcomes may include, but are not limited to:</p><p><br></p><p>State animal food regulatory programs will achieve and maintain implementation of the AFRPS, which is recognized as a critical element to creating a national, fully integrated food safety system.</p><p><br></p><p>Operational use of standardized animal food regulatory systems developed by state programs to compel federal reliance on state regulatory work and resources and reciprocal state reliance on federal work and resources, resulting in mutual reliance.</p><p>This project will strengthen and improve FDA efforts to build an integrated food safety system by building high quality state animal food regulatory programs that can promote regulatory compliance and prevent foodborne illnesses.</p>",
+      "responseDate": "Apr 01, 2027 12:00:00 AM EDT",
+      "postingDate": "Jun 25, 2025 12:00:00 AM EDT",
+      "archiveDate": "May 01, 2027 12:00:00 AM EDT",
+      "awardCeiling": "300000",
+      "awardFloor": "0",
+      "applicantEligibilityDesc": "The eligibility for this opportunity is limited to State animal food safety programs meeting the following criteria:Applicants must maintain an FDA inspectional contract in good standing by completing all agreed upon inspectional work, audits, and associated compliance and regulatory activities. The contract must include performing comprehensive animal food inspections under 21 CFR Part 507 that is representative of the state's firm inventory and supports the FDA and state regulatory program in meeting a risk-based inspection frequency. The contract should result in a minimum of 10% of the firm inventory regulated by the FDA being inspected for all applicable regulations.Applicant organizations must have a valid 20.88 agreement with FDA prior to the time of application.Applicants will be categorized under one of two funding tracks: AFRPS Development or AFRPS Maintenance (see eligibility criteria above. Within the AFRPS Maintenance funding track only, an applicant may apply to the Mutual Reliance funding option, provided they meet the funding option eligibility criteria (below).Applicants are encouraged to apply for cooperative agreement assistance that reflects their jurisdiction's needs in terms of amounts of funding and number of project years.To ascertain an applicant's tier funding level, please consult Section II. Award Information.Funding Track 1: AFRPS Development PhaseApplicants must have received less than five (5) years of funding under a past AFRPS cooperative agreement, or have never received an AFRPS cooperative agreement. Applicants may request up to $300,000 per year for this funding track. State programs will move to AFRPS Maintenance funding levels in the sixth year of funding under AFRPS cooperative agreements. Applicants with less than five (5) years of funding under a past AFRPS cooperative agreement may elect to count years of AFRPS enrollment under the FDA Animal Food Safety Inspection Contract toward the five (5) years AFRPS funding eligibility requirement when determining the entry date for Funding Track 2 (AFRPS Maintenance Phase), and may elect to move to Funding Track 2 (AFRPS Maintenance Phase) for the award year after full implementation of the AFRPS has been achieved (as determined by an assessment by FDA Audit Staff).Funding Track 2: AFRPS Maintenance PhaseApplicants must have received five (5) years of funding under a past AFRPS cooperative agreement. Applicants with less than five (5) years funding under a past AFRPS cooperative agreement may elect to count years of AFRPS enrollment toward the five (5 years AFRPS funding eligibility requirement when determining the entry date for Funding Track 2 (AFRPS Maintenance Phase), and may elect to move to Funding Track 2 (AFRPS Maintenance Phase for the award year after full implementation of the AFRPS has been achieved (as determined by an assessment by FDA Audit Staff). If the state program is not currently deemed to be in full implementation and their corrective actions are still pending (in response to the most recent assessment by FDA Audit Staff), then the program must address the corrective actions in their strategic improvement plan submitted as part of the application.Applicants have been classified into three (3) levels of funding levels based on a variety of factors unique to that jurisdiction (See data sources below). This approach establishes funding levels proportional to the applicant's jurisdictional work volume and costs for this program area. To determine which funding level is applicable to your program, please consult the table below. Applicants are encouraged to apply for cooperative agreement assistance that reflects their jurisdiction's needs both in terms of amounts of funding and number of project years.Funding Track 3 (Optional): Mutual RelianceApplicants must be recognized as being in full implementation by the FDA audit staff prior to the time of application.",
+      "applicantTypes": [
+        {
+          "id": "00",
+          "description": "State governments"
+        }
+      ],
+      "fundingActivityCategories": [
+        {
+          "id": "AG",
+          "description": "Agriculture"
+        },
+        {
+          "id": "CP",
+          "description": "Consumer Protection"
+        },
+        {
+          "id": "FN",
+          "description": "Food and Nutrition"
+        }
+      ],
+      "estimatedFunding": null,
+      "numberOfAwards": "7",
+      "costSharing": false
+    },
+    "cfdas": [
+      {
+        "cfdaNumber": "93.103",
+        "programTitle": "Food and Drug Administration Research"
+      },
+      {
+        "cfdaNumber": null,
+        "programTitle": null
+      }
+    ],
+    "synopsisAttachmentFolders": []
+  }
+}

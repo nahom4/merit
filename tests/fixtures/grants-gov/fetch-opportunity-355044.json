@@ -1,0 +1,72 @@
+{
+  "errorcode": 0,
+  "msg": "Webservice Succeeds",
+  "data": {
+    "id": 355044,
+    "opportunityNumber": "PAR-24-251",
+    "opportunityTitle": "Animal and Veterinary Innovation Centers (U18)",
+    "docType": "synopsis",
+    "ost": "POSTED",
+    "synopsis": {
+      "agencyName": "Terrin  Brown\nGrantor",
+      "synopsisDesc": "<p>The purpose of this Funding Opportunity Announcement (FOA) is to solicit applications for inclusion as Animal and Veterinary Innovation Centers, which are intended to form long-term partnerships to address priority areas for FDA's Center for Veterinary Medicine (CVM). This includes CVM developing cooperative agreement(s) with academic research institutions (public and private) to:&nbsp;</p>\n<p><br></p>\n<p>1. Drive research that supports the development of interventions to prevent, control, or eliminate Highly Pathogenic Avian Influenza (HPAI) virus in animals, or interventions that reduce the circulation of the virus in the ecosystem.&nbsp;Work may also include other emerging zoonotic disease threats or One Health issues in future years.&nbsp;</p>\n<p><br></p>\n<p>2. Drive research that supports the development of intentional genomic alternations in animals and the advancement of regulatory science in this field, with a focus on intentional genomic alternations that support agricultural resilience, food security, animal health, or public health.&nbsp;</p>\n<p><br></p>\n<p><span style=\"color: black;\">3. Drive research that supports the development of products for minor species, minor uses in major species (dogs, cats, horses, cattle, pigs, chickens, and turkeys) and other unmet veterinary medical needs in major species that create a significant animal or public health burden.</span></p>",
+      "responseDate": "May 12, 2028 12:00:00 AM EDT",
+      "postingDate": "Jun 20, 2024 12:00:00 AM EDT",
+      "archiveDate": "Jun 11, 2028 12:00:00 AM EDT",
+      "awardCeiling": "1250000",
+      "awardFloor": "none",
+      "applicantEligibilityDesc": "Higher Education Institutions:The following types of Higher Education Institutions are always encouraged to apply for FDA support as Public or Private Institutions of Higher Education: Hispanic-serving InstitutionsHistorically Black Colleges and Universities (HBCUs)Tribally Controlled Colleges and Universities (TCCUs) Alaska Native and Native Hawaiian Serving InstitutionsAsian American Native American Pacific Islander Serving Institutions (AANAPISIs)",
+      "applicantTypes": [
+        {
+          "id": "06",
+          "description": "Public and State controlled institutions of higher education"
+        },
+        {
+          "id": "25",
+          "description": "Others (see text field entitled \"Additional Information on Eligibility\" for clarification)"
+        },
+        {
+          "id": "20",
+          "description": "Private institutions of higher education"
+        }
+      ],
+      "fundingActivityCategories": [
+        {
+          "id": "AG",
+          "description": "Agriculture"
+        },
+        {
+          "id": "CP",
+          "description": "Consumer Protection"
+        },
+        {
+          "id": "FN",
+          "description": "Food and Nutrition"
+        }
+      ],
+      "estimatedFunding": "3000000",
+      "numberOfAwards": "8",
+      "costSharing": false
+    },
+    "cfdas": [
+      {
+        "cfdaNumber": "93.103",
+        "programTitle": "Food and Drug Administration Research"
+      }
+    ],
+    "synopsisAttachmentFolders": [
+      {
+        "folderType": "Revised Full Announcement",
+        "folderName": "PAR-24-251",
+        "synopsisAttachments": [
+          {
+            "id": 351713,
+            "mimeType": "application/pdf",
+            "fileName": "PAR-24-251 Animal and Veterinary Innovation Centers Full Notice of Funding Opportunity Announcement.pdf",
+            "fileDescription": "Animal and Veterinary Innovation Centers NOFO"
+          }
+        ]
+      }
+    ]
+  }
+}

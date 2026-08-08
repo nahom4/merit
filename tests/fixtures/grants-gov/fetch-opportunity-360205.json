@@ -1,0 +1,56 @@
+{
+  "errorcode": 0,
+  "msg": "Webservice Succeeds",
+  "data": {
+    "id": 360205,
+    "opportunityNumber": "USDA-NIFA-AFRI-011134",
+    "opportunityTitle": "Agriculture and Food Research Initiative Competitive Grants Program Foundational and Applied Science Program",
+    "docType": "synopsis",
+    "ost": "POSTED",
+    "synopsis": {
+      "agencyName": "Joseph  Perez\nProgram Analyst",
+      "synopsisDesc": "<p><span style=\"color: rgb(49, 37, 28);\">The AFRI Foundational and Applied Science Program supports grants in six AFRI priority areas to advance knowledge in both fundamental and applied sciences important to agriculture. The six priority areas are: Plant Health and Production and Plant Products; Animal Health and Production and Animal Products; Food Safety, Nutrition, and Health; Bioenergy, Natural Resources, and Environment; Agriculture Systems and Technology; and Agriculture Economics and Rural Communities. Research-only, extension-only, and integrated research, education and/or extension projects are solicited in this Request for Applications (RFA). See Foundational and Applied Science RFA for specific detail.</span></p>",
+      "responseDate": "Dec 31, 2026 12:00:00 AM EST",
+      "postingDate": "Aug 01, 2025 12:00:00 AM EDT",
+      "archiveDate": "Jan 30, 2027 12:00:00 AM EST",
+      "awardCeiling": "10000000",
+      "awardFloor": "10000",
+      "applicantEligibilityDesc": "Eligibility Requirements\r\nApplicants for AFRI must meet all the requirements discussed in this RFA. Failure to meet the eligibility criteria by the application deadline may result in exclusion from consideration or, preclude NIFA from making an award. For those new to Federal financial assistance, NIFA&rsquo;s About Grants provides highly recommended information about grants and other resources to help understand the Federal awards process.\r\n\r\nEligibility is linked to the project type as specified below.\r\n\r\n1.\tResearch, Education or Extension Projects\r\nEligible applicants for single-function Research, Education or Extension Projects include:\r\na)\tState Agricultural Experiment Station;\r\nb)\tcolleges and universities (including junior colleges offering associate degrees or higher);\r\nc)\tuniversity research foundations;\r\nd)\tother research institutions and organizations;\r\ne)\tFederal agencies;\r\nf)\tnational laboratories;\r\ng)\tprivate organizations or corporations;\r\nh)\tindividuals who are U.S. citizens, nationals, or permanent residents; and\r\ni)\tany group consisting of two or more entities identified in a) through h).\r\n\r\nEligible institutions do not include foreign and international organizations.\r\n\r\n2.\tIntegrated Projects\r\nEligible applicants for Integrated Projects include: \r\na)\tcolleges and universities;\r\nb)\t1994 Land-Grant Institutions; and\r\nc)\tHispanic-serving agricultural colleges and universities (see NIFA's Hispanic-Serving Agricultural Colleges and Universities page).\r\n\r\nFor item a) under Integrated Projects, the terms &quot;college&quot; and &quot;university&quot; mean an educational institution in any state which \r\na)\tadmits as regular students only persons having a certificate of graduation from a school providing secondary education, or the recognized equivalent of such a certificate; \r\nb)\tis legally authorized within such state to provide a program of education beyond secondary education; \r\nc)\tprovides an educational program for which a bachelor&rsquo;s degree or any other higher degree is awarded; \r\nd)\tis a public or other nonprofit institution; and \r\ne)\tis accredited by a nationally recognized accrediting agency or association. \r\n\r\nA research foundation maintained by a college or university is eligible to receive an award under this program.\r\n3.\tFood and Agricultural Science Enhancement Grants\r\nPart II &sect; C.2 contains the eligibility details for Food and Agricultural Science Enhancement (FASE) Grants. Note that under the FASE program, New Investigator Standard, New Investigator Seed, Strengthening Standard, Strengthening Workshop, Strengthening Seed, Equipment and Sabbatical Grants are solicited by specific program area priorities in this RFA. Not all grant types are solicited by every program area priority in this RFA and only grant types specifically solicited by each specific program area priority, as identified in the Program Area Descriptions of Part I &sect; C, will be considered for review.",
+      "applicantTypes": [
+        {
+          "id": "25",
+          "description": "Others (see text field entitled \"Additional Information on Eligibility\" for clarification)"
+        }
+      ],
+      "fundingActivityCategories": [
+        {
+          "id": "AG",
+          "description": "Agriculture"
+        }
+      ],
+      "estimatedFunding": "300000000",
+      "numberOfAwards": null,
+      "costSharing": false
+    },
+    "cfdas": [
+      {
+        "cfdaNumber": "10.310",
+        "programTitle": "Agriculture and Food Research Initiative (AFRI)"
+      }
+    ],
+    "synopsisAttachmentFolders": [
+      {
+        "folderType": "Full Announcement",
+        "folderName": "FY26-AFRI-FAS-RFA",
+        "synopsisAttachments": [
+          {
+            "id": 349216,
+            "mimeType": "application/pdf",
+            "fileName": "FY26-AFRI-FAS-NOFO-P-MOD4.pdf",
+            "fileDescription": "FY2026 - Agriculture and Food Research Initiative Competitive Grants Program Foundational and Applied Science Program - RFA-MOD1"
+          }
+        ]
+      }
+    ]
+  }
+}

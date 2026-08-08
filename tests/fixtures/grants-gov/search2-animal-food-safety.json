@@ -1,0 +1,80 @@
+{
+  "errorcode": 0,
+  "msg": "Webservice Succeeds",
+  "data": {
+    "hitCount": 550,
+    "startRecord": 0,
+    "oppHits": [
+      {
+        "id": "359816",
+        "number": "PAR-25-003",
+        "title": "Animal Food Regulatory Program Standards Implementation Development and Maintenance, with Mutual Reliance Initiatives Clinical Trials Not Allowed",
+        "agency": "Food and Drug Administration",
+        "agencyCode": "HHS-FDA",
+        "openDate": "06/25/2025",
+        "closeDate": "04/01/2027",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+          "93.103"
+        ]
+      },
+      {
+        "id": "354573",
+        "number": "PAR-24-216",
+        "title": "Minor Use Minor Species Development of Drugs (R01)",
+        "agency": "Food and Drug Administration",
+        "agencyCode": "HHS-FDA",
+        "openDate": "05/29/2024",
+        "closeDate": "01/29/2027",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+          "93.103"
+        ]
+      },
+      {
+        "id": "358411",
+        "number": "RFA-FD-25-007",
+        "title": "Laboratory Flexible Funding Model (LFFM)",
+        "agency": "Food and Drug Administration",
+        "agencyCode": "HHS-FDA",
+        "openDate": "02/06/2025",
+        "closeDate": "01/11/2028",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+          "93.103"
+        ]
+      },
+      {
+        "id": "360205",
+        "number": "USDA-NIFA-AFRI-011134",
+        "title": "Agriculture and Food Research Initiative Competitive Grants Program Foundational and Applied Science Program",
+        "agency": "National Institute of Food and Agriculture",
+        "agencyCode": "USDA-NIFA",
+        "openDate": "08/01/2025",
+        "closeDate": "12/31/2026",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+          "10.310"
+        ]
+      },
+      {
+        "id": "355044",
+        "number": "PAR-24-251",
+        "title": "Animal and Veterinary Innovation Centers (U18)",
+        "agency": "Food and Drug Administration",
+        "agencyCode": "HHS-FDA",
+        "openDate": "06/20/2024",
+        "closeDate": "05/12/2028",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+          "93.103"
+        ]
+      }
+    ]
+  }
+}

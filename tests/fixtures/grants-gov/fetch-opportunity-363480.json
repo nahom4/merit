@@ -1,0 +1,80 @@
+{
+  "errorcode": 0,
+  "msg": "Webservice Succeeds",
+  "data": {
+    "id": 363480,
+    "opportunityNumber": "26-DC-MG-SOI-TRX-FALL-2026",
+    "opportunityTitle": "SOI - Rural Transportation Match and Gap Funding Assistance Program",
+    "docType": "synopsis",
+    "ost": "POSTED",
+    "synopsis": {
+      "agencyName": "Christian  Diamond\nGrantor",
+      "synopsisDesc": "<p>The Denali Commission is inviting statements of interest for rural Alaska transportation projects in need of local match or gap funding assistance. Many Alaskan communities lack the tax base or resources necessary to meet cost share requirements. This opportunity seeks to provide funding to cover local match needs or address funding gaps, facilitating the completion of transportation projects and supporting infrastructure development in rural communities across the state.</p><p><br></p><p><strong>Overview</strong></p><p>The Commission announces the availability of match and gap assistance funds for construction-ready rural transportation improvement projects. This announcement commits up to $7,500,000 for the purpose of this program from funds appropriated under Public Law 117-328 and allows for non-federal match via Section 309(h) Non-Federal Share of the Denali Commission Act of 1998 (42 U.S.C. 3121; Public Law 105-277), stating, “funds made available to carry out this section may be used to meet the non-Federal share of the cost of projects under title 23, United States Code”.</p><p><br></p><p>Eligible projects must benefit the public in Alaska. Eligible applicants include municipal, borough, and tribal governments; Indian Tribes as defined by Title 25 US Code § 5304; regional tribal non-profit organizations; and other non-profit organizations.</p><p><br></p><p>Entities which do not have an active or pending award with the Denali Commission transportation program will be given priority consideration.</p><p><br></p><p>The Commission will evaluate statements of interest forms shortly after the application window closes. A review committee of Commission staff and subject matter experts will conduct a conformance review and evaluate statements according to the priorities listed above, beginning to invite successful respondents by early September to submit proposals. Invitations for proposal will give interested parties approximately 30 days to respond with a full proposal. The Transportation Advisory Committee, Commission staff and subject matter experts will evaluate full proposals. The Commission anticipates making awards in spring 2027. The Commission reserves the right to partially fund projects, subject to the quality of funding assistance requests received and other relevant considerations.</p><p><br></p><p>Download the full announcement and fillable form in Related Documents: <strong>Statement of Interest - Rural Transportation Match and Gap Funding Assistance Program</strong></p><p><br></p><p><strong>﻿Please email your completed Statement of Interest form to the Commission at projects@denali.gov. DO NOT UPLOAD TO Grants.gov.</strong></p>",
+      "responseDate": "Aug 28, 2026 12:00:00 AM EDT",
+      "postingDate": "Aug 05, 2026 12:00:00 AM EDT",
+      "archiveDate": "Sep 27, 2026 12:00:00 AM EDT",
+      "awardCeiling": "1000000",
+      "awardFloor": "50000",
+      "applicantEligibilityDesc": "Entities which do not have an active or pending award with the Denali Commission transportation program will be given priority consideration.",
+      "applicantTypes": [
+        {
+          "id": "05",
+          "description": "Independent school districts"
+        },
+        {
+          "id": "13",
+          "description": "Nonprofits that do not have a 501(c)(3) status with the IRS, other than institutions of higher education"
+        },
+        {
+          "id": "12",
+          "description": "Nonprofits having a 501(c)(3) status with the IRS, other than institutions of higher education"
+        },
+        {
+          "id": "07",
+          "description": "Native American tribal governments (Federally recognized)"
+        },
+        {
+          "id": "02",
+          "description": "City or township governments"
+        },
+        {
+          "id": "11",
+          "description": "Native American tribal organizations (other than Federally recognized tribal governments)"
+        },
+        {
+          "id": "01",
+          "description": "County governments"
+        }
+      ],
+      "fundingActivityCategories": [
+        {
+          "id": "T",
+          "description": "Transportation"
+        }
+      ],
+      "estimatedFunding": "7500000",
+      "numberOfAwards": "11",
+      "costSharing": true
+    },
+    "cfdas": [
+      {
+        "cfdaNumber": "90.100",
+        "programTitle": "Denali Commission Program"
+      }
+    ],
+    "synopsisAttachmentFolders": [
+      {
+        "folderType": "Full Announcement",
+        "folderName": "SOI - Match and Gap Assistance",
+        "synopsisAttachments": [
+          {
+            "id": 354406,
+            "mimeType": "application/pdf",
+            "fileName": "FY26 Fall TRX Statement of Interest Form fillable.pdf",
+            "fileDescription": "Statement of Interest - Rural Transportation Match and Gap Funding Assistance Program.pdf"
+          }
+        ]
+      }
+    ]
+  }
+}

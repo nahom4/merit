@@ -1,0 +1,108 @@
+{
+  "errorcode": 0,
+  "msg": "Webservice Succeeds",
+  "data": {
+    "id": 361986,
+    "opportunityNumber": "HHS-2026-ACF-ACYF-AP-0003",
+    "opportunityTitle": "Personal Responsibility Education Innovative Strategies (PREIS)",
+    "docType": "synopsis",
+    "ost": "POSTED",
+    "synopsis": {
+      "agencyName": "Administration for Children & Families - ACYF/FYSB",
+      "synopsisDesc": "The Personal Responsibility Education Program-Innovative Strategies (PREIS) builds the evidence base for adolescent pregnancy prevention interventions that are effective with high risk and vulnerable youth populations and addresses gaps with new promising program models. PREIS funds rigorous impact evaluations of innovative youth pregnancy prevention interventions that target services to high-risk, vulnerable, and culturally under-represented youth populations, including youth in foster care/child welfare settings, juvenile justice, victims of trafficking, youth who have runaway or experience homelessness, youth with HIV/AIDS, expectant youth who are under 21 years of age and their partners, parenting youth who are under 21 years of age and their partners, and youth residing in areas with high birth rates for youth. Projects must implement at least three of the six congressionally mandated adulthood preparation subjects (APS) which include: 1) healthy relationships, 2) adolescent development, 3) financial literacy, 4) parent-child communication, 5) educational and career success, and 6) healthy life skills. Projects are required to conduct rigorous impact evaluations (randomized controlled trials or quasi-experimental design studies with assignment to treatment or control group). PREIS evaluations must be conducted by an independent, third-party evaluator.Interventions to be evaluated under this funding opportunity are expected to have compelling, positive preliminary evidence from previous research, but have not been evaluated through a randomized control trial or quasi-experimental design. Interventions must have a well-described theory of change, with intervention materials already developed.",
+      "responseDate": "Aug 18, 2026 12:00:00 AM EDT",
+      "postingDate": "Jul 17, 2026 12:00:00 AM EDT",
+      "archiveDate": null,
+      "awardCeiling": "900000",
+      "awardFloor": "750000",
+      "applicantEligibilityDesc": "Applications from collaboratives and/or consortiums must identify a primary applicant responsible for administering the award. A primary applicant must be named in the application.  Applications from individuals (including sole proprietorships) and foreign entities are not eligible and will be disqualified from the merit review and funding under this funding opportunity. Faith-based and community organizations that meet the eligibility requirements are eligible for awards under this funding opportunity.",
+      "applicantTypes": [
+        {
+          "id": "01",
+          "description": "County governments"
+        },
+        {
+          "id": "11",
+          "description": "Native American tribal organizations (other than Federally recognized tribal governments)"
+        },
+        {
+          "id": "20",
+          "description": "Private institutions of higher education"
+        },
+        {
+          "id": "23",
+          "description": "Small businesses"
+        },
+        {
+          "id": "05",
+          "description": "Independent school districts"
+        },
+        {
+          "id": "22",
+          "description": "For profit organizations other than small businesses"
+        },
+        {
+          "id": "07",
+          "description": "Native American tribal governments (Federally recognized)"
+        },
+        {
+          "id": "02",
+          "description": "City or township governments"
+        },
+        {
+          "id": "06",
+          "description": "Public and State controlled institutions of higher education"
+        },
+        {
+          "id": "12",
+          "description": "Nonprofits having a 501(c)(3) status with the IRS, other than institutions of higher education"
+        },
+        {
+          "id": "04",
+          "description": "Special district governments"
+        },
+        {
+          "id": "08",
+          "description": "Public housing authorities/Indian housing authorities"
+        },
+        {
+          "id": "00",
+          "description": "State governments"
+        },
+        {
+          "id": "13",
+          "description": "Nonprofits that do not have a 501(c)(3) status with the IRS, other than institutions of higher education"
+        }
+      ],
+      "fundingActivityCategories": [
+        {
+          "id": "ISS",
+          "description": "Income Security and Social Services"
+        }
+      ],
+      "estimatedFunding": "10000000",
+      "numberOfAwards": "12",
+      "costSharing": false
+    },
+    "cfdas": [
+      {
+        "cfdaNumber": "93.092",
+        "programTitle": "Affordable Care Act (ACA) Personal Responsibility Education Program"
+      }
+    ],
+    "synopsisAttachmentFolders": [
+      {
+        "folderType": "Full Announcement",
+        "folderName": "Full Announcement",
+        "synopsisAttachments": [
+          {
+            "id": 353953,
+            "mimeType": "application/pdf",
+            "fileName": "HHS-2026-ACF-ACYF-AP-0003.pdf",
+            "fileDescription": "HHS-2026-ACF-ACYF-AP-0003.pdf"
+          }
+        ]
+      }
+    ]
+  }
+}

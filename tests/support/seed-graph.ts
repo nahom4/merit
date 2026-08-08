@@ -71,6 +71,9 @@ export const seedGivingGraph = async (db: Database): Promise<{ grants: number; e
       zip: row['recipient_zip'] === null ? null : String(row['recipient_zip']),
       revenueCents: 60_000_000,
       blockingKey: blockingKey(normalized, state),
+      // The bundle carries no exempt-status codes, so the seeded registry states none. The
+      // 501(c)(3) screening check reports that honestly as undecided rather than assuming.
+      subsectionCode: null,
     };
   });
 

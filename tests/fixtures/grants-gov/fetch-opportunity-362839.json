@@ -1,0 +1,80 @@
+{
+  "errorcode": 0,
+  "msg": "Webservice Succeeds",
+  "data": {
+    "id": 362839,
+    "opportunityNumber": "HHS-2026-ACF-OCS-EAH-0027",
+    "opportunityTitle": "Affordable Housing and Supportive Services Demonstration",
+    "docType": "synopsis",
+    "ost": "POSTED",
+    "synopsis": {
+      "agencyName": "Administration for Children and Families - OCS",
+      "synopsisDesc": "The Office of Community Services (OCS) intends to fund Community Action Agencies (CAAs) and tribes that received FY25 Community Services Block Grant (CSBG) awards and own affordable housing units. The purpose of the AHSSD is to demonstrate the potential for improving housing stability, economic mobility, and well-being by boosting public welfare and support service enrollment for residents of affordable housing who are American citizens.  AHSSD does this by improving the coordination of public and private assistance programs to prevent and reduce dependency among this population cohort. Recipients will offer direct provision of specific public welfare and support services, internal referrals to assistance programs, external referrals to programming offered through other agencies, and/or case management and human-services coordination. Recipients must also provide services to eligible residents who live in affordable housing units.The range of service enrollment is broad, including educational opportunities for children and adults; afterschool and/or summer programs for children and teens; direct provision of childcare programs/opportunities for children ages 0 to 5 or connections to Head Start and Early Head Start programs; older adult care services; mental health, alcohol, and addiction services; services for Americans and eligible residents with disabilities; self-sufficiency resources; resources on homeownership; financial literacy training; transportation services for residents; referrals and connections to resources to help meet concrete needs; and healthcare services.",
+      "responseDate": "Aug 24, 2026 12:00:00 AM EDT",
+      "postingDate": "Jul 24, 2026 12:00:00 AM EDT",
+      "archiveDate": null,
+      "awardCeiling": "300000",
+      "awardFloor": "150000",
+      "applicantEligibilityDesc": "Eligible applicants are Community Action Agencies (CAAs) and tribes that were funded directly by the CSBG in FY 2025 (see Appendix A) that own affordable housing units and provide support services to residents of the affordable units. CAAs and tribes funded directly by CSBG, by nature of this funding support, work to provide public welfare, health, and social services to their communities. Applications from individuals (including sole proprietorships) and foreign entities are not eligible and will be disqualified from the merit review and funding under this funding opportunity.",
+      "applicantTypes": [
+        {
+          "id": "11",
+          "description": "Native American tribal organizations (other than Federally recognized tribal governments)"
+        },
+        {
+          "id": "07",
+          "description": "Native American tribal governments (Federally recognized)"
+        },
+        {
+          "id": "25",
+          "description": "Others (see text field entitled \"Additional Information on Eligibility\" for clarification)"
+        },
+        {
+          "id": "02",
+          "description": "City or township governments"
+        },
+        {
+          "id": "04",
+          "description": "Special district governments"
+        },
+        {
+          "id": "12",
+          "description": "Nonprofits having a 501(c)(3) status with the IRS, other than institutions of higher education"
+        },
+        {
+          "id": "01",
+          "description": "County governments"
+        }
+      ],
+      "fundingActivityCategories": [
+        {
+          "id": "ISS",
+          "description": "Income Security and Social Services"
+        }
+      ],
+      "estimatedFunding": "2100000",
+      "numberOfAwards": "7",
+      "costSharing": true
+    },
+    "cfdas": [
+      {
+        "cfdaNumber": "93.647",
+        "programTitle": "Social Services Research and Demonstration"
+      }
+    ],
+    "synopsisAttachmentFolders": [
+      {
+        "folderType": "Full Announcement",
+        "folderName": "Full Announcement",
+        "synopsisAttachments": [
+          {
+            "id": 354136,
+            "mimeType": "application/pdf",
+            "fileName": "hhs-2026-acf-ocs-eah-0027.pdf",
+            "fileDescription": "hhs-2026-acf-ocs-eah-0027.pdf"
+          }
+        ]
+      }
+    ]
+  }
+}

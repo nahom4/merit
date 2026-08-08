@@ -69,6 +69,79 @@ const BORDERS: Readonly<Record<string, readonly string[]>> = {
   MP: [],
 };
 
+/**
+ * The jurisdiction's name in the words an announcement uses. Federal eligibility text states
+ * geography in prose -- "the eight Mississippi Delta Region States (Alabama, Arkansas, ...)" --
+ * so screening has to recognise the name, and a rejection has to be readable back to a user in
+ * the same words rather than as a two-letter code.
+ */
+const NAMES: Readonly<Record<string, string>> = {
+  AL: 'Alabama',
+  AK: 'Alaska',
+  AZ: 'Arizona',
+  AR: 'Arkansas',
+  CA: 'California',
+  CO: 'Colorado',
+  CT: 'Connecticut',
+  DE: 'Delaware',
+  DC: 'District of Columbia',
+  FL: 'Florida',
+  GA: 'Georgia',
+  HI: 'Hawaii',
+  ID: 'Idaho',
+  IL: 'Illinois',
+  IN: 'Indiana',
+  IA: 'Iowa',
+  KS: 'Kansas',
+  KY: 'Kentucky',
+  LA: 'Louisiana',
+  ME: 'Maine',
+  MD: 'Maryland',
+  MA: 'Massachusetts',
+  MI: 'Michigan',
+  MN: 'Minnesota',
+  MS: 'Mississippi',
+  MO: 'Missouri',
+  MT: 'Montana',
+  NE: 'Nebraska',
+  NV: 'Nevada',
+  NH: 'New Hampshire',
+  NJ: 'New Jersey',
+  NM: 'New Mexico',
+  NY: 'New York',
+  NC: 'North Carolina',
+  ND: 'North Dakota',
+  OH: 'Ohio',
+  OK: 'Oklahoma',
+  OR: 'Oregon',
+  PA: 'Pennsylvania',
+  RI: 'Rhode Island',
+  SC: 'South Carolina',
+  SD: 'South Dakota',
+  TN: 'Tennessee',
+  TX: 'Texas',
+  UT: 'Utah',
+  VT: 'Vermont',
+  VA: 'Virginia',
+  WA: 'Washington',
+  WV: 'West Virginia',
+  WI: 'Wisconsin',
+  WY: 'Wyoming',
+  PR: 'Puerto Rico',
+  VI: 'Virgin Islands',
+  GU: 'Guam',
+  AS: 'American Samoa',
+  MP: 'Northern Mariana Islands',
+};
+
+/**
+ * Name-to-code pairs, longest name first. Order is load-bearing for a prose scan: matching
+ * "Virginia" before "West Virginia" would read a West Virginia restriction as a Virginia one.
+ */
+const NAME_PAIRS: readonly (readonly [string, string])[] = Object.entries(NAMES)
+  .map(([code, name]) => [name, code] as const)
+  .sort((a, b) => b[0].length - a[0].length);
+
 const parse = (value: unknown): Result<UsState, ParseError> => {
   if (typeof value !== 'string') {
     return err(new ParseError('state must be a string', { field: 'state', received: typeof value }));
@@ -83,6 +156,10 @@ const parse = (value: unknown): Result<UsState, ParseError> => {
 export const UsState = {
   parse,
   toString: (state: UsState): string => state as string,
+  /** The jurisdiction's name. Falls back to the code, which is what a filing carries. */
+  label: (state: string): string => NAMES[state.toUpperCase()] ?? state,
+  /** Name-to-code pairs, longest name first, for scanning prose. */
+  namePairs: (): readonly (readonly [string, string])[] => NAME_PAIRS,
   /** The state plus every state it borders. Always contains the state itself. */
   region: (state: UsState): ReadonlySet<string> =>
     new Set([state as string, ...(BORDERS[state as string] ?? [])]),

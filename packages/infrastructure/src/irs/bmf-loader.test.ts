@@ -1,5 +1,52 @@
-import { describe, expect, it } from 'vitest';
-import { splitCsvLine } from './bmf-loader.js';
+import { mkdtempSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { afterAll, describe, expect, it } from 'vitest';
+import { BmfSchemaChanged, splitCsvLine, streamRegistry } from './bmf-loader.js';
+
+/** The header the live BMF returns, in the order the appendix records it. */
+const HEADER = 'EIN,NAME,CITY,STATE,ZIP,SUBSECTION,REVENUE_AMT,NTEE_CD';
+
+const directory = mkdtempSync(join(tmpdir(), 'merit-bmf-'));
+
+const registryFile = (contents: string): string => {
+  const path = join(directory, `bmf-${Math.random().toString(36).slice(2)}.csv`);
+  writeFileSync(path, contents, 'utf8');
+  return path;
+};
+
+const stream = async (contents: string) => {
+  const rows = [];
+  for await (const entity of streamRegistry(registryFile(contents))) rows.push(entity);
+  return rows;
+};
+
+afterAll(() => rmSync(directory, { recursive: true, force: true }));
+
+describe('streamRegistry — exempt status', () => {
+  it('reads the subsection the 501(c)(3) eligibility check decides on', async () => {
+    const rows = await stream(
+      `${HEADER}\n581613254,CAPE FEAR LITERACY COUNCIL,WILMINGTON,NC,28401,03,656000,B60\n`,
+    );
+
+    expect(rows[0]?.subsectionCode).toBe(3);
+  });
+
+  it('reads a registry row with no subsection as not stated, never as not a charity', async () => {
+    const rows = await stream(
+      `${HEADER}\n581613254,CAPE FEAR LITERACY COUNCIL,WILMINGTON,NC,28401,,656000,B60\n`,
+    );
+
+    expect(rows[0]?.subsectionCode).toBeNull();
+  });
+
+  it('raises when the registry stops carrying the column rather than loading everything as unknown', async () => {
+    const withoutSubsection =
+      'EIN,NAME,CITY,STATE,ZIP,REVENUE_AMT,NTEE_CD\n123456789,A CHARITY,WILMINGTON,NC,28401,1000,B60\n';
+
+    await expect(stream(withoutSubsection)).rejects.toThrow(BmfSchemaChanged);
+  });
+});
 
 describe('splitCsvLine', () => {
   it('splits a plain row', () => {

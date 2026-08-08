@@ -22,6 +22,12 @@ export const ProspectCard = ({ prospect }: { prospect: ProspectRowView }) => (
       <ScoreBars bars={prospect.bars} />
     </div>
 
+    <p className="mt-3">
+      <a href={prospect.reportHref} className="text-sm text-accent">
+        Reachability report
+      </a>
+    </p>
+
     <dl className="mt-4 flex flex-wrap gap-6 text-sm">
       <div>
         <dt className="text-muted">Median grant</dt>

@@ -1,0 +1,116 @@
+{
+  "errorcode": 0,
+  "msg": "Webservice Succeeds",
+  "data": {
+    "id": 361754,
+    "opportunityNumber": "PA-FPH-27-001",
+    "opportunityTitle": "Title X Family Planning Services Grants",
+    "docType": "synopsis",
+    "ost": "POSTED",
+    "synopsis": {
+      "agencyName": "Office of the Assistant Secretary for Health",
+      "synopsisDesc": "The Office of Population Affairs (OPA) announces the anticipated availability of funds for Fiscal Year (FY) 2027 grants under the authority of Title X of the Public Health Service Act, Section 1001 (42 U.S.C. §300).This notice solicits applications for projects to provide Title X services throughout the 50 United States, District of Columbia, Guam, the Commonwealth of Puerto Rico, the Northern Mariana Islands, the U.S. Virgin Islands, American Samoa, the U.S. Outlaying Islands (Midway, Wake, et al.), the Republic of the Marshall Islands, the Federated State of Micronesia, and the Republic of Palau (hereafter, States). OPA intends to make available approximately up to $257 million for up to 90 grant awards for a period of up to five (5) years. The actual amount available will not be determined until enactment of the FY 2027 federal budget.OPA\"s Title X Family Planning Program funds \"voluntary family planning projects [that] offer a broad range of acceptable and effective family planning methods and services (including natural family planning methods, infertility services, and services for adolescents).\" (Title X of the Public Health Service Act, 42 U.S.C. 300 et seq., available at https://opa.hhs.gov/sites/default/files/2020-07/title-x-statute-attachment-a_0.pdf). The Title X Program is implemented through competitively awarded grants to a diverse network of public and private nonprofit entities. The program helps millions of low-income and uninsured Americans develop health literacy and access family planning and related health services, empowering individuals and families to make informed decisions and navigate chronic health conditions and pregnancy with confidence. By offering counseling and education to improve individuals\" optimal health outcomes, Title X promotes the level of health literacy necessary to support informed consent across the reproductive lifespan. For example, endometriosis often goes undiagnosed for years because symptoms such as severe menstrual pain or irregular bleeding are frequently normalized or minimized. Body literacy counseling helps patients recognize that these experiences are not \"normal\" features of womanhood, but potential indicators of an underlying condition, prompting earlier discussion with providers, timely diagnosis, appropriate treatment, and improved long-term reproductive and overall health outcomes.Likewise, foundational knowledge of reproductive physiology enables patients and couples to recognize early signs of dysfunction, seek timely evaluation, and participate meaningfully in care decisions. Persistent gaps in reproductive knowledge highlight the need for such education. For example, a survey conducted for OPA in 2020 found that only 50% of women and 38% of men know that a woman\"s ovaries do not keep producing new eggs until menopause (https://opa.hhs.gov/sites/default/files/2021-01/fertility-knowledge-survey-findings-exec-summary-2020.pdf). By supporting body literacy education alongside evidence-based evaluation and treatment of chronic disease, Title X services can help patients move beyond symptom-focused care toward informed, preventive, and restorative approaches to reproductive health.These efforts align with HHS\"s focus on addressing the root causes of chronic illnesses by targeting conditions that affect reproductive health and fertility. By promoting strategies that support education and counseling on reproductive health goals, reduce chronic disease, and assist individuals seeking to achieve healthy pregnancies, the Title X Program strengthens American families, individuals, and communities.This notice solicits applications from public and private nonprofit entities to establish and operate voluntary Title X projects. These projects include a broad range of effective and acceptable services, including pregnancy testing and counseling, basic infertility services, sexually transmitted infection (STI) services (such as HIV prevention education, counseling, testing, and referral), health literacy, reproductive goals counseling to increase optimal health outcomes, and other preconception health services. Title X services also help address and provide referrals for health conditions that affect fertility, including endometriosis, polycystic ovary syndrome (PCOS), and uterine fibroids in women, as well as low sperm count, low sperm motility, low testosterone, and erectile dysfunction in men. OPA seeks a broad competition for Title X grant awards and are interested in innovative strategies to address chronic disease; reduce overmedicalization by strengthening approaches focused on underlying behavioral and lifestyle factors of health and evidence-based practices such as fertility-awareness based methods; promote health and body literacy; advance reproductive goals counseling for all clients; and support family formation.All activities funded under this announcement must be in compliance with the requirements of the Title X statute, legislative mandates, and regulations. Copies of the Title X statute, regulations, and legislative mandates may be downloaded from the OPA website at https://opa.hhs.gov/grant-programs/title- x-service-grants/title-x-statutes-regulations-and-legislative-mandates.",
+      "responseDate": "Jan 11, 2027 12:00:00 AM EST",
+      "postingDate": "Apr 03, 2026 12:00:00 AM EDT",
+      "archiveDate": "Jul 31, 2027 12:00:00 AM EDT",
+      "awardCeiling": "22000000",
+      "awardFloor": "200000",
+      "applicantEligibilityDesc": "Any public or private nonprofit entity is eligible to apply.",
+      "applicantTypes": [
+        {
+          "id": "06",
+          "description": "Public and State controlled institutions of higher education"
+        },
+        {
+          "id": "12",
+          "description": "Nonprofits having a 501(c)(3) status with the IRS, other than institutions of higher education"
+        },
+        {
+          "id": "04",
+          "description": "Special district governments"
+        },
+        {
+          "id": "11",
+          "description": "Native American tribal organizations (other than Federally recognized tribal governments)"
+        },
+        {
+          "id": "08",
+          "description": "Public housing authorities/Indian housing authorities"
+        },
+        {
+          "id": "02",
+          "description": "City or township governments"
+        },
+        {
+          "id": "20",
+          "description": "Private institutions of higher education"
+        },
+        {
+          "id": "05",
+          "description": "Independent school districts"
+        },
+        {
+          "id": "00",
+          "description": "State governments"
+        },
+        {
+          "id": "13",
+          "description": "Nonprofits that do not have a 501(c)(3) status with the IRS, other than institutions of higher education"
+        },
+        {
+          "id": "25",
+          "description": "Others (see text field entitled \"Additional Information on Eligibility\" for clarification)"
+        },
+        {
+          "id": "07",
+          "description": "Native American tribal governments (Federally recognized)"
+        },
+        {
+          "id": "01",
+          "description": "County governments"
+        }
+      ],
+      "fundingActivityCategories": [
+        {
+          "id": "HL",
+          "description": "Health"
+        }
+      ],
+      "estimatedFunding": "257000000",
+      "numberOfAwards": "90",
+      "costSharing": false
+    },
+    "cfdas": [
+      {
+        "cfdaNumber": "93.217",
+        "programTitle": "Family Planning Services"
+      }
+    ],
+    "synopsisAttachmentFolders": [
+      {
+        "folderType": "Full Announcement",
+        "folderName": "Full Announcement",
+        "synopsisAttachments": [
+          {
+            "id": 350973,
+            "mimeType": "application/pdf",
+            "fileName": "2027 Title X Services NOFO_PA-FPH-27-001_PDF.pdf",
+            "fileDescription": "2027 Title X Services NOFO_PA-FPH-27-001_PDF.pdf"
+          }
+        ]
+      },
+      {
+        "folderType": "Revised Full Announcement",
+        "folderName": "Revised Full Announcement",
+        "synopsisAttachments": [
+          {
+            "id": 353768,
+            "mimeType": "application/pdf",
+            "fileName": "PA-FPH-27-001 Revised Title X Services NOFO 7.8.26.pdf",
+            "fileDescription": "PA-FPH-27-001 Revised Title X Services NOFO 7.8.26.pdf"
+          }
+        ]
+      }
+    ]
+  }
+}

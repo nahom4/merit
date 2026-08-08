@@ -1,0 +1,128 @@
+{
+  "errorcode": 0,
+  "msg": "Webservice Succeeds",
+  "data": {
+    "id": 362942,
+    "opportunityNumber": "HRSA-26-045",
+    "opportunityTitle": "Delta States Rural Development Network Program",
+    "docType": "synopsis",
+    "ost": "POSTED",
+    "synopsis": {
+      "agencyName": "Health Resources and Services Administration",
+      "synopsisDesc": "The Delta States Rural Development Network Program supports support the planning, development, and implementation of integrated health care networks that collaborate in order to (i) achieve efficiencies; (ii) expand access to, coordinate, and improve the quality of basic health care services and associated health outcomes in rural areas within the eight rural Mississippi Delta Region states (Alabama, Arkansas, Illinois, Kentucky, Louisiana, Mississippi, Missouri, and Tennessee); and (iii) strengthen the rural health care system as a whole.",
+      "responseDate": "Aug 12, 2026 12:00:00 AM EDT",
+      "postingDate": "Jul 13, 2026 12:00:00 AM EDT",
+      "archiveDate": "Apr 22, 2027 12:00:00 AM EDT",
+      "awardCeiling": "1188684",
+      "awardFloor": "905664",
+      "applicantEligibilityDesc": "Eligible applicants include domestic public or private, non-profit or for-profit entities including domestic faith-based and community-based organizations, tribes and tribal organizations.  The applicant organization may be located in a rural or urban area and must have demonstrated experience serving, or capacity to serve, populations in rural areas within the eight Mississippi Delta Region States (Alabama, Arkansas, Illinois, Kentucky, Louisiana, Mississippi, Missouri, and Tennessee).  The applicant organization may not previously have received an award under 42 U.S.C. 254c(f) for the same or a similar project unless the entity is proposing to expand the scope of the project or the area that will be served through the project.",
+      "applicantTypes": [
+        {
+          "id": "06",
+          "description": "Public and State controlled institutions of higher education"
+        },
+        {
+          "id": "13",
+          "description": "Nonprofits that do not have a 501(c)(3) status with the IRS, other than institutions of higher education"
+        },
+        {
+          "id": "22",
+          "description": "For profit organizations other than small businesses"
+        },
+        {
+          "id": "25",
+          "description": "Others (see text field entitled \"Additional Information on Eligibility\" for clarification)"
+        },
+        {
+          "id": "23",
+          "description": "Small businesses"
+        },
+        {
+          "id": "99",
+          "description": "Unrestricted (i.e., open to any type of entity above), subject to any clarification in text field entitled \"Additional Information on Eligibility\""
+        },
+        {
+          "id": "02",
+          "description": "City or township governments"
+        },
+        {
+          "id": "04",
+          "description": "Special district governments"
+        },
+        {
+          "id": "07",
+          "description": "Native American tribal governments (Federally recognized)"
+        },
+        {
+          "id": "00",
+          "description": "State governments"
+        },
+        {
+          "id": "05",
+          "description": "Independent school districts"
+        },
+        {
+          "id": "20",
+          "description": "Private institutions of higher education"
+        },
+        {
+          "id": "11",
+          "description": "Native American tribal organizations (other than Federally recognized tribal governments)"
+        },
+        {
+          "id": "12",
+          "description": "Nonprofits having a 501(c)(3) status with the IRS, other than institutions of higher education"
+        },
+        {
+          "id": "01",
+          "description": "County governments"
+        },
+        {
+          "id": "08",
+          "description": "Public housing authorities/Indian housing authorities"
+        }
+      ],
+      "fundingActivityCategories": [
+        {
+          "id": "HL",
+          "description": "Health"
+        }
+      ],
+      "estimatedFunding": "12000000",
+      "numberOfAwards": "12",
+      "costSharing": false
+    },
+    "cfdas": [
+      {
+        "cfdaNumber": "93.619",
+        "programTitle": "Rural Health Limited Geographic  Areas: Delta, Appalachian Region, and Northern Border Region"
+      }
+    ],
+    "synopsisAttachmentFolders": [
+      {
+        "folderType": "Full Announcement",
+        "folderName": "Full Announcement",
+        "synopsisAttachments": [
+          {
+            "id": 353822,
+            "mimeType": "application/pdf",
+            "fileName": "HRSA-26-045 Final.pdf",
+            "fileDescription": "HRSA-26-045 Final.pdf"
+          }
+        ]
+      },
+      {
+        "folderType": "Other Supporting Documents",
+        "folderName": "TA webinar",
+        "synopsisAttachments": [
+          {
+            "id": 353919,
+            "mimeType": "application/pdf",
+            "fileName": "TA Webinar Announcement HRSA-26-045 (pre-recorded).pdf",
+            "fileDescription": "TA Webinar Announcement HRSA-26-045"
+          }
+        ]
+      }
+    ]
+  }
+}

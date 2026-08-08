@@ -46,6 +46,33 @@ If you find yourself thinking *"this is a bit subtle"* — that's the signal. Wr
 This ordering — **whole → parts → details** — is the single most important thing about how these
 notes should read.
 
+## Cover the Whole Product, Not Only What You Built
+
+**The reader is reading ahead of you.** They want to understand the parts that have not been
+implemented yet, so that when an agent starts on one they already know what it is building, what
+it must not do, and how to check it. A set of notes that describes only the finished slices leaves
+the reader with a detailed view of a fragment and no idea of the shape of the thing.
+
+So:
+
+- **Whenever you write notes covering a project, cover the unbuilt parts too** — from the spec,
+  the roadmap, and the decisions already recorded. Design that is written down is knowable, and
+  explaining it is more useful before the code exists than after.
+- **Mark every note's status explicitly**, at the top:
+  - **Built** — running code. Cite real files and line numbers.
+  - **Designed** — specified but not yet written. Cite spec sections and roadmap criteria, describe
+    the *shape* the code must take given the project's conventions, and never link a path that does
+    not exist as though it does.
+- **A Designed note should end with how to verify it** — the tests that must exist, the questions
+  to ask the implementer, the open design questions to expect. That is the reader's leverage.
+- **When a slice lands, rewrite its note against the real code** and flip the status. The note is
+  a living document, not a record of what was once planned.
+
+Being honest about which half you are describing is the whole point. A confident note about code
+that does not exist is worse than no note.
+
+---
+
 ## How to Write a Good Note
 
 Be as long as the lesson needs — **no longer, no shorter.** Don't sacrifice understanding for
@@ -84,6 +111,9 @@ Copy this for each new note:
 
 ```markdown
 # <Concept / Decision Title>
+
+**Status: Built | Designed** — <if Designed: name the spec sections and roadmap criteria this is
+drawn from, and say plainly that no code exists yet.>
 
 **TL;DR:** <one or two sentences — the whole lesson in a nutshell>
 

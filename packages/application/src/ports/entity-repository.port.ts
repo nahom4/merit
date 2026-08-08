@@ -32,6 +32,8 @@ export interface RegistryEntityRow {
   readonly zip: string | null;
   readonly revenueCents: number | null;
   readonly blockingKey: string | null;
+  /** The BMF's SUBSECTION column: 3 is 501(c)(3). Null when the registry states none. */
+  readonly subsectionCode: number | null;
 }
 
 export interface EntityRepository {

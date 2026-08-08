@@ -1,0 +1,80 @@
+{
+  "errorcode": 0,
+  "msg": "Webservice Succeeds",
+  "data": {
+    "hitCount": 27,
+    "startRecord": 0,
+    "oppHits": [
+      {
+        "id": "361754",
+        "number": "PA-FPH-27-001",
+        "title": "Title X Family Planning Services Grants",
+        "agency": "Office of the Assistant Secretary for Health",
+        "agencyCode": "HHS-OPHS",
+        "openDate": "04/03/2026",
+        "closeDate": "01/11/2027",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+          "93.217"
+        ]
+      },
+      {
+        "id": "363064",
+        "number": "PDS-CAIRO-004-FY26",
+        "title": "Mentor Program for English Educators",
+        "agency": "U.S. Mission to Egypt",
+        "agencyCode": "DOS-EGY",
+        "openDate": "07/07/2026",
+        "closeDate": "08/09/2026",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+          "19.022"
+        ]
+      },
+      {
+        "id": "362839",
+        "number": "HHS-2026-ACF-OCS-EAH-0027",
+        "title": "Affordable Housing and Supportive Services Demonstration",
+        "agency": "Administration for Children and Families - OCS",
+        "agencyCode": "HHS-ACF-OCS",
+        "openDate": "07/24/2026",
+        "closeDate": "08/24/2026",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+          "93.647"
+        ]
+      },
+      {
+        "id": "362903",
+        "number": "OFOP0002813",
+        "title": "Prosperity through Partnership:  Catalyzing U.S.-Algerian Collaboration in Innovation, Commerce and English Language",
+        "agency": "U.S. Mission to Algeria",
+        "agencyCode": "DOS-DZA",
+        "openDate": "06/22/2026",
+        "closeDate": "08/08/2026",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+          "19.040"
+        ]
+      },
+      {
+        "id": "361986",
+        "number": "HHS-2026-ACF-ACYF-AP-0003",
+        "title": "Personal Responsibility Education Innovative Strategies (PREIS)",
+        "agency": "Administration for Children & Families - ACYF/FYSB",
+        "agencyCode": "HHS-ACF-FYSB",
+        "openDate": "07/17/2026",
+        "closeDate": "08/18/2026",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+          "93.092"
+        ]
+      }
+    ]
+  }
+}

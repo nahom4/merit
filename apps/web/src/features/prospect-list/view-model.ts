@@ -18,6 +18,8 @@ export interface EvidenceRowView {
 export interface ProspectRowView {
   readonly funderEin: string;
   readonly name: string;
+  /** The S2 reachability report for this funder, in the context of this organisation. */
+  readonly reportHref: string;
   readonly location: string;
   readonly isRegional: boolean;
   readonly bars: readonly ScoreBarView[];
@@ -93,6 +95,7 @@ export const toProspectListView = (listing: ProspectListing): ProspectListView =
   const rows = listing.prospects.map((prospect): ProspectRowView => ({
     funderEin: prospect.funderEin,
     name: prospect.funderName,
+    reportHref: `/organizations/${listing.organization.id}/funders/${prospect.funderEin}`,
     location: prospect.funderState ?? 'location not stated',
     isRegional: prospect.regionalGranteeCount > 0,
     bars: barsFor(prospect),
