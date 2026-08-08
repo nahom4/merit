@@ -1,0 +1,1886 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Return xmlns="http://www.irs.gov/efile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.irs.gov/efile" returnVersion="2023v5.1">
+  <ReturnHeader binaryAttachmentCnt="0">
+    <ReturnTs>2024-12-20T11:54:55-06:00</ReturnTs>
+    <TaxPeriodEndDt>2024-06-30</TaxPeriodEndDt>
+    <PreparerFirmGrp>
+      <PreparerFirmEIN>263753134</PreparerFirmEIN>
+      <PreparerFirmName>
+        <BusinessNameLine1Txt>CBIZ ADVISORS LLC</BusinessNameLine1Txt>
+      </PreparerFirmName>
+      <PreparerUSAddress>
+        <AddressLine1Txt>500 BOYLSTON STREET</AddressLine1Txt>
+        <CityNm>BOSTON</CityNm>
+        <StateAbbreviationCd>MA</StateAbbreviationCd>
+        <ZIPCd>02116</ZIPCd>
+      </PreparerUSAddress>
+    </PreparerFirmGrp>
+    <ReturnTypeCd>990</ReturnTypeCd>
+    <TaxPeriodBeginDt>2023-07-01</TaxPeriodBeginDt>
+    <Filer>
+      <EIN>042104702</EIN>
+      <BusinessName>
+        <BusinessNameLine1Txt>MASSACHUSETTS AUDUBON SOCIETY INC</BusinessNameLine1Txt>
+      </BusinessName>
+      <BusinessNameControlTxt>MASS</BusinessNameControlTxt>
+      <PhoneNum>7812599500</PhoneNum>
+      <USAddress>
+        <AddressLine1Txt>208 SOUTH GREAT ROAD</AddressLine1Txt>
+        <CityNm>LINCOLN</CityNm>
+        <StateAbbreviationCd>MA</StateAbbreviationCd>
+        <ZIPCd>01773</ZIPCd>
+      </USAddress>
+    </Filer>
+    <BusinessOfficerGrp>
+      <PersonNm>BANCROFT POOR</PersonNm>
+      <PersonTitleTxt>ASSISTANT TREASURER, CFO</PersonTitleTxt>
+      <PhoneNum>7812599500</PhoneNum>
+      <SignatureDt>2024-12-20</SignatureDt>
+      <DiscussWithPaidPreparerInd>1</DiscussWithPaidPreparerInd>
+    </BusinessOfficerGrp>
+    <IRSResponsiblePrtyInfoCurrInd>1</IRSResponsiblePrtyInfoCurrInd>
+    <PreparerPersonGrp>
+      <PreparerPersonNm>BRENDA L BOOTH</PreparerPersonNm>
+      <PTIN>P01342395</PTIN>
+      <PhoneNum>6177610600</PhoneNum>
+      <PreparationDt>2024-12-20</PreparationDt>
+    </PreparerPersonGrp>
+    <TaxYr>2023</TaxYr>
+    <BuildTS>2024-10-15 13:58:12Z</BuildTS>
+  </ReturnHeader>
+  <ReturnData documentCnt="12">
+    <IRS990 documentId="RetDoc1038000001" referenceDocumentId="RetDoc1044400001">
+      <PrincipalOfficerNm>DAVID O'NEILL</PrincipalOfficerNm>
+      <USAddress>
+        <AddressLine1Txt>208 SOUTH GREAT ROAD</AddressLine1Txt>
+        <CityNm>LINCOLN</CityNm>
+        <StateAbbreviationCd>MA</StateAbbreviationCd>
+        <ZIPCd>01773</ZIPCd>
+      </USAddress>
+      <GrossReceiptsAmt>80476484</GrossReceiptsAmt>
+      <GroupReturnForAffiliatesInd>0</GroupReturnForAffiliatesInd>
+      <Organization501c3Ind>X</Organization501c3Ind>
+      <WebsiteAddressTxt>HTTP://WWW.MASSAUDUBON.ORG</WebsiteAddressTxt>
+      <TypeOfOrganizationCorpInd>X</TypeOfOrganizationCorpInd>
+      <FormationYr>1896</FormationYr>
+      <LegalDomicileStateCd>MA</LegalDomicileStateCd>
+      <ActivityOrMissionDesc>LAND AND HABITAT CONSERVATION AND ENVIRONMENTAL EDUCATION AND ADVOCACY.</ActivityOrMissionDesc>
+      <VotingMembersGoverningBodyCnt>28</VotingMembersGoverningBodyCnt>
+      <VotingMembersIndependentCnt>28</VotingMembersIndependentCnt>
+      <TotalEmployeeCnt>1222</TotalEmployeeCnt>
+      <TotalVolunteersCnt>6455</TotalVolunteersCnt>
+      <TotalGrossUBIAmt>112503</TotalGrossUBIAmt>
+      <NetUnrelatedBusTxblIncmAmt>16130</NetUnrelatedBusTxblIncmAmt>
+      <PYContributionsGrantsAmt>33972843</PYContributionsGrantsAmt>
+      <CYContributionsGrantsAmt>55427294</CYContributionsGrantsAmt>
+      <PYProgramServiceRevenueAmt>11428312</PYProgramServiceRevenueAmt>
+      <CYProgramServiceRevenueAmt>11238980</CYProgramServiceRevenueAmt>
+      <PYInvestmentIncomeAmt>2193657</PYInvestmentIncomeAmt>
+      <CYInvestmentIncomeAmt>5925707</CYInvestmentIncomeAmt>
+      <PYOtherRevenueAmt>1291975</PYOtherRevenueAmt>
+      <CYOtherRevenueAmt>1064168</CYOtherRevenueAmt>
+      <PYTotalRevenueAmt>48886787</PYTotalRevenueAmt>
+      <CYTotalRevenueAmt>73656149</CYTotalRevenueAmt>
+      <PYGrantsAndSimilarPaidAmt>341441</PYGrantsAndSimilarPaidAmt>
+      <CYGrantsAndSimilarPaidAmt>943798</CYGrantsAndSimilarPaidAmt>
+      <PYBenefitsPaidToMembersAmt>0</PYBenefitsPaidToMembersAmt>
+      <CYBenefitsPaidToMembersAmt>0</CYBenefitsPaidToMembersAmt>
+      <PYSalariesCompEmpBnftPaidAmt>33121245</PYSalariesCompEmpBnftPaidAmt>
+      <CYSalariesCompEmpBnftPaidAmt>37988038</CYSalariesCompEmpBnftPaidAmt>
+      <PYTotalProfFndrsngExpnsAmt>244163</PYTotalProfFndrsngExpnsAmt>
+      <CYTotalProfFndrsngExpnsAmt>302142</CYTotalProfFndrsngExpnsAmt>
+      <CYTotalFundraisingExpenseAmt>3946463</CYTotalFundraisingExpenseAmt>
+      <PYOtherExpensesAmt>12081693</PYOtherExpensesAmt>
+      <CYOtherExpensesAmt>11989390</CYOtherExpensesAmt>
+      <PYTotalExpensesAmt>45788542</PYTotalExpensesAmt>
+      <CYTotalExpensesAmt>51223368</CYTotalExpensesAmt>
+      <PYRevenuesLessExpensesAmt>3098245</PYRevenuesLessExpensesAmt>
+      <CYRevenuesLessExpensesAmt>22432781</CYRevenuesLessExpensesAmt>
+      <TotalAssetsBOYAmt>343260160</TotalAssetsBOYAmt>
+      <TotalAssetsEOYAmt>380857060</TotalAssetsEOYAmt>
+      <TotalLiabilitiesBOYAmt>13130066</TotalLiabilitiesBOYAmt>
+      <TotalLiabilitiesEOYAmt>12347289</TotalLiabilitiesEOYAmt>
+      <NetAssetsOrFundBalancesBOYAmt>330130094</NetAssetsOrFundBalancesBOYAmt>
+      <NetAssetsOrFundBalancesEOYAmt>368509771</NetAssetsOrFundBalancesEOYAmt>
+      <InfoInScheduleOPartIIIInd>X</InfoInScheduleOPartIIIInd>
+      <MissionDesc>TO PROTECT THE NATURE OF MASSACHUSETTS FOR PEOPLE AND FOR WILDLIFE THROUGH EDUCATION, LAND CONSERVATION, ADVOCACY, SCIENTIFIC RESEARCH, AND HABITAT STEWARDSHIP/RESTORATION.</MissionDesc>
+      <SignificantNewProgramSrvcInd>0</SignificantNewProgramSrvcInd>
+      <SignificantChangeInd>0</SignificantChangeInd>
+      <ExpenseAmt>33949990</ExpenseAmt>
+      <GrantAmt>943798</GrantAmt>
+      <RevenueAmt>10371318</RevenueAmt>
+      <Desc>MASS AUDUBON MAINTAINS 25 FIELD OFFICES AND STAFFED WILDLIFE SANCTUARIES (INCLUDING 20 SANCTUARIES WITH NATURE CENTERS, TWO OF WHICH ARE IN URBAN AREAS) AND AN ADDITIONAL 40 UNSTAFFED WILDLIFE SANCTUARIES WHICH ARE PREPARED FOR PUBLIC VISITATION. MASS AUDUBON SANCTUARIES SERVE AS THE BASE FOR NATURE AND ENVIRONMENTAL EDUCATION COURSES AND PROGRAMS, SCIENTIFIC RESEARCH, ECOLOGICAL MANAGEMENT AND OTHER CONSERVATION-RELATED ACTIVITIES. AS OF JUNE 30, 2024, MASS AUDUBON PROTECTED 42,595 ACRES OF OPEN SPACE IN MASSACHUSETTS, OWNING 33,903 ACRES IN FEE AND PROTECTING THE REMAINDER WITH CONSERVATION EASEMENTS. THESE DIVERSE PROTECTED HABITATS RANGE FROM THE BERKSHIRES TO CAPE COD AND THE ISLANDS AND HELP PRESERVE THE RICH BIODIVERSITY OF MASSACHUSETTS. MASS AUDUBON ACTIVELY PURSUES BOTH DONATIONS AND PURCHASES OF ADDITIONAL CONSERVATION LAND AND IS THE LARGEST PRIVATE CONSERVATION LANDOWNER IN THE STATE. AN ESTIMATED 609,000 VISITORS CAME TO ENJOY MASS AUDUBON PROPERTIES IN FY 2024.MASS AUDUBON IS ALSO THE LARGEST NON-GOVERNMENTAL PROVIDER OF NATURE EDUCATION IN THE STATE. MASS AUDUBON DEVELOPS EDUCATIONAL MATERIALS AND ENVIRONMENTAL POLICY MATERIALS FOR STUDENTS, TEACHERS, LEGISLATORS, AND THE GENERAL PUBLIC. IN FY 2024, MASS AUDUBON TAUGHT NATURE PROGRAMS TO MORE THAN 102,000 CHILDREN AND ADULTS, ENROLLED MORE THAN 10,600 CHILDREN IN ITS SUMMER DAY AND RESIDENTIAL NATURE CAMPS, AND CONDUCTED SCIENCE/NATURE TRAINING FOR MORE THAN 2,500 TEACHERS. IN ADDITION, MASS AUDUBON WAS FORTUNATE TO HAVE MORE THAN 6,455 VOLUNTEERS CONTRIBUTE MORE THAN 106,000 HOURS OF SERVICE ACROSS THE STATE IN FY 2024.</Desc>
+      <ProgSrvcAccomActy2Grp>
+        <ExpenseAmt>2233187</ExpenseAmt>
+        <RevenueAmt>165498</RevenueAmt>
+        <Desc>IN ADDITION TO THE SERVICES PROVIDED BY THE NETWORK OF SANCTUARIES AND THE EDUCATION PROGRAMMING REFERRED TO IN 4A ABOVE WHICH ARE AVAILABLE TO MEMBERS AND NON-MEMBERS ALIKE, MASS AUDUBON MEMBERS ALSO ENJOY A NEWSLETTER (EXPLORE) PRODUCED FOUR TIMES PER YEAR, A QUARTERLY E-NEWSLETTER (EXPLORATIONS), DISCOUNTS ON PROGRAMS AND AT GIFT SHOPS, AND PUBLICATIONS TO INCREASE PUBLIC AWARENESS OF WILDLIFE, NATURE, AND ENVIRONMENTAL ISSUES. FOR EXAMPLE, IN FY 2024 MASS AUDUBON RELEASED ITS LANDMARK SOLAR SITING STUDY ENTITLED "GROWING SOLAR, PROTECTING NATURE." THE REPORT SHOWS THAT MASSACHUSETTS DOES NOT NEED TO SACRIFICE THE FORESTS AND FARMLAND WE HAVE IN ORDER TO BUILD THE SOLAR ENERGY WE NEED. IN ADDITION, THE MASS AUDUBON WEBSITE (WWW.MASSAUDUBON.ORG) OFFERS A WIDE VARIETY OF INFORMATION ON MASS AUDUBON'S SANCTUARIES, CONSERVATION EFFORTS, LAND PROTECTION PROJECTS, ADVOCACY ISSUES, CLIMATE CHANGE WORK, AND THE NATURAL WORLD. CURRENTLY, MASS AUDUBON HAS NINE REGIONAL E-NEWSLETTERS AND FIVE OTHER E-NEWSLETTERS ON SPECIFIC TOPICS, AS WELL AS A NUMBER OF BLOGS. MASS AUDUBON ALSO OPERATES A GIFT SHOP IN LINCOLN WHICH SELLS MERCHANDISE RELATED TO NATURE, WILDLIFE OBSERVATION AND ENVIRONMENTAL EDUCATION TO BOTH MEMBERS AND NON-MEMBERS AS WELL AS A NUMBER OF SMALLER NATURE-THEMED GIFT SHOPS AT MANY OF THE SANCTUARIES.</Desc>
+      </ProgSrvcAccomActy2Grp>
+      <ProgSrvcAccomActy3Grp>
+        <ExpenseAmt>3071069</ExpenseAmt>
+        <RevenueAmt>700164</RevenueAmt>
+        <Desc>MASS AUDUBON UTILIZES AND DEVELOPS SCIENTIFIC KNOWLEDGE TO SUPPORT ITS LONGSTANDING TRADITION AS AN ORGANIZATION WHICH USES SCIENCE AS THE UNDERPINNING FOR ITS EDUCATION, LAND PROTECTION, ADVOCACY AND HABITAT STEWARDSHIP ACTIVITIES. CURRENT RESEARCH AND/OR ECOLOGICAL MANAGEMENT WORK FOCUSES ON THE PROTECTION, RESTORATION, AND STEWARDSHIP OF SELECTED MASSACHUSETTS HABITATS SUCH AS GRASSLANDS, COASTAL HEATHLANDS AND SALT MARSHES. IN ADDITION, MONITORING OF KEY GROUPS OF ORGANISMS SUCH AS BIRDS, AMPHIBIANS, INVERTEBRATES AND PLANTS CONTINUES ACROSS THE STATE IN ORDER TO PROVIDE AN IMPORTANT BASELINE TO EVALUATE CHANGING ENVIRONMENTAL CONDITIONS ASSOCIATED WITH CLIMATE CHANGE AND LAND DEVELOPMENT. MASS AUDUBON HAS ALSO DEVELOPED AND IMPLEMENTS AN INVASIVE SPECIES MANAGEMENT STRATEGY TO PROTECT THE INTEGRITY OF ITS LANDS AS WELL AS TO PROVIDE GUIDANCE FOR OTHER LANDOWNERS THROUGHOUT THE STATE.MASS AUDUBON LANDS PLAY A CRITICAL ROLE IN THE DELIVERY OF ITS MISSION, AND ITS LAND PROTECTION EFFORTS FOCUS ON CONSERVING ECOLOGICALLY SIGNIFICANT TRACTS OF LAND ADJACENT TO EXISTING WILDLIFE SANCTUARIES, THEREBY PROTECTING AND ENHANCING THEIR BIOLOGICAL INTEGRITY AND VIABILITY AS PROGRAM SITES. MASS AUDUBON ALSO ADVANCES THE PROTECTION OF SELECTED HIGH PRIORITY FOCUS AREAS BEYOND ITS EXISTING WILDLIFE SANCTUARIES THROUGH COLLABORATION WITH STATE AND LOCAL PUBLIC AGENCIES AND LOCAL AND REGIONAL LAND TRUSTS. COLLECTIVELY, THESE PROTECTION PRIORITIES INCLUDE A WIDE RANGE OF MASSACHUSETTS HABITATS.</Desc>
+      </ProgSrvcAccomActy3Grp>
+      <ProgSrvcAccomActyOtherGrp>
+        <ExpenseAmt>1175994</ExpenseAmt>
+        <RevenueAmt>2000</RevenueAmt>
+        <Desc>MASS AUDUBON RELEASED ITS LANDMARK SOLAR SITING STUDY ENTITLED GROWING SOLAR, PROTECTING NATURE. THE REPORT SHOWS THAT MASSACHUSETTS DOES NOT NEED TO SACRIFICE THE NATURE WE HAVE TO BUILD THE SOLAR ENERGY WE NEED. THE RESEARCH DEMONSTRATES THAT BY BUILDING MORE SOLAR ON ROOFTOPS, PARKING LOTS, AND ALREADY-DEVELOPED AREAS, MASSACHUSETTS CAN MEET OUR GOAL OF REACHING NET-ZERO GREENHOUSE GAS EMISSIONS BY 2050 WHILE CONSERVING ALMOST ALL OF OUR REMAINING FARMLANDS AND FORESTS.IN A HUGE WIN FOR HORSESHOE CRABS, THE MASSACHUSETTS' MARINE FISHERIES ADVISORY COMMISSION VOTED TO BAN THE HARVEST OF HORSESHOE CRABS FOR BAIT DURING THEIR BREEDING AND EGG-LAYING SEASON. THANKS TO THE SUPPORT OF NEARLY 100 ADVOCATES WHO JOINED US AT TWO PUBLIC HEARINGS, AND MORE THAN 2,600 PEOPLE WHO SPOKE UP TO SUPPORT STRONGER HORSESHOE CRAB PROTECTIONS IN MASSACHUSETTS BY SUBMITTING WRITTEN COMMENTS, THIS TRANSFORMATIVE DECISION COULD START HORSESHOE CRABS ON THE ROAD TO RECOVERY. SELECTED KEY ADVOCACY ACCOMPLISHMENTS IN FY 2024: WITH ENCOURAGEMENT AND SUPPORT FROM MASS AUDUBON, OVER 40 CITIES AND TOWNS HAVE TAKEN STEPS TOWARD LAUNCHING LOCAL CAMPAIGNS TO CURB HARMFUL NEW RODENT POISONS WHICH ARE KILLING WILDLIFE, ESPECIALLY BIRDS OF PREY. THESE COMMUNITY CAMPAIGNS WILL BE KEY TO REDUCING THE USE OF THESE POISONS IN MASSACHUSETTS, AND IN TURN HELPING PROTECT WILDLIFE LIKE RAPTORS, FOXES, COYOTES, AND OTHER PREDATORS THAT HELP KEEP MASSACHUSETTS' ECOSYSTEMS IN BALANCE. MASS AUDUBON AND OUR PARTNERS OFFERED RECOMMENDATIONS FOR ACCELERATING THE BUILD-OUT OF CLEAN ENERGY IN MASSACHUSETTS WHILE PROTECTING THE NEEDS OF RATEPAYERS, COMMUNITIES, FORESTS, FARMS, AND WETLANDS. A CLIMATE BILL WAS FILED THAT WOULD HAVE TRANSLATED THOSE RECOMMENDATIONS INTO ACTION, BUT DESPITE STRONG OUTREACH FROM ADVOCATES, TIME RAN OUT FOR THE LEGISLATURE TO PASS THE BILL DURING THE REGULAR LEGISLATIVE SESSION. WE AND OUR PARTNERS ARE STILL WORKING TO GET THIS BILL PASSED THIS YEAR IN INFORMAL SESSION, SO THE STATE DOES NOT WAIT ANOTHER TWO YEARS TO STREAMLINE RESPONSIBLY SITED CLEAN ENERGY PROJECTS.</Desc>
+      </ProgSrvcAccomActyOtherGrp>
+      <TotalOtherProgSrvcExpenseAmt>1175994</TotalOtherProgSrvcExpenseAmt>
+      <TotalOtherProgSrvcRevenueAmt>2000</TotalOtherProgSrvcRevenueAmt>
+      <TotalProgramServiceExpensesAmt>40430240</TotalProgramServiceExpensesAmt>
+      <DescribedInSection501c3Ind referenceDocumentId="RetDoc1039100001">1</DescribedInSection501c3Ind>
+      <ScheduleBRequiredInd referenceDocumentId="RetDoc1234500001">1</ScheduleBRequiredInd>
+      <PoliticalCampaignActyInd referenceDocumentId="RetDoc1039600001">0</PoliticalCampaignActyInd>
+      <LobbyingActivitiesInd referenceDocumentId="RetDoc1039600001">1</LobbyingActivitiesInd>
+      <SubjectToProxyTaxInd referenceDocumentId="RetDoc1039600001">0</SubjectToProxyTaxInd>
+      <DonorAdvisedFundInd referenceDocumentId="RetDoc1039900001">0</DonorAdvisedFundInd>
+      <ConservationEasementsInd referenceDocumentId="RetDoc1039900001">1</ConservationEasementsInd>
+      <CollectionsOfArtInd referenceDocumentId="RetDoc1039900001">1</CollectionsOfArtInd>
+      <CreditCounselingInd referenceDocumentId="RetDoc1039900001">0</CreditCounselingInd>
+      <DonorRstrOrQuasiEndowmentsInd>1</DonorRstrOrQuasiEndowmentsInd>
+      <ReportLandBuildingEquipmentInd referenceDocumentId="RetDoc1039900001">1</ReportLandBuildingEquipmentInd>
+      <ReportInvestmentsOtherSecInd referenceDocumentId="RetDoc1039900001">1</ReportInvestmentsOtherSecInd>
+      <ReportProgramRelatedInvstInd referenceDocumentId="RetDoc1039900001">0</ReportProgramRelatedInvstInd>
+      <ReportOtherAssetsInd referenceDocumentId="RetDoc1039900001">0</ReportOtherAssetsInd>
+      <ReportOtherLiabilitiesInd referenceDocumentId="RetDoc1039900001">1</ReportOtherLiabilitiesInd>
+      <IncludeFIN48FootnoteInd referenceDocumentId="RetDoc1039900001">1</IncludeFIN48FootnoteInd>
+      <IndependentAuditFinclStmtInd referenceDocumentId="RetDoc1039900001">0</IndependentAuditFinclStmtInd>
+      <ConsolidatedAuditFinclStmtInd referenceDocumentId="RetDoc1039900001">1</ConsolidatedAuditFinclStmtInd>
+      <SchoolOperatingInd>0</SchoolOperatingInd>
+      <ForeignOfficeInd>0</ForeignOfficeInd>
+      <ForeignActivitiesInd referenceDocumentId="RetDoc1040500001">1</ForeignActivitiesInd>
+      <MoreThan5000KToOrgInd referenceDocumentId="RetDoc1040500001">1</MoreThan5000KToOrgInd>
+      <MoreThan5000KToIndividualsInd referenceDocumentId="RetDoc1040500001">0</MoreThan5000KToIndividualsInd>
+      <ProfessionalFundraisingInd referenceDocumentId="RetDoc1041200001">1</ProfessionalFundraisingInd>
+      <FundraisingActivitiesInd referenceDocumentId="RetDoc1041200001">1</FundraisingActivitiesInd>
+      <GamingActivitiesInd referenceDocumentId="RetDoc1041200001">1</GamingActivitiesInd>
+      <OperateHospitalInd>0</OperateHospitalInd>
+      <GrantsToOrganizationsInd referenceDocumentId="RetDoc1041900001">1</GrantsToOrganizationsInd>
+      <GrantsToIndividualsInd referenceDocumentId="RetDoc1041900001">1</GrantsToIndividualsInd>
+      <ScheduleJRequiredInd referenceDocumentId="RetDoc1042400001">1</ScheduleJRequiredInd>
+      <TaxExemptBondsInd>0</TaxExemptBondsInd>
+      <EngagedInExcessBenefitTransInd>0</EngagedInExcessBenefitTransInd>
+      <PYExcessBenefitTransInd>0</PYExcessBenefitTransInd>
+      <LoanOutstandingInd>0</LoanOutstandingInd>
+      <GrantToRelatedPersonInd>0</GrantToRelatedPersonInd>
+      <BusinessRlnWithOrgMemInd>0</BusinessRlnWithOrgMemInd>
+      <BusinessRlnWithFamMemInd>0</BusinessRlnWithFamMemInd>
+      <BusinessRlnWith35CtrlEntInd>0</BusinessRlnWith35CtrlEntInd>
+      <DeductibleNonCashContriInd referenceDocumentId="RetDoc1042900001">1</DeductibleNonCashContriInd>
+      <DeductibleArtContributionInd referenceDocumentId="RetDoc1042900001">1</DeductibleArtContributionInd>
+      <TerminateOperationsInd>0</TerminateOperationsInd>
+      <PartialLiquidationInd>0</PartialLiquidationInd>
+      <DisregardedEntityInd referenceDocumentId="RetDoc1043400001">0</DisregardedEntityInd>
+      <RelatedEntityInd referenceDocumentId="RetDoc1043400001">1</RelatedEntityInd>
+      <RelatedOrganizationCtrlEntInd>1</RelatedOrganizationCtrlEntInd>
+      <TransactionWithControlEntInd referenceDocumentId="RetDoc1043400001">1</TransactionWithControlEntInd>
+      <TrnsfrExmptNonChrtblRltdOrgInd referenceDocumentId="RetDoc1043400001">0</TrnsfrExmptNonChrtblRltdOrgInd>
+      <ActivitiesConductedPrtshpInd referenceDocumentId="RetDoc1043400001">0</ActivitiesConductedPrtshpInd>
+      <ScheduleORequiredInd>1</ScheduleORequiredInd>
+      <IRPDocumentCnt>166</IRPDocumentCnt>
+      <IRPDocumentW2GCnt>0</IRPDocumentW2GCnt>
+      <BackupWthldComplianceInd>1</BackupWthldComplianceInd>
+      <EmployeeCnt>1222</EmployeeCnt>
+      <EmploymentTaxReturnsFiledInd>1</EmploymentTaxReturnsFiledInd>
+      <UnrelatedBusIncmOverLimitInd>1</UnrelatedBusIncmOverLimitInd>
+      <Form990TFiledInd>1</Form990TFiledInd>
+      <ForeignFinancialAccountInd>0</ForeignFinancialAccountInd>
+      <ProhibitedTaxShelterTransInd>0</ProhibitedTaxShelterTransInd>
+      <TaxablePartyNotificationInd>0</TaxablePartyNotificationInd>
+      <NondeductibleContributionsInd>0</NondeductibleContributionsInd>
+      <QuidProQuoContributionsInd>1</QuidProQuoContributionsInd>
+      <QuidProQuoContriDisclInd>1</QuidProQuoContriDisclInd>
+      <Form8282PropertyDisposedOfInd>0</Form8282PropertyDisposedOfInd>
+      <RcvFndsToPayPrsnlBnftCntrctInd>0</RcvFndsToPayPrsnlBnftCntrctInd>
+      <PayPremiumsPrsnlBnftCntrctInd>0</PayPremiumsPrsnlBnftCntrctInd>
+      <IndoorTanningServicesInd>0</IndoorTanningServicesInd>
+      <SubjToTaxRmnrtnExPrchtPymtInd>0</SubjToTaxRmnrtnExPrchtPymtInd>
+      <SubjectToExcsTaxNetInvstIncInd>0</SubjectToExcsTaxNetInvstIncInd>
+      <InfoInScheduleOPartVIInd>X</InfoInScheduleOPartVIInd>
+      <GoverningBodyVotingMembersCnt>28</GoverningBodyVotingMembersCnt>
+      <IndependentVotingMemberCnt>28</IndependentVotingMemberCnt>
+      <FamilyOrBusinessRlnInd>0</FamilyOrBusinessRlnInd>
+      <DelegationOfMgmtDutiesInd>0</DelegationOfMgmtDutiesInd>
+      <ChangeToOrgDocumentsInd>0</ChangeToOrgDocumentsInd>
+      <MaterialDiversionOrMisuseInd>0</MaterialDiversionOrMisuseInd>
+      <MembersOrStockholdersInd>1</MembersOrStockholdersInd>
+      <ElectionOfBoardMembersInd>1</ElectionOfBoardMembersInd>
+      <DecisionsSubjectToApprovaInd>1</DecisionsSubjectToApprovaInd>
+      <MinutesOfGoverningBodyInd>1</MinutesOfGoverningBodyInd>
+      <MinutesOfCommitteesInd>1</MinutesOfCommitteesInd>
+      <OfficerMailingAddressInd>0</OfficerMailingAddressInd>
+      <LocalChaptersInd>1</LocalChaptersInd>
+      <PoliciesReferenceChaptersInd>1</PoliciesReferenceChaptersInd>
+      <Form990ProvidedToGvrnBodyInd>1</Form990ProvidedToGvrnBodyInd>
+      <ConflictOfInterestPolicyInd>1</ConflictOfInterestPolicyInd>
+      <AnnualDisclosureCoveredPrsnInd>1</AnnualDisclosureCoveredPrsnInd>
+      <RegularMonitoringEnfrcInd>1</RegularMonitoringEnfrcInd>
+      <WhistleblowerPolicyInd>1</WhistleblowerPolicyInd>
+      <DocumentRetentionPolicyInd>1</DocumentRetentionPolicyInd>
+      <CompensationProcessCEOInd>1</CompensationProcessCEOInd>
+      <CompensationProcessOtherInd>1</CompensationProcessOtherInd>
+      <InvestmentInJointVentureInd>0</InvestmentInJointVentureInd>
+      <StatesWhereCopyOfReturnIsFldCd>CA</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>CT</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>DC</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>FL</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>MA</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>MD</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>NH</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>NJ</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>NY</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>OH</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>PA</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>RI</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>VA</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>WI</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>GA</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>MN</StatesWhereCopyOfReturnIsFldCd>
+      <StatesWhereCopyOfReturnIsFldCd>ME</StatesWhereCopyOfReturnIsFldCd>
+      <OwnWebsiteInd>X</OwnWebsiteInd>
+      <OtherWebsiteInd>X</OtherWebsiteInd>
+      <UponRequestInd>X</UponRequestInd>
+      <BooksInCareOfDetail>
+        <BusinessName>
+          <BusinessNameLine1Txt>BANCROFT POOR</BusinessNameLine1Txt>
+        </BusinessName>
+        <PhoneNum>7812599500</PhoneNum>
+        <USAddress>
+          <AddressLine1Txt>208 SOUTH GREAT ROAD</AddressLine1Txt>
+          <CityNm>LINCOLN</CityNm>
+          <StateAbbreviationCd>MA</StateAbbreviationCd>
+          <ZIPCd>01773</ZIPCd>
+        </USAddress>
+      </BooksInCareOfDetail>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>ALBERT NIERENBERG</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>ANDREW FALENDER</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>ANN HOLLINGSWORTH</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>BETH KRESSLEY GOLDSTEIN</PersonNm>
+        <TitleTxt>CHAIR/DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>6.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>BRIAN HICKS</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>CAROL GREGORY</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>CHRISTOPHER KLEM</PersonNm>
+        <TitleTxt>VICE CHAIR/DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>4.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>DAVID PHELAN</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>DELPHINE ZURKIYA</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>ELIZABETH GILMORE</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>HENRY WOOLSEY</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.50</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>JOEL BARRERA</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>KATHLEEN EMRICH</PersonNm>
+        <TitleTxt>DIRECTOR (UNTIL 11/2/23)</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>LINDA JONES</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>LORNA GIBSON</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>MARCELO SUAREZ-OROZCO</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>MICHAEL PAPPONE</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>NAGESH MAHANTHAPPA</PersonNm>
+        <TitleTxt>VICE CHAIR/DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>4.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>PATRICIA SPENCE</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>PETER BERNARD</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>PETER ROSENBLUM</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>RANDOLPH WENTWORTH</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>ROBERT BALL</PersonNm>
+        <TitleTxt>TREASURER/DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>5.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>ROBERT MURCHISON</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>SCOTT EDWARDS</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>THOMAS DEMARCO</PersonNm>
+        <TitleTxt>DIRECTOR (UNTIL 11/2/23)</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>THOMAS M POUNDS</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>TRACEY BOLOTNICK</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>SUZIE TAPSON</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>CANDANCE LUN PLOTKIN</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>BANCROFT POOR</PersonNm>
+        <TitleTxt>CFO/ASST. TREASURER</TitleTxt>
+        <AverageHoursPerWeekRt>39.50</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.50</AverageHoursPerWeekRltdOrgRt>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>266416</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>38608</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>DAVID O'NEILL</PersonNm>
+        <TitleTxt>PRESIDENT</TitleTxt>
+        <AverageHoursPerWeekRt>39.50</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.50</AverageHoursPerWeekRltdOrgRt>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>442993</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>52178</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>JAN O'NEIL</PersonNm>
+        <TitleTxt>DIR OF MEMBERSHIP/ASST TREASURER</TitleTxt>
+        <AverageHoursPerWeekRt>40.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>145714</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>37255</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>KRISTIN BARR</PersonNm>
+        <TitleTxt>ASST. SECRETARY/EA TO CFO</TitleTxt>
+        <AverageHoursPerWeekRt>30.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>53103</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>4248</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>MARGO MERCER</PersonNm>
+        <TitleTxt>ASSISTANT SECRETARY/CHIEF OF STAFF</TitleTxt>
+        <AverageHoursPerWeekRt>40.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>97325</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>25081</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>MALLORY KENDOR</PersonNm>
+        <TitleTxt>SECRETARY/EA TO PRESIDENT</TitleTxt>
+        <AverageHoursPerWeekRt>40.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>64310</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>6918</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>AMANDA HUKANOVIC</PersonNm>
+        <TitleTxt>ASST TREAS/SR BUSINESS &amp; FIN ANALYST</TitleTxt>
+        <AverageHoursPerWeekRt>40.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>23110</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>GAIL YEO</PersonNm>
+        <TitleTxt>VP OF WILDLIFE SANCTUARIES</TitleTxt>
+        <AverageHoursPerWeekRt>40.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <HighestCompensatedEmployeeInd>X</HighestCompensatedEmployeeInd>
+        <ReportableCompFromOrgAmt>203547</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>16284</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>MICHELLE MANION</PersonNm>
+        <TitleTxt>VP FOR ADVOCACY AND POLICY</TitleTxt>
+        <AverageHoursPerWeekRt>40.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <HighestCompensatedEmployeeInd>X</HighestCompensatedEmployeeInd>
+        <ReportableCompFromOrgAmt>188734</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>14467</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>NIA KEITH</PersonNm>
+        <TitleTxt>VP FOR DEIJA</TitleTxt>
+        <AverageHoursPerWeekRt>40.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <HighestCompensatedEmployeeInd>X</HighestCompensatedEmployeeInd>
+        <ReportableCompFromOrgAmt>184001</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>14720</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>TIMOTHY CALABRESE</PersonNm>
+        <TitleTxt>SR. DIR.OF CORP, FND, &amp; GRANT SUPPORT</TitleTxt>
+        <AverageHoursPerWeekRt>40.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <HighestCompensatedEmployeeInd>X</HighestCompensatedEmployeeInd>
+        <ReportableCompFromOrgAmt>153683</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>12295</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>VICTORIA JONES</PersonNm>
+        <TitleTxt>CHIEF DEVELOPMENT OFFICER</TitleTxt>
+        <AverageHoursPerWeekRt>40.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <HighestCompensatedEmployeeInd>X</HighestCompensatedEmployeeInd>
+        <ReportableCompFromOrgAmt>325499</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>19938</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <TotalReportableCompFromOrgAmt>2148435</TotalReportableCompFromOrgAmt>
+      <TotReportableCompRltdOrgAmt>0</TotReportableCompRltdOrgAmt>
+      <TotalOtherCompensationAmt>241992</TotalOtherCompensationAmt>
+      <IndivRcvdGreaterThan100KCnt>27</IndivRcvdGreaterThan100KCnt>
+      <FormerOfcrEmployeesListedInd>0</FormerOfcrEmployeesListedInd>
+      <TotalCompGreaterThan150KInd>1</TotalCompGreaterThan150KInd>
+      <CompensationFromOtherSrcsInd>0</CompensationFromOtherSrcsInd>
+      <ContractorCompensationGrp>
+        <ContractorName>
+          <BusinessName>
+            <BusinessNameLine1Txt>STAGE COACH DIGITAL</BusinessNameLine1Txt>
+          </BusinessName>
+        </ContractorName>
+        <ContractorAddress>
+          <USAddress>
+            <AddressLine1Txt>2038 NE DAVIS STREET</AddressLine1Txt>
+            <CityNm>PORTLAND</CityNm>
+            <StateAbbreviationCd>OR</StateAbbreviationCd>
+            <ZIPCd>97232</ZIPCd>
+          </USAddress>
+        </ContractorAddress>
+        <ServicesDesc>MARKETING CONSULTANT</ServicesDesc>
+        <CompensationAmt>302142</CompensationAmt>
+      </ContractorCompensationGrp>
+      <ContractorCompensationGrp>
+        <ContractorName>
+          <BusinessName>
+            <BusinessNameLine1Txt>CBIZ ADVISORS LLC</BusinessNameLine1Txt>
+          </BusinessName>
+        </ContractorName>
+        <ContractorAddress>
+          <USAddress>
+            <AddressLine1Txt>500 BOYLSTON ST</AddressLine1Txt>
+            <CityNm>BOSTON</CityNm>
+            <StateAbbreviationCd>MA</StateAbbreviationCd>
+            <ZIPCd>02116</ZIPCd>
+          </USAddress>
+        </ContractorAddress>
+        <ServicesDesc>AUDIT/TAX/CONSULTING SERVICES</ServicesDesc>
+        <CompensationAmt>227707</CompensationAmt>
+      </ContractorCompensationGrp>
+      <ContractorCompensationGrp>
+        <ContractorName>
+          <BusinessName>
+            <BusinessNameLine1Txt>AGENCY LANDSCAPE &amp; PLANNING LLC</BusinessNameLine1Txt>
+          </BusinessName>
+        </ContractorName>
+        <ContractorAddress>
+          <USAddress>
+            <AddressLine1Txt>91 HARVEY STREET</AddressLine1Txt>
+            <CityNm>CAMBRIDGE</CityNm>
+            <StateAbbreviationCd>MA</StateAbbreviationCd>
+            <ZIPCd>02140</ZIPCd>
+          </USAddress>
+        </ContractorAddress>
+        <ServicesDesc>LANDSCAPE ARCHITECT</ServicesDesc>
+        <CompensationAmt>177426</CompensationAmt>
+      </ContractorCompensationGrp>
+      <ContractorCompensationGrp>
+        <ContractorName>
+          <BusinessName>
+            <BusinessNameLine1Txt>ROI SOLUTIONS</BusinessNameLine1Txt>
+          </BusinessName>
+        </ContractorName>
+        <ContractorAddress>
+          <USAddress>
+            <AddressLine1Txt>200 RIVERS EDGE DRIVE</AddressLine1Txt>
+            <CityNm>MEDFORD</CityNm>
+            <StateAbbreviationCd>MA</StateAbbreviationCd>
+            <ZIPCd>02155</ZIPCd>
+          </USAddress>
+        </ContractorAddress>
+        <ServicesDesc>CRM SOFTWARE PROVIDER</ServicesDesc>
+        <CompensationAmt>174732</CompensationAmt>
+      </ContractorCompensationGrp>
+      <ContractorCompensationGrp>
+        <ContractorName>
+          <BusinessName>
+            <BusinessNameLine1Txt>PRIME BUCHHOLZ</BusinessNameLine1Txt>
+          </BusinessName>
+        </ContractorName>
+        <ContractorAddress>
+          <USAddress>
+            <AddressLine1Txt>273 CORPORATE DR 250</AddressLine1Txt>
+            <CityNm>PORTSMOUTH</CityNm>
+            <StateAbbreviationCd>NH</StateAbbreviationCd>
+            <ZIPCd>03801</ZIPCd>
+          </USAddress>
+        </ContractorAddress>
+        <ServicesDesc>INVESTMENT CONSULTANT</ServicesDesc>
+        <CompensationAmt>159638</CompensationAmt>
+      </ContractorCompensationGrp>
+      <CntrctRcvdGreaterThan100KCnt>7</CntrctRcvdGreaterThan100KCnt>
+      <MembershipDuesAmt>4444345</MembershipDuesAmt>
+      <FundraisingAmt>32600</FundraisingAmt>
+      <GovernmentGrantsAmt>5034586</GovernmentGrantsAmt>
+      <AllOtherContributionsAmt>45915763</AllOtherContributionsAmt>
+      <NoncashContributionsAmt>2565333</NoncashContributionsAmt>
+      <TotalContributionsAmt>55427294</TotalContributionsAmt>
+      <ProgramServiceRevenueGrp>
+        <Desc>SANCTUARIES</Desc>
+        <BusinessCd>900099</BusinessCd>
+        <TotalRevenueColumnAmt>11238980</TotalRevenueColumnAmt>
+        <RelatedOrExemptFuncIncomeAmt>11238980</RelatedOrExemptFuncIncomeAmt>
+      </ProgramServiceRevenueGrp>
+      <TotalProgramServiceRevenueAmt>11238980</TotalProgramServiceRevenueAmt>
+      <InvestmentIncomeGrp>
+        <TotalRevenueColumnAmt>3132644</TotalRevenueColumnAmt>
+        <UnrelatedBusinessRevenueAmt>112503</UnrelatedBusinessRevenueAmt>
+        <ExclusionAmt>3020141</ExclusionAmt>
+      </InvestmentIncomeGrp>
+      <GrossRentsGrp>
+        <RealAmt>332269</RealAmt>
+      </GrossRentsGrp>
+      <LessRentalExpensesGrp>
+        <RealAmt>0</RealAmt>
+      </LessRentalExpensesGrp>
+      <RentalIncomeOrLossGrp>
+        <RealAmt>332269</RealAmt>
+      </RentalIncomeOrLossGrp>
+      <NetRentalIncomeOrLossGrp>
+        <TotalRevenueColumnAmt>332269</TotalRevenueColumnAmt>
+        <ExclusionAmt>332269</ExclusionAmt>
+      </NetRentalIncomeOrLossGrp>
+      <GrossAmountSalesAssetsGrp>
+        <SecuritiesAmt>8915388</SecuritiesAmt>
+      </GrossAmountSalesAssetsGrp>
+      <LessCostOthBasisSalesExpnssGrp>
+        <SecuritiesAmt>6122325</SecuritiesAmt>
+      </LessCostOthBasisSalesExpnssGrp>
+      <GainOrLossGrp>
+        <SecuritiesAmt>2793063</SecuritiesAmt>
+      </GainOrLossGrp>
+      <NetGainOrLossInvestmentsGrp>
+        <TotalRevenueColumnAmt>2793063</TotalRevenueColumnAmt>
+        <ExclusionAmt>2793063</ExclusionAmt>
+      </NetGainOrLossInvestmentsGrp>
+      <FundraisingGrossIncomeAmt>92203</FundraisingGrossIncomeAmt>
+      <ContriRptFundraisingEventAmt>32600</ContriRptFundraisingEventAmt>
+      <FundraisingDirectExpensesAmt>22654</FundraisingDirectExpensesAmt>
+      <NetIncmFromFundraisingEvtGrp>
+        <TotalRevenueColumnAmt>69549</TotalRevenueColumnAmt>
+        <ExclusionAmt>69549</ExclusionAmt>
+      </NetIncmFromFundraisingEvtGrp>
+      <GamingGrossIncomeAmt>23170</GamingGrossIncomeAmt>
+      <GamingDirectExpensesAmt>6671</GamingDirectExpensesAmt>
+      <NetIncomeFromGamingGrp>
+        <TotalRevenueColumnAmt>16499</TotalRevenueColumnAmt>
+        <ExclusionAmt>16499</ExclusionAmt>
+      </NetIncomeFromGamingGrp>
+      <GrossSalesOfInventoryAmt>1314536</GrossSalesOfInventoryAmt>
+      <CostOfGoodsSoldAmt>668685</CostOfGoodsSoldAmt>
+      <NetIncomeOrLossGrp>
+        <TotalRevenueColumnAmt>645851</TotalRevenueColumnAmt>
+        <ExclusionAmt>645851</ExclusionAmt>
+      </NetIncomeOrLossGrp>
+      <TotalRevenueGrp>
+        <TotalRevenueColumnAmt>73656149</TotalRevenueColumnAmt>
+        <RelatedOrExemptFuncIncomeAmt>11238980</RelatedOrExemptFuncIncomeAmt>
+        <UnrelatedBusinessRevenueAmt>112503</UnrelatedBusinessRevenueAmt>
+        <ExclusionAmt>6877372</ExclusionAmt>
+      </TotalRevenueGrp>
+      <GrantsToDomesticOrgsGrp>
+        <TotalAmt>27500</TotalAmt>
+        <ProgramServicesAmt>27500</ProgramServicesAmt>
+      </GrantsToDomesticOrgsGrp>
+      <GrantsToDomesticIndividualsGrp>
+        <TotalAmt>765298</TotalAmt>
+        <ProgramServicesAmt>765298</ProgramServicesAmt>
+      </GrantsToDomesticIndividualsGrp>
+      <ForeignGrantsGrp>
+        <TotalAmt>151000</TotalAmt>
+        <ProgramServicesAmt>151000</ProgramServicesAmt>
+      </ForeignGrantsGrp>
+      <CompCurrentOfcrDirectorsGrp>
+        <TotalAmt>1239238</TotalAmt>
+        <ProgramServicesAmt>161975</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>1077263</ManagementAndGeneralAmt>
+      </CompCurrentOfcrDirectorsGrp>
+      <OtherSalariesAndWagesGrp>
+        <TotalAmt>30060384</TotalAmt>
+        <ProgramServicesAmt>24541955</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>2897007</ManagementAndGeneralAmt>
+        <FundraisingAmt>2621422</FundraisingAmt>
+      </OtherSalariesAndWagesGrp>
+      <PensionPlanContributionsGrp>
+        <TotalAmt>1148541</TotalAmt>
+        <ProgramServicesAmt>1009491</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>128313</ManagementAndGeneralAmt>
+        <FundraisingAmt>10737</FundraisingAmt>
+      </PensionPlanContributionsGrp>
+      <OtherEmployeeBenefitsGrp>
+        <TotalAmt>3570660</TotalAmt>
+        <ProgramServicesAmt>2550710</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>574304</ManagementAndGeneralAmt>
+        <FundraisingAmt>445646</FundraisingAmt>
+      </OtherEmployeeBenefitsGrp>
+      <PayrollTaxesGrp>
+        <TotalAmt>1969215</TotalAmt>
+        <ProgramServicesAmt>1477350</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>296376</ManagementAndGeneralAmt>
+        <FundraisingAmt>195489</FundraisingAmt>
+      </PayrollTaxesGrp>
+      <FeesForServicesLegalGrp>
+        <TotalAmt>100297</TotalAmt>
+        <ProgramServicesAmt>32038</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>68259</ManagementAndGeneralAmt>
+      </FeesForServicesLegalGrp>
+      <FeesForServicesAccountingGrp>
+        <TotalAmt>111195</TotalAmt>
+        <ManagementAndGeneralAmt>111195</ManagementAndGeneralAmt>
+      </FeesForServicesAccountingGrp>
+      <FeesForServicesLobbyingGrp>
+        <TotalAmt>120000</TotalAmt>
+        <ProgramServicesAmt>120000</ProgramServicesAmt>
+      </FeesForServicesLobbyingGrp>
+      <FeesForServicesProfFundraising>
+        <TotalAmt>302142</TotalAmt>
+        <FundraisingAmt>302142</FundraisingAmt>
+      </FeesForServicesProfFundraising>
+      <FeesForSrvcInvstMgmntFeesGrp>
+        <TotalAmt>234865</TotalAmt>
+        <ManagementAndGeneralAmt>234865</ManagementAndGeneralAmt>
+      </FeesForSrvcInvstMgmntFeesGrp>
+      <FeesForServicesOtherGrp>
+        <TotalAmt>1545904</TotalAmt>
+        <ProgramServicesAmt>1062976</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>477268</ManagementAndGeneralAmt>
+        <FundraisingAmt>5660</FundraisingAmt>
+      </FeesForServicesOtherGrp>
+      <AdvertisingGrp>
+        <TotalAmt>120127</TotalAmt>
+        <ProgramServicesAmt>33038</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>87014</ManagementAndGeneralAmt>
+        <FundraisingAmt>75</FundraisingAmt>
+      </AdvertisingGrp>
+      <OfficeExpensesGrp>
+        <TotalAmt>271511</TotalAmt>
+        <ProgramServicesAmt>97597</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>163230</ManagementAndGeneralAmt>
+        <FundraisingAmt>10684</FundraisingAmt>
+      </OfficeExpensesGrp>
+      <InformationTechnologyGrp>
+        <TotalAmt>350544</TotalAmt>
+        <ProgramServicesAmt>290889</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>39882</ManagementAndGeneralAmt>
+        <FundraisingAmt>19773</FundraisingAmt>
+      </InformationTechnologyGrp>
+      <OccupancyGrp>
+        <TotalAmt>518556</TotalAmt>
+        <ProgramServicesAmt>487412</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>31119</ManagementAndGeneralAmt>
+        <FundraisingAmt>25</FundraisingAmt>
+      </OccupancyGrp>
+      <TravelGrp>
+        <TotalAmt>523323</TotalAmt>
+        <ProgramServicesAmt>477758</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>34620</ManagementAndGeneralAmt>
+        <FundraisingAmt>10945</FundraisingAmt>
+      </TravelGrp>
+      <ConferencesMeetingsGrp>
+        <TotalAmt>95032</TotalAmt>
+        <ProgramServicesAmt>88694</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>5713</ManagementAndGeneralAmt>
+        <FundraisingAmt>625</FundraisingAmt>
+      </ConferencesMeetingsGrp>
+      <DepreciationDepletionGrp>
+        <TotalAmt>3080901</TotalAmt>
+        <ProgramServicesAmt>3028810</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>52091</ManagementAndGeneralAmt>
+      </DepreciationDepletionGrp>
+      <InsuranceGrp>
+        <TotalAmt>618218</TotalAmt>
+        <ProgramServicesAmt>541421</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>76797</ManagementAndGeneralAmt>
+      </InsuranceGrp>
+      <OtherExpensesGrp>
+        <Desc>SUPPLIES</Desc>
+        <TotalAmt>1816760</TotalAmt>
+        <ProgramServicesAmt>1745110</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>65616</ManagementAndGeneralAmt>
+        <FundraisingAmt>6034</FundraisingAmt>
+      </OtherExpensesGrp>
+      <OtherExpensesGrp>
+        <Desc>SERVICE CONTRACTS</Desc>
+        <TotalAmt>947124</TotalAmt>
+        <ProgramServicesAmt>549524</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>174177</ManagementAndGeneralAmt>
+        <FundraisingAmt>223423</FundraisingAmt>
+      </OtherExpensesGrp>
+      <OtherExpensesGrp>
+        <Desc>PRINTING AND PUBLICATIO</Desc>
+        <TotalAmt>589549</TotalAmt>
+        <ProgramServicesAmt>417918</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>156090</ManagementAndGeneralAmt>
+        <FundraisingAmt>15541</FundraisingAmt>
+      </OtherExpensesGrp>
+      <OtherExpensesGrp>
+        <Desc>FOOD</Desc>
+        <TotalAmt>413603</TotalAmt>
+        <ProgramServicesAmt>357920</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>31846</ManagementAndGeneralAmt>
+        <FundraisingAmt>23837</FundraisingAmt>
+      </OtherExpensesGrp>
+      <AllOtherExpensesGrp>
+        <TotalAmt>531881</TotalAmt>
+        <ProgramServicesAmt>413856</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>63620</ManagementAndGeneralAmt>
+        <FundraisingAmt>54405</FundraisingAmt>
+      </AllOtherExpensesGrp>
+      <TotalFunctionalExpensesGrp>
+        <TotalAmt>51223368</TotalAmt>
+        <ProgramServicesAmt>40430240</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>6846665</ManagementAndGeneralAmt>
+        <FundraisingAmt>3946463</FundraisingAmt>
+      </TotalFunctionalExpensesGrp>
+      <CashNonInterestBearingGrp>
+        <BOYAmt>7047872</BOYAmt>
+        <EOYAmt>2127324</EOYAmt>
+      </CashNonInterestBearingGrp>
+      <SavingsAndTempCashInvstGrp>
+        <BOYAmt>27988933</BOYAmt>
+        <EOYAmt>27754967</EOYAmt>
+      </SavingsAndTempCashInvstGrp>
+      <PledgesAndGrantsReceivableGrp>
+        <BOYAmt>1787148</BOYAmt>
+        <EOYAmt>18279628</EOYAmt>
+      </PledgesAndGrantsReceivableGrp>
+      <AccountsReceivableGrp>
+        <BOYAmt>657820</BOYAmt>
+        <EOYAmt>1659435</EOYAmt>
+      </AccountsReceivableGrp>
+      <InventoriesForSaleOrUseGrp>
+        <BOYAmt>302905</BOYAmt>
+        <EOYAmt>343011</EOYAmt>
+      </InventoriesForSaleOrUseGrp>
+      <PrepaidExpensesDefrdChargesGrp>
+        <BOYAmt>214345</BOYAmt>
+        <EOYAmt>172327</EOYAmt>
+      </PrepaidExpensesDefrdChargesGrp>
+      <LandBldgEquipCostOrOtherBssAmt>159175873</LandBldgEquipCostOrOtherBssAmt>
+      <LandBldgEquipAccumDeprecAmt>36618387</LandBldgEquipAccumDeprecAmt>
+      <LandBldgEquipBasisNetGrp>
+        <BOYAmt>112976805</BOYAmt>
+        <EOYAmt>122557486</EOYAmt>
+      </LandBldgEquipBasisNetGrp>
+      <InvestmentsPubTradedSecGrp>
+        <BOYAmt>76615061</BOYAmt>
+        <EOYAmt>77184101</EOYAmt>
+      </InvestmentsPubTradedSecGrp>
+      <InvestmentsOtherSecuritiesGrp>
+        <BOYAmt>115538791</BOYAmt>
+        <EOYAmt>130778781</EOYAmt>
+      </InvestmentsOtherSecuritiesGrp>
+      <OtherAssetsTotalGrp>
+        <BOYAmt>130480</BOYAmt>
+        <EOYAmt>0</EOYAmt>
+      </OtherAssetsTotalGrp>
+      <TotalAssetsGrp>
+        <BOYAmt>343260160</BOYAmt>
+        <EOYAmt>380857060</EOYAmt>
+      </TotalAssetsGrp>
+      <AccountsPayableAccrExpnssGrp>
+        <BOYAmt>4033687</BOYAmt>
+        <EOYAmt>4284927</EOYAmt>
+      </AccountsPayableAccrExpnssGrp>
+      <DeferredRevenueGrp>
+        <BOYAmt>5230207</BOYAmt>
+        <EOYAmt>4796053</EOYAmt>
+      </DeferredRevenueGrp>
+      <OtherLiabilitiesGrp>
+        <BOYAmt>3866172</BOYAmt>
+        <EOYAmt>3266309</EOYAmt>
+      </OtherLiabilitiesGrp>
+      <TotalLiabilitiesGrp>
+        <BOYAmt>13130066</BOYAmt>
+        <EOYAmt>12347289</EOYAmt>
+      </TotalLiabilitiesGrp>
+      <OrganizationFollowsFASB117Ind>X</OrganizationFollowsFASB117Ind>
+      <NoDonorRestrictionNetAssetsGrp>
+        <BOYAmt>95679144</BOYAmt>
+        <EOYAmt>101448117</EOYAmt>
+      </NoDonorRestrictionNetAssetsGrp>
+      <DonorRestrictionNetAssetsGrp>
+        <BOYAmt>234450950</BOYAmt>
+        <EOYAmt>267061654</EOYAmt>
+      </DonorRestrictionNetAssetsGrp>
+      <TotalNetAssetsFundBalanceGrp>
+        <BOYAmt>330130094</BOYAmt>
+        <EOYAmt>368509771</EOYAmt>
+      </TotalNetAssetsFundBalanceGrp>
+      <TotLiabNetAssetsFundBalanceGrp>
+        <BOYAmt>343260160</BOYAmt>
+        <EOYAmt>380857060</EOYAmt>
+      </TotLiabNetAssetsFundBalanceGrp>
+      <InfoInScheduleOPartXIInd>X</InfoInScheduleOPartXIInd>
+      <ReconcilationRevenueExpnssAmt>22432781</ReconcilationRevenueExpnssAmt>
+      <NetUnrlzdGainsLossesInvstAmt>15222118</NetUnrlzdGainsLossesInvstAmt>
+      <OtherChangesInNetAssetsAmt>724778</OtherChangesInNetAssetsAmt>
+      <MethodOfAccountingAccrualInd>X</MethodOfAccountingAccrualInd>
+      <AccountantCompileOrReviewInd>0</AccountantCompileOrReviewInd>
+      <FSAuditedInd>1</FSAuditedInd>
+      <FSAuditedBasisGrp>
+        <ConsolidatedBasisFinclStmtInd>X</ConsolidatedBasisFinclStmtInd>
+      </FSAuditedBasisGrp>
+      <AuditCommitteeInd>1</AuditCommitteeInd>
+      <FederalGrantAuditRequiredInd>1</FederalGrantAuditRequiredInd>
+      <FederalGrantAuditPerformedInd>1</FederalGrantAuditPerformedInd>
+    </IRS990>
+    <IRS990ScheduleA documentId="RetDoc1039100001">
+      <PublicOrganization170Ind>X</PublicOrganization170Ind>
+      <GiftsGrantsContriRcvd170Grp>
+        <CurrentTaxYearMinus4YearsAmt>20071462</CurrentTaxYearMinus4YearsAmt>
+        <CurrentTaxYearMinus3YearsAmt>23422342</CurrentTaxYearMinus3YearsAmt>
+        <CurrentTaxYearMinus2YearsAmt>28672847</CurrentTaxYearMinus2YearsAmt>
+        <CurrentTaxYearMinus1YearAmt>33972843</CurrentTaxYearMinus1YearAmt>
+        <CurrentTaxYearAmt>55427294</CurrentTaxYearAmt>
+        <TotalAmt>161566788</TotalAmt>
+      </GiftsGrantsContriRcvd170Grp>
+      <TotalCalendarYear170Grp>
+        <CurrentTaxYearMinus4YearsAmt>20071462</CurrentTaxYearMinus4YearsAmt>
+        <CurrentTaxYearMinus3YearsAmt>23422342</CurrentTaxYearMinus3YearsAmt>
+        <CurrentTaxYearMinus2YearsAmt>28672847</CurrentTaxYearMinus2YearsAmt>
+        <CurrentTaxYearMinus1YearAmt>33972843</CurrentTaxYearMinus1YearAmt>
+        <CurrentTaxYearAmt>55427294</CurrentTaxYearAmt>
+        <TotalAmt>161566788</TotalAmt>
+      </TotalCalendarYear170Grp>
+      <SubstantialContributorsTotAmt>24048594</SubstantialContributorsTotAmt>
+      <PublicSupportTotal170Amt>137518194</PublicSupportTotal170Amt>
+      <GrossInvestmentIncome170Grp>
+        <CurrentTaxYearMinus4YearsAmt>1142894</CurrentTaxYearMinus4YearsAmt>
+        <CurrentTaxYearMinus3YearsAmt>1081094</CurrentTaxYearMinus3YearsAmt>
+        <CurrentTaxYearMinus2YearsAmt>1652964</CurrentTaxYearMinus2YearsAmt>
+        <CurrentTaxYearMinus1YearAmt>2684041</CurrentTaxYearMinus1YearAmt>
+        <CurrentTaxYearAmt>3352410</CurrentTaxYearAmt>
+        <TotalAmt>9913403</TotalAmt>
+      </GrossInvestmentIncome170Grp>
+      <UnrelatedBusinessNetIncm170Grp>
+        <CurrentTaxYearMinus4YearsAmt>43825</CurrentTaxYearMinus4YearsAmt>
+        <CurrentTaxYearMinus3YearsAmt>170083</CurrentTaxYearMinus3YearsAmt>
+        <CurrentTaxYearMinus2YearsAmt>15072</CurrentTaxYearMinus2YearsAmt>
+        <CurrentTaxYearAmt>16130</CurrentTaxYearAmt>
+        <TotalAmt>245110</TotalAmt>
+      </UnrelatedBusinessNetIncm170Grp>
+      <TotalSupportAmt>171725301</TotalSupportAmt>
+      <GrossReceiptsRltdActivitiesAmt>46066760</GrossReceiptsRltdActivitiesAmt>
+      <PublicSupportCY170Pct>0.80080</PublicSupportCY170Pct>
+      <PublicSupportPY170Pct>0.87960</PublicSupportPY170Pct>
+      <ThirtyThrPctSuprtTestsCY170Ind>X</ThirtyThrPctSuprtTestsCY170Ind>
+    </IRS990ScheduleA>
+    <IRS990ScheduleB documentId="RetDoc1234500001">
+      <ContributorInformationGrp>
+        <ContributorNum>RESTRICTED</ContributorNum>
+        <ContributorBusinessName>
+          <BusinessNameLine1>RESTRICTED</BusinessNameLine1>
+        </ContributorBusinessName>
+        <ContributorUSAddress>
+          <AddressLine1>RESTRICTED</AddressLine1>
+          <AddressLine2>RESTRICTED</AddressLine2>
+          <City>RESTRICTED</City>
+          <State>RESTRICTED</State>
+          <ZIPCode>RESTRICTED</ZIPCode>
+        </ContributorUSAddress>
+        <TotalContributionsAmt>RESTRICTED</TotalContributionsAmt>
+      </ContributorInformationGrp>
+    </IRS990ScheduleB>
+    <IRS990ScheduleC documentId="RetDoc1039600001">
+      <TotalGrassrootsLobbyingGrp>
+        <FilingOrganizationsTotalAmt>18177</FilingOrganizationsTotalAmt>
+      </TotalGrassrootsLobbyingGrp>
+      <TotalDirectLobbyingGrp>
+        <FilingOrganizationsTotalAmt>183744</FilingOrganizationsTotalAmt>
+      </TotalDirectLobbyingGrp>
+      <TotalLobbyingExpendGrp>
+        <FilingOrganizationsTotalAmt>201921</FilingOrganizationsTotalAmt>
+      </TotalLobbyingExpendGrp>
+      <OtherExemptPurposeExpendGrp>
+        <FilingOrganizationsTotalAmt>47075484</FilingOrganizationsTotalAmt>
+      </OtherExemptPurposeExpendGrp>
+      <TotalExemptPurposeExpendGrp>
+        <FilingOrganizationsTotalAmt>47277405</FilingOrganizationsTotalAmt>
+      </TotalExemptPurposeExpendGrp>
+      <LobbyingNontaxableAmountGrp>
+        <FilingOrganizationsTotalAmt>1000000</FilingOrganizationsTotalAmt>
+      </LobbyingNontaxableAmountGrp>
+      <GrassrootsNontaxableGrp>
+        <FilingOrganizationsTotalAmt>250000</FilingOrganizationsTotalAmt>
+      </GrassrootsNontaxableGrp>
+      <TotLbbyngGrassrootMnsNonTxGrp>
+        <FilingOrganizationsTotalAmt>0</FilingOrganizationsTotalAmt>
+      </TotLbbyngGrassrootMnsNonTxGrp>
+      <TotLbbyExpendMnsLbbyngNonTxGrp>
+        <FilingOrganizationsTotalAmt>0</FilingOrganizationsTotalAmt>
+      </TotLbbyExpendMnsLbbyngNonTxGrp>
+      <AvgLobbyingNontaxableAmountGrp>
+        <CurrentYearMinus3Amt>1000000</CurrentYearMinus3Amt>
+        <CurrentYearMinus2Amt>1000000</CurrentYearMinus2Amt>
+        <CurrentYearMinus1Amt>1000000</CurrentYearMinus1Amt>
+        <CurrentYearAmt>1000000</CurrentYearAmt>
+        <TotalAmt>4000000</TotalAmt>
+      </AvgLobbyingNontaxableAmountGrp>
+      <LobbyingCeilingAmt>6000000</LobbyingCeilingAmt>
+      <AvgTotalLobbyingExpendGrp>
+        <CurrentYearMinus3Amt>144237</CurrentYearMinus3Amt>
+        <CurrentYearMinus2Amt>207318</CurrentYearMinus2Amt>
+        <CurrentYearMinus1Amt>176252</CurrentYearMinus1Amt>
+        <CurrentYearAmt>201921</CurrentYearAmt>
+        <TotalAmt>729728</TotalAmt>
+      </AvgTotalLobbyingExpendGrp>
+      <AvgGrassrootsNontaxableGrp>
+        <CurrentYearMinus3Amt>250000</CurrentYearMinus3Amt>
+        <CurrentYearMinus2Amt>250000</CurrentYearMinus2Amt>
+        <CurrentYearMinus1Amt>250000</CurrentYearMinus1Amt>
+        <CurrentYearAmt>250000</CurrentYearAmt>
+        <TotalAmt>1000000</TotalAmt>
+      </AvgGrassrootsNontaxableGrp>
+      <GrassrootsCeilingAmt>1500000</GrassrootsCeilingAmt>
+      <AvgGrassrootsLobbyingExpendGrp>
+        <CurrentYearMinus3Amt>5546</CurrentYearMinus3Amt>
+        <CurrentYearMinus2Amt>8105</CurrentYearMinus2Amt>
+        <CurrentYearMinus1Amt>8600</CurrentYearMinus1Amt>
+        <CurrentYearAmt>18177</CurrentYearAmt>
+        <TotalAmt>40428</TotalAmt>
+      </AvgGrassrootsLobbyingExpendGrp>
+    </IRS990ScheduleC>
+    <IRS990ScheduleD documentId="RetDoc1039900001">
+      <PreservationPublicUseInd>X</PreservationPublicUseInd>
+      <ProtectionNaturalHabitatInd>X</ProtectionNaturalHabitatInd>
+      <PreservationOpenSpaceInd>X</PreservationOpenSpaceInd>
+      <TotalEasementsCnt>139</TotalEasementsCnt>
+      <TotalAcreageCnt>8692.30</TotalAcreageCnt>
+      <HistoricStructureEasementsCnt>0</HistoricStructureEasementsCnt>
+      <HistoricStrctrEasementsAftrCnt>0</HistoricStrctrEasementsAftrCnt>
+      <ModifiedEasementsCnt>2</ModifiedEasementsCnt>
+      <StatesEasementsHeldCnt>1</StatesEasementsHeldCnt>
+      <WrittenPolicyMonitoringInd>1</WrittenPolicyMonitoringInd>
+      <StaffHoursSpentEnforcementCnt>6200.00</StaffHoursSpentEnforcementCnt>
+      <ExpensesIncurredEnforcementAmt>139947</ExpensesIncurredEnforcementAmt>
+      <Section170hRqrStsfdInd>1</Section170hRqrStsfdInd>
+      <CollectionUsedPubExhibitionInd>X</CollectionUsedPubExhibitionInd>
+      <CollUsedScholarlyRsrchInd>X</CollUsedScholarlyRsrchInd>
+      <CollectionUsedPreservationInd>X</CollectionUsedPreservationInd>
+      <CollUsedLoanOrExchProgInd>X</CollUsedLoanOrExchProgInd>
+      <SolicitedAssetsSaleInd>0</SolicitedAssetsSaleInd>
+      <CYEndwmtFundGrp>
+        <BeginningYearBalanceAmt>184805816</BeginningYearBalanceAmt>
+        <ContributionsAmt>2171124</ContributionsAmt>
+        <InvestmentEarningsOrLossesAmt>19457175</InvestmentEarningsOrLossesAmt>
+        <OtherExpendituresAmt>8332791</OtherExpendituresAmt>
+        <AdministrativeExpensesAmt>234865</AdministrativeExpensesAmt>
+        <EndYearBalanceAmt>197866459</EndYearBalanceAmt>
+      </CYEndwmtFundGrp>
+      <CYMinus1YrEndwmtFundGrp>
+        <BeginningYearBalanceAmt>168003923</BeginningYearBalanceAmt>
+        <ContributionsAmt>6223274</ContributionsAmt>
+        <InvestmentEarningsOrLossesAmt>12306269</InvestmentEarningsOrLossesAmt>
+        <GrantsOrScholarshipsAmt>-5163451</GrantsOrScholarshipsAmt>
+        <OtherExpendituresAmt>6664744</OtherExpendituresAmt>
+        <AdministrativeExpensesAmt>226357</AdministrativeExpensesAmt>
+        <EndYearBalanceAmt>184805816</EndYearBalanceAmt>
+      </CYMinus1YrEndwmtFundGrp>
+      <CYMinus2YrEndwmtFundGrp>
+        <BeginningYearBalanceAmt>191096698</BeginningYearBalanceAmt>
+        <ContributionsAmt>5327634</ContributionsAmt>
+        <InvestmentEarningsOrLossesAmt>-24080571</InvestmentEarningsOrLossesAmt>
+        <OtherExpendituresAmt>4339838</OtherExpendituresAmt>
+        <EndYearBalanceAmt>168003923</EndYearBalanceAmt>
+      </CYMinus2YrEndwmtFundGrp>
+      <CYMinus3YrEndwmtFundGrp>
+        <BeginningYearBalanceAmt>147184290</BeginningYearBalanceAmt>
+        <ContributionsAmt>3455064</ContributionsAmt>
+        <InvestmentEarningsOrLossesAmt>50662215</InvestmentEarningsOrLossesAmt>
+        <OtherExpendituresAmt>10204871</OtherExpendituresAmt>
+        <EndYearBalanceAmt>191096698</EndYearBalanceAmt>
+      </CYMinus3YrEndwmtFundGrp>
+      <CYMinus4YrEndwmtFundGrp>
+        <BeginningYearBalanceAmt>147911196</BeginningYearBalanceAmt>
+        <ContributionsAmt>2386972</ContributionsAmt>
+        <InvestmentEarningsOrLossesAmt>1944720</InvestmentEarningsOrLossesAmt>
+        <OtherExpendituresAmt>5058598</OtherExpendituresAmt>
+        <EndYearBalanceAmt>147184290</EndYearBalanceAmt>
+      </CYMinus4YrEndwmtFundGrp>
+      <BoardDesignatedBalanceEOYPct>0.10700</BoardDesignatedBalanceEOYPct>
+      <PrmnntEndowmentBalanceEOYPct>0.47900</PrmnntEndowmentBalanceEOYPct>
+      <TermEndowmentBalanceEOYPct>0.41400</TermEndowmentBalanceEOYPct>
+      <EndowmentsHeldUnrelatedOrgInd>1</EndowmentsHeldUnrelatedOrgInd>
+      <EndowmentsHeldRelatedOrgInd>0</EndowmentsHeldRelatedOrgInd>
+      <LandGrp>
+        <OtherCostOrOtherBasisAmt>69037501</OtherCostOrOtherBasisAmt>
+        <BookValueAmt>69037501</BookValueAmt>
+      </LandGrp>
+      <BuildingsGrp>
+        <OtherCostOrOtherBasisAmt>57420464</OtherCostOrOtherBasisAmt>
+        <DepreciationAmt>31902810</DepreciationAmt>
+        <BookValueAmt>25517654</BookValueAmt>
+      </BuildingsGrp>
+      <EquipmentGrp>
+        <OtherCostOrOtherBasisAmt>4834686</OtherCostOrOtherBasisAmt>
+        <DepreciationAmt>3835922</DepreciationAmt>
+        <BookValueAmt>998764</BookValueAmt>
+      </EquipmentGrp>
+      <OtherLandBuildingsGrp>
+        <OtherCostOrOtherBasisAmt>27883222</OtherCostOrOtherBasisAmt>
+        <DepreciationAmt>879655</DepreciationAmt>
+        <BookValueAmt>27003567</BookValueAmt>
+      </OtherLandBuildingsGrp>
+      <TotalBookValueLandBuildingsAmt>122557486</TotalBookValueLandBuildingsAmt>
+      <OtherSecuritiesGrp>
+        <Desc>LIMITED PARTNERSHIPS</Desc>
+        <BookValueAmt>64846425</BookValueAmt>
+        <MethodValuationCd>F</MethodValuationCd>
+      </OtherSecuritiesGrp>
+      <OtherSecuritiesGrp>
+        <Desc>DIRECT HEDGE FUNDS</Desc>
+        <BookValueAmt>36597425</BookValueAmt>
+        <MethodValuationCd>F</MethodValuationCd>
+      </OtherSecuritiesGrp>
+      <OtherSecuritiesGrp>
+        <Desc>COMMINGLED TRUST FUNDS</Desc>
+        <BookValueAmt>10341395</BookValueAmt>
+        <MethodValuationCd>F</MethodValuationCd>
+      </OtherSecuritiesGrp>
+      <OtherSecuritiesGrp>
+        <Desc>FUND OF FUNDS</Desc>
+        <BookValueAmt>18406444</BookValueAmt>
+        <MethodValuationCd>F</MethodValuationCd>
+      </OtherSecuritiesGrp>
+      <OtherSecuritiesGrp>
+        <Desc>MUTUAL FUNDS: LARGE CAP</Desc>
+        <BookValueAmt>587092</BookValueAmt>
+        <MethodValuationCd>F</MethodValuationCd>
+      </OtherSecuritiesGrp>
+      <TotalBookValueSecuritiesAmt>130778781</TotalBookValueSecuritiesAmt>
+      <OtherLiabilitiesOrgGrp>
+        <Desc>SPLIT-INTEREST AGREEMENT LIABILITIES</Desc>
+        <Amt>3266309</Amt>
+      </OtherLiabilitiesOrgGrp>
+      <TotalLiabilityAmt>3266309</TotalLiabilityAmt>
+      <FootnoteTextInd>X</FootnoteTextInd>
+      <TotalRevEtcAuditedFinclStmtAmt>89815016</TotalRevEtcAuditedFinclStmtAmt>
+      <NetUnrealizedGainsInvstAmt>15222118</NetUnrealizedGainsInvstAmt>
+      <OtherRevenueAmt>936749</OtherRevenueAmt>
+      <RevenueNotReportedAmt>16158867</RevenueNotReportedAmt>
+      <RevenueSubtotalAmt>73656149</RevenueSubtotalAmt>
+      <RevenueNotReportedFinclStmtAmt>0</RevenueNotReportedFinclStmtAmt>
+      <TotalRevenuePerForm990Amt>73656149</TotalRevenuePerForm990Amt>
+      <TotExpnsEtcAuditedFinclStmtAmt>51310985</TotExpnsEtcAuditedFinclStmtAmt>
+      <OtherExpensesIncludedAmt>87617</OtherExpensesIncludedAmt>
+      <ExpensesNotReportedAmt>87617</ExpensesNotReportedAmt>
+      <ExpensesSubtotalAmt>51223368</ExpensesSubtotalAmt>
+      <ExpensesNotRptFinclStmtAmt>0</ExpensesNotRptFinclStmtAmt>
+      <TotalExpensesPerForm990Amt>51223368</TotalExpensesPerForm990Amt>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>PART II, LINE 5:</FormAndLineReferenceDesc>
+        <ExplanationTxt>MASS AUDUBON HAS A WRITTEN POLICY FOR THE MONITORING AND ENFORCEMENT OF THE CONSERVATION EASEMENTS ENTRUSTED TO ITS CARE. THE POLICY ESTABLISHES A TARGET OF AT LEAST ONE ON-SITE MONITORING VISIT EACH YEAR AND DESCRIBES THE STEPS TO BE TAKEN IN RESPONSE TO ANY VIOLATION TO PROTECT THE CONSERVATION VALUES OF THE PROPERTY.</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>PART II, LINE 9:</FormAndLineReferenceDesc>
+        <ExplanationTxt>THE COST OF PURCHASING CONSERVATION RESTRICTIONS AND EASEMENTS IS CAPITALIZED.</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>PART III, LINE 1A:</FormAndLineReferenceDesc>
+        <ExplanationTxt>MASS AUDUBON DOES NOT CAPITALIZE ITS COLLECTIONS AS AN ASSET IN THE COMBINED STATEMENTS OF FINANCIAL POSITION. FINE ARTS COLLECTIONS INCLUDE ARTWORK HELD FOR EDUCATIONAL AND CURATORIAL PURPOSES. EACH OF THE ITEMS IS CATALOGED, PRESERVED, AND CARED FOR, AND ACTIVITIES VERIFYING THEIR EXISTENCE AND ASSESSING THEIR CONDITION ARE PERFORMED CONTINUOUSLY. OCCASIONALLY, MASS AUDUBON WILL SELL OR DE-ACCESS CERTAIN PIECES. THE DE-ACCESSION PROCEEDS WILL BE UTILIZED AS DETERMINED BY THE BOARD OF DIRECTORS FOR FUTURE COLLECTION ACQUISITIONS UNLESS THE ORIGINAL DONOR HAS SPECIFIED A RESTRICTION ON THE DE-ACCESSION PROCEEDS. MASS AUDUBON HAS APPROXIMATELY 2,700 ITEMS CATALOGUED IN ITS COLLECTION.</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>PART III, LINE 4:</FormAndLineReferenceDesc>
+        <ExplanationTxt>MASS AUDUBON MAINTAINS A COLLECTION OF ARTWORKS DEPICTING BIRDS, OTHER WILDLIFE, AND NATURAL HABITATS. THIS COLLECTION IS ACTIVELY USED FOR TEACHING STUDENTS AND ADULTS AND ALSO BY SCHOLARS FOR RESEARCH. PORTIONS OF THE COLLECTION ARE FREQUENTLY ON DISPLAY AT MASS AUDUBON'S MUSEUM OF AMERICAN BIRD ART (TEMPORARILY CLOSED) AND OCCASIONALLY AT OTHER SANCTUARIES AROUND THE STATE. THE COLLECTION IS USED TO EDUCATE VISITORS ABOUT BIRDS AND THE NATURAL WORLD AND TO INSPIRE THEM TO BECOME ACTIVELY INVOLVED IN PROTECTING THE NATURE OF MASSACHUSETTS IN DIRECT FURTHERANCE OF MASS AUDUBON'S MISSION.</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>PART V, LINE 4:</FormAndLineReferenceDesc>
+        <ExplanationTxt>MASS AUDUBON USES INCOME FROM ITS ENDOWMENT FUNDS IN DIRECT FURTHERANCE OF ITS MISSION AND IN SUPPORT OF THE MANY SANCTUARIES AND ACTIVITIES FOR WHICH DONORS HAVE CREATED RESTRICTED ENDOWMENT FUNDS. APPROXIMATELY 17% OF MASS AUDUBON'S ANNUAL OPERATING BUDGET COMES FROM ENDOWMENT INCOME. FOR INSTANCE, MANY DONORS HAVE LEFT BEQUESTS TO ESTABLISH RESTRICTED ENDOWMENT FUNDS TO SUPPORT OPERATIONS AND ACTIVITIES AT SANCTUARY PROPERTIES WHICH THEY HAD PREVIOUSLY OWNED OR TO WHICH THEY WERE PARTICULARLY ATTACHED, AND OTHER DONORS HAVE ESTABLISHED ENDOWMENTS TO SUBSIDIZE CHILDREN FROM DISADVANTAGED BACKGROUNDS TO ATTEND MASS AUDUBON SUMMER CAMPS AND EDUCATIONAL PROGRAMS.</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>PART X, LINE 2:</FormAndLineReferenceDesc>
+        <ExplanationTxt>MASS AUDUBON ACCOUNTS FOR THE EFFECT OF ANY UNCERTAIN TAX POSITIONS BASED ON A "MORE LIKELY THAN NOT" THRESHOLD TO THE RECOGNITION OF THE TAX POSITIONS BEING SUSTAINED BASED ON THE TECHNICAL MERITS OF THE POSITION UNDER SCRUTINY BY THE APPLICABLE TAXING AUTHORITY. IF A TAX POSITION OR POSITIONS ARE DEEMED TO RESULT IN UNCERTAINTIES OF THOSE POSITIONS, THE UNRECOGNIZED TAX BENEFIT IS ESTIMATED BASED ON A "CUMULATIVE PROBABILITY ASSESSMENT" THAT AGGREGATES THE ESTIMATED TAX LIABILITY FOR ALL UNCERTAIN TAX POSITIONS. MASS AUDUBON HAS IDENTIFIED ITS TAX STATUS AS A TAX-EXEMPT ENTITY AND ITS DETERMINATION AS TO ITS INCOME BEING RELATED OR UNRELATED AS ITS ONLY SIGNIFICANT TAX POSITIONS AND HAS DETERMINED THAT SUCH TAX POSITIONS DO NOT RESULT IN AN UNCERTAINTY REQUIRING RECOGNITION. MASS AUDUBON IS NOT CURRENTLY UNDER EXAMINATION BY ANY TAXING JURISDICTION. FEDERAL AND STATE INCOME TAX RETURNS ARE GENERALLY OPEN FOR EXAMINATION FOR THREE YEARS FOLLOWING THE DATE FILED.</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>PART XI, LINE 2D - OTHER ADJUSTMENTS:</FormAndLineReferenceDesc>
+        <ExplanationTxt>FUNDRAISING AND GAMING EVENT EXPENSES 29,325. REVENUES OF WHETSTONE WOOD TRUST FUND INCLUDED IN CONSOLIDATED FINANCIALS 182,646. CHANGES IN SPLIT INTEREST AGREEMENTS 724,778.</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>PART XII, LINE 2D - OTHER ADJUSTMENTS:</FormAndLineReferenceDesc>
+        <ExplanationTxt>FUNDRAISING AND GAMING EVENT EXPENSES 29,325. EXPENSES OF WHETSTONE WOOD TRUST FUND INCLUDED IN CONSOLIDATED FINANCIALS 58,292.</ExplanationTxt>
+      </SupplementalInformationDetail>
+    </IRS990ScheduleD>
+    <IRS990ScheduleF documentId="RetDoc1040500001">
+      <GrantRecordsMaintainedInd>1</GrantRecordsMaintainedInd>
+      <AccountActivitiesOutsideUSGrp>
+        <RegionTxt>CENTRAL AMERICA AND THE CARIBBEAN</RegionTxt>
+        <OfficesCnt>0</OfficesCnt>
+        <EmployeeCnt>0</EmployeeCnt>
+        <TypeOfActivitiesConductedTxt>GRANTMAKING</TypeOfActivitiesConductedTxt>
+        <RegionTotalExpendituresAmt>151000</RegionTotalExpendituresAmt>
+      </AccountActivitiesOutsideUSGrp>
+      <SubtotalOfficesCnt>0</SubtotalOfficesCnt>
+      <SubtotalEmployeesCnt>0</SubtotalEmployeesCnt>
+      <ContinuationTotalOfficeCnt>0</ContinuationTotalOfficeCnt>
+      <ContinuationTotalEmployeeCnt>0</ContinuationTotalEmployeeCnt>
+      <TotalOfficeCnt>0</TotalOfficeCnt>
+      <TotalEmployeeCnt>0</TotalEmployeeCnt>
+      <SubtotalSpentAmt>151000</SubtotalSpentAmt>
+      <ContinuationSpentAmt>0</ContinuationSpentAmt>
+      <TotalSpentAmt>151000</TotalSpentAmt>
+      <GrantsToOrgOutsideUSGrp>
+        <RegionTxt>CENTRAL AMERICA AND THE CARIBBEAN</RegionTxt>
+        <PurposeOfGrantTxt>TROPICAL FOREST AND SAVANNAH WILDLIFE PROTECTION AND FIRE SUPPRESSION EFFORTS, EQUIPMENT PURCHASES, AND BUILDING REPAIRS/CONSTRUCTION AT THE 252,000-ACRE RIO BRAVO CONSERVATION AND MANAGEMENT AREA IN NORTHWESTERN BELIZE</PurposeOfGrantTxt>
+        <CashGrantAmt>68000</CashGrantAmt>
+        <MannerOfCashDisbursementTxt>WIRE TRANSFER</MannerOfCashDisbursementTxt>
+        <NonCashAssistanceAmt>0</NonCashAssistanceAmt>
+      </GrantsToOrgOutsideUSGrp>
+      <GrantsToOrgOutsideUSGrp>
+        <RegionTxt>CENTRAL AMERICA AND THE CARIBBEAN</RegionTxt>
+        <PurposeOfGrantTxt>MARINE AND TERRESTRIAL WILDLIFE PROTECTION IN PROTECTED AREAS IN THE TOLEDO DISTRICT OF SOUTHEASTERN BELIZE, INCLUDING EQUIPMENT PURCHASES AND PERSONNEL COSTS AND TRAINING</PurposeOfGrantTxt>
+        <CashGrantAmt>83000</CashGrantAmt>
+        <MannerOfCashDisbursementTxt>WIRE TRANSFER</MannerOfCashDisbursementTxt>
+        <NonCashAssistanceAmt>0</NonCashAssistanceAmt>
+      </GrantsToOrgOutsideUSGrp>
+      <Total501c3OrgCnt>2</Total501c3OrgCnt>
+      <TotalOtherOrgCnt>0</TotalOtherOrgCnt>
+      <TransferToForeignCorpInd>1</TransferToForeignCorpInd>
+      <InterestInForeignTrustInd>0</InterestInForeignTrustInd>
+      <ForeignCorpOwnershipInd>1</ForeignCorpOwnershipInd>
+      <PassiveForeignInvestmestCoInd>1</PassiveForeignInvestmestCoInd>
+      <ForeignPartnershipInd>1</ForeignPartnershipInd>
+      <BoycottCountriesInd>0</BoycottCountriesInd>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>PART I, LINE 2</FormAndLineReferenceDesc>
+        <ExplanationTxt>MASS AUDUBON CLOSELY MONITORS THE EXPENDITURE OF THE FUNDS BY THE ORGANIZATIONS IN BELIZE FOR WHICH IT PROVIDES GRANTS, ADVICE AND TECHNICAL ASSISTANCE. WRITTEN PROPOSALS ARE REQUIRED FOR ALL GRANT REQUESTS AND FINAL REPORTS ARE REQUIRED FOR ALL GRANTS AWARDED (AND FOR LARGER GRANTS INTERIM REPORTS ARE REQUIRED AS WELL). ALL PROPOSALS CONTAIN BUDGET INFORMATION, AND ALL FINAL REPORTS PROVIDE DETAILS ON ACTUAL AMOUNTS EXPENDED ON FUNDED PROJECTS. MASS AUDUBON STAFF WORK CLOSELY WITH THE ORGANIZATIONS FUNDED AND VISIT THEM IN BELIZE IN MOST YEARS. SUCH VISITS INCLUDE THE VISUAL INSPECTION OF CAPITAL IMPROVEMENTS OR EQUIPMENT FUNDED BY THE GRANTS AND THE DISCUSSION OF PRIORITIES, ACCOMPLISHMENTS AND GOALS WITH THE LEADERS OF THE ORGANIZATIONS.</ExplanationTxt>
+      </SupplementalInformationDetail>
+    </IRS990ScheduleF>
+    <IRS990ScheduleG documentId="RetDoc1041200001">
+      <MailSolicitationsInd>X</MailSolicitationsInd>
+      <EmailSolicitationsInd>X</EmailSolicitationsInd>
+      <PhoneSolicitationsInd>X</PhoneSolicitationsInd>
+      <InPersonSolicitationsInd>X</InPersonSolicitationsInd>
+      <SolicitationOfNonGovtGrantsInd>X</SolicitationOfNonGovtGrantsInd>
+      <SolicitationOfGovtGrantsInd>X</SolicitationOfGovtGrantsInd>
+      <SpecialFundraisingEventsInd>X</SpecialFundraisingEventsInd>
+      <AgrmtProfFundraisingActyInd>1</AgrmtProfFundraisingActyInd>
+      <FundraiserActivityInfoGrp>
+        <OrganizationBusinessName>
+          <BusinessNameLine1Txt>STAGE COACH DIGITAL</BusinessNameLine1Txt>
+        </OrganizationBusinessName>
+        <USAddress>
+          <AddressLine1Txt>2038 NE DAVIS STREET</AddressLine1Txt>
+          <CityNm>PORTLAND</CityNm>
+          <StateAbbreviationCd>OR</StateAbbreviationCd>
+          <ZIPCd>97232</ZIPCd>
+        </USAddress>
+        <ActivityTxt>DIGITAL MARKETING AND MEMBERSHIP RECRUITMENT</ActivityTxt>
+        <FundraiserControlOfFundsInd>0</FundraiserControlOfFundsInd>
+        <GrossReceiptsAmt>0</GrossReceiptsAmt>
+        <RetainedByContractorAmt>302142</RetainedByContractorAmt>
+        <NetToOrganizationAmt>0</NetToOrganizationAmt>
+      </FundraiserActivityInfoGrp>
+      <TotalRetainedByContractorsAmt>302142</TotalRetainedByContractorsAmt>
+      <LicensedStatesCd>CA</LicensedStatesCd>
+      <LicensedStatesCd>CT</LicensedStatesCd>
+      <LicensedStatesCd>DC</LicensedStatesCd>
+      <LicensedStatesCd>FL</LicensedStatesCd>
+      <LicensedStatesCd>GA</LicensedStatesCd>
+      <LicensedStatesCd>MA</LicensedStatesCd>
+      <LicensedStatesCd>ME</LicensedStatesCd>
+      <LicensedStatesCd>MN</LicensedStatesCd>
+      <LicensedStatesCd>NH</LicensedStatesCd>
+      <LicensedStatesCd>NJ</LicensedStatesCd>
+      <LicensedStatesCd>NY</LicensedStatesCd>
+      <LicensedStatesCd>OH</LicensedStatesCd>
+      <LicensedStatesCd>PA</LicensedStatesCd>
+      <LicensedStatesCd>RI</LicensedStatesCd>
+      <LicensedStatesCd>VA</LicensedStatesCd>
+      <LicensedStatesCd>MD</LicensedStatesCd>
+      <LicensedStatesCd>WI</LicensedStatesCd>
+      <FundraisingEventInformationGrp>
+        <Event1Nm>ARCADIA FOLK FEST</Event1Nm>
+        <GrossReceiptsEvent1Amt>49549</GrossReceiptsEvent1Amt>
+        <CharitableContriEvent1Amt>27500</CharitableContriEvent1Amt>
+        <GrossRevenueEvent1Amt>22049</GrossRevenueEvent1Amt>
+        <OtherDirectExpensesEvent1Amt>3345</OtherDirectExpensesEvent1Amt>
+        <Event2Nm>BIRDERS MEETING</Event2Nm>
+        <GrossReceiptsEvent2Amt>8400</GrossReceiptsEvent2Amt>
+        <CharitableContriEvent2Amt>100</CharitableContriEvent2Amt>
+        <GrossRevenueEvent2Amt>8300</GrossRevenueEvent2Amt>
+        <RentFacilityCostsEvent2Amt>6370</RentFacilityCostsEvent2Amt>
+        <OtherDirectExpensesEvent2Amt>484</OtherDirectExpensesEvent2Amt>
+        <OtherEventsTotalCnt>11</OtherEventsTotalCnt>
+        <GrossReceiptsOtherEventsAmt>66854</GrossReceiptsOtherEventsAmt>
+        <CharitableContriOtherEventsAmt>5000</CharitableContriOtherEventsAmt>
+        <GrossRevenueOtherEventsAmt>61854</GrossRevenueOtherEventsAmt>
+        <RentFcltyCostsOtherEventsAmt>3222</RentFcltyCostsOtherEventsAmt>
+        <FoodAndBeverageOtherEventsAmt>456</FoodAndBeverageOtherEventsAmt>
+        <OthDirectExpnssOtherEventsAmt>8777</OthDirectExpnssOtherEventsAmt>
+        <GrossReceiptsTotalAmt>124803</GrossReceiptsTotalAmt>
+        <CharitableContributionsTotAmt>32600</CharitableContributionsTotAmt>
+        <GrossRevenueTotalEventsAmt>92203</GrossRevenueTotalEventsAmt>
+        <RentFcltyCostsTotalEventsAmt>9592</RentFcltyCostsTotalEventsAmt>
+        <FoodAndBeverageTotalEventsAmt>456</FoodAndBeverageTotalEventsAmt>
+        <OthDirectExpnssTotalEventsAmt>12606</OthDirectExpnssTotalEventsAmt>
+        <DirectExpenseSummaryEventsAmt>22654</DirectExpenseSummaryEventsAmt>
+        <NetIncomeSummaryAmt>69549</NetIncomeSummaryAmt>
+      </FundraisingEventInformationGrp>
+      <GamingInformationGrp>
+        <GrossRevenueOtherGamingAmt>23170</GrossRevenueOtherGamingAmt>
+        <CashPrizesOtherGamingAmt>5000</CashPrizesOtherGamingAmt>
+        <OthDirectExpnssOtherGamingAmt>1671</OthDirectExpnssOtherGamingAmt>
+        <VolunteerLaborOtherGamingInd>0</VolunteerLaborOtherGamingInd>
+        <GrossRevenueTotalGamingAmt>23170</GrossRevenueTotalGamingAmt>
+        <CashPrizesTotalGamingAmt>5000</CashPrizesTotalGamingAmt>
+        <OthDirectExpnssTotalGamingAmt>1671</OthDirectExpnssTotalGamingAmt>
+        <DirectExpenseSummaryGamingAmt>6671</DirectExpenseSummaryGamingAmt>
+        <NetGamingIncomeSummaryAmt>16499</NetGamingIncomeSummaryAmt>
+      </GamingInformationGrp>
+      <StatesWhereGamingConductedCd>MA</StatesWhereGamingConductedCd>
+      <LicensedInd>1</LicensedInd>
+      <LicenseSuspendedEtcInd>0</LicenseSuspendedEtcInd>
+      <GamingWithNonmembersInd>1</GamingWithNonmembersInd>
+      <MemberOfOtherEntityInd>0</MemberOfOtherEntityInd>
+      <GamingOwnFacilityPct>0.00000</GamingOwnFacilityPct>
+      <GamingOtherFacilityPct>1.00000</GamingOtherFacilityPct>
+      <PersonsWithBooksName>
+        <BusinessNameLine1Txt>BRIANA WINGATE</BusinessNameLine1Txt>
+      </PersonsWithBooksName>
+      <PersonsWithBooksUSAddress>
+        <AddressLine1Txt>1280 HORSE NECK ROAD</AddressLine1Txt>
+        <CityNm>WESTPORT</CityNm>
+        <StateAbbreviationCd>MA</StateAbbreviationCd>
+        <ZIPCd>02790</ZIPCd>
+      </PersonsWithBooksUSAddress>
+      <CntrctWith3rdPrtyForGameRevInd>0</CntrctWith3rdPrtyForGameRevInd>
+      <GamingManagerBusinessName>
+        <BusinessNameLine1Txt>GINA PURTELL</BusinessNameLine1Txt>
+      </GamingManagerBusinessName>
+      <GamingManagerCompensationAmt>323</GamingManagerCompensationAmt>
+      <GamingManagerServicesProvTxt>MANAGES ONE DAY DUCK DERBY EVENT</GamingManagerServicesProvTxt>
+      <GamingManagerIsEmployeeInd>X</GamingManagerIsEmployeeInd>
+      <CharitableDistributionRqrInd>0</CharitableDistributionRqrInd>
+      <DistributedAmt>0</DistributedAmt>
+    </IRS990ScheduleG>
+    <IRS990ScheduleI documentId="RetDoc1041900001">
+      <GrantRecordsMaintainedInd>1</GrantRecordsMaintainedInd>
+      <RecipientTable>
+        <RecipientBusinessName>
+          <BusinessNameLine1Txt>MASSACHUSETTS LAND TRUST COALITION</BusinessNameLine1Txt>
+        </RecipientBusinessName>
+        <USAddress>
+          <AddressLine1Txt>18 WOLBACH ROAD</AddressLine1Txt>
+          <CityNm>SUDBURY</CityNm>
+          <StateAbbreviationCd>MA</StateAbbreviationCd>
+          <ZIPCd>01776</ZIPCd>
+        </USAddress>
+        <RecipientEIN>272331022</RecipientEIN>
+        <IRCSectionDesc>501(C)(3)</IRCSectionDesc>
+        <CashGrantAmt>7500</CashGrantAmt>
+        <NonCashAssistanceAmt>0</NonCashAssistanceAmt>
+        <PurposeOfGrantTxt>CONFERENCE SPONSOR</PurposeOfGrantTxt>
+      </RecipientTable>
+      <RecipientTable>
+        <RecipientBusinessName>
+          <BusinessNameLine1Txt>MOUNT GRACE LAND CONSERVATION TRUST</BusinessNameLine1Txt>
+        </RecipientBusinessName>
+        <USAddress>
+          <AddressLine1Txt>1461 OLD KEENE ROAD</AddressLine1Txt>
+          <CityNm>ATHOL</CityNm>
+          <StateAbbreviationCd>MA</StateAbbreviationCd>
+          <ZIPCd>01331</ZIPCd>
+        </USAddress>
+        <RecipientEIN>042938967</RecipientEIN>
+        <IRCSectionDesc>501(C)(3)</IRCSectionDesc>
+        <CashGrantAmt>20000</CashGrantAmt>
+        <NonCashAssistanceAmt>0</NonCashAssistanceAmt>
+        <PurposeOfGrantTxt>AWARD FOR BEING A PARTNER IN THE WINCHENDON LAND PURCHASE</PurposeOfGrantTxt>
+      </RecipientTable>
+      <Total501c3OrgCnt>2</Total501c3OrgCnt>
+      <TotalOtherOrgCnt>0</TotalOtherOrgCnt>
+      <GrantsOtherAsstToIndivInUSGrp>
+        <GrantTypeTxt>CAMP, COLLEGE AND PRESCHOOL SCHOLARSHIP FUND</GrantTypeTxt>
+        <RecipientCnt>1530</RecipientCnt>
+        <CashGrantAmt>765298</CashGrantAmt>
+      </GrantsOtherAsstToIndivInUSGrp>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>PART I, LINE 2:</FormAndLineReferenceDesc>
+        <ExplanationTxt>MASS AUDUBON CLOSELY MONITORS DAY AND RESIDENTIAL CAMP SCHOLARSHIPS AND OTHER PROGRAM SCHOLARSHIPS. THESE SCHOLARSHIPS ARE DISCOUNTS (EITHER FULL OR PARTIAL) TO PROGRAMS OFFERED, AND MASS AUDUBON IS PROVIDING REDUCED OR FREE TUITION BASED ON NEED. THE FEW COLLEGE SCHOLARSHIPS WHICH ARE PROVIDED ARE ALSO CLOSELY MONITORED AND THE SCHOLARSHIP MONIES ARE GENERALLY SENT DIRECTLY TO THE COLLEGE AT WHICH THE RECIPIENT WILL BE STUDYING.</ExplanationTxt>
+      </SupplementalInformationDetail>
+    </IRS990ScheduleI>
+    <IRS990ScheduleJ documentId="RetDoc1042400001">
+      <CompensationCommitteeInd>X</CompensationCommitteeInd>
+      <Form990OfOtherOrganizationsInd>X</Form990OfOtherOrganizationsInd>
+      <WrittenEmploymentContractInd>X</WrittenEmploymentContractInd>
+      <CompensationSurveyInd>X</CompensationSurveyInd>
+      <BoardOrCommitteeApprovalInd>X</BoardOrCommitteeApprovalInd>
+      <SeverancePaymentInd>0</SeverancePaymentInd>
+      <SupplementalNonqualRtrPlanInd>0</SupplementalNonqualRtrPlanInd>
+      <EquityBasedCompArrngmInd>0</EquityBasedCompArrngmInd>
+      <CompBasedOnRevenueOfFlngOrgInd>0</CompBasedOnRevenueOfFlngOrgInd>
+      <CompBsdOnRevRelatedOrgsInd>0</CompBsdOnRevRelatedOrgsInd>
+      <CompBsdNetEarnsFlngOrgInd>0</CompBsdNetEarnsFlngOrgInd>
+      <CompBsdNetEarnsRltdOrgsInd>0</CompBsdNetEarnsRltdOrgsInd>
+      <AnyNonFixedPaymentsInd>1</AnyNonFixedPaymentsInd>
+      <InitialContractExceptionInd>0</InitialContractExceptionInd>
+      <RltdOrgOfficerTrstKeyEmplGrp>
+        <PersonNm>DAVID O'NEILL</PersonNm>
+        <TitleTxt>PRESIDENT</TitleTxt>
+        <BaseCompensationFilingOrgAmt>382993</BaseCompensationFilingOrgAmt>
+        <CompensationBasedOnRltdOrgsAmt>0</CompensationBasedOnRltdOrgsAmt>
+        <BonusFilingOrganizationAmount>60000</BonusFilingOrganizationAmount>
+        <BonusRelatedOrganizationsAmt>0</BonusRelatedOrganizationsAmt>
+        <OtherCompensationFilingOrgAmt>0</OtherCompensationFilingOrgAmt>
+        <OtherCompensationRltdOrgsAmt>0</OtherCompensationRltdOrgsAmt>
+        <DeferredCompensationFlngOrgAmt>26580</DeferredCompensationFlngOrgAmt>
+        <DeferredCompRltdOrgsAmt>0</DeferredCompRltdOrgsAmt>
+        <NontaxableBenefitsFilingOrgAmt>25598</NontaxableBenefitsFilingOrgAmt>
+        <NontaxableBenefitsRltdOrgsAmt>0</NontaxableBenefitsRltdOrgsAmt>
+        <TotalCompensationFilingOrgAmt>495171</TotalCompensationFilingOrgAmt>
+        <TotalCompensationRltdOrgsAmt>0</TotalCompensationRltdOrgsAmt>
+        <CompReportPrior990FilingOrgAmt>0</CompReportPrior990FilingOrgAmt>
+        <CompReportPrior990RltdOrgsAmt>0</CompReportPrior990RltdOrgsAmt>
+      </RltdOrgOfficerTrstKeyEmplGrp>
+      <RltdOrgOfficerTrstKeyEmplGrp>
+        <PersonNm>VICTORIA JONES</PersonNm>
+        <TitleTxt>CHIEF DEVELOPMENT OFFICER</TitleTxt>
+        <BaseCompensationFilingOrgAmt>325499</BaseCompensationFilingOrgAmt>
+        <CompensationBasedOnRltdOrgsAmt>0</CompensationBasedOnRltdOrgsAmt>
+        <BonusFilingOrganizationAmount>0</BonusFilingOrganizationAmount>
+        <BonusRelatedOrganizationsAmt>0</BonusRelatedOrganizationsAmt>
+        <OtherCompensationFilingOrgAmt>0</OtherCompensationFilingOrgAmt>
+        <OtherCompensationRltdOrgsAmt>0</OtherCompensationRltdOrgsAmt>
+        <DeferredCompensationFlngOrgAmt>13020</DeferredCompensationFlngOrgAmt>
+        <DeferredCompRltdOrgsAmt>0</DeferredCompRltdOrgsAmt>
+        <NontaxableBenefitsFilingOrgAmt>6918</NontaxableBenefitsFilingOrgAmt>
+        <NontaxableBenefitsRltdOrgsAmt>0</NontaxableBenefitsRltdOrgsAmt>
+        <TotalCompensationFilingOrgAmt>345437</TotalCompensationFilingOrgAmt>
+        <TotalCompensationRltdOrgsAmt>0</TotalCompensationRltdOrgsAmt>
+        <CompReportPrior990FilingOrgAmt>0</CompReportPrior990FilingOrgAmt>
+        <CompReportPrior990RltdOrgsAmt>0</CompReportPrior990RltdOrgsAmt>
+      </RltdOrgOfficerTrstKeyEmplGrp>
+      <RltdOrgOfficerTrstKeyEmplGrp>
+        <PersonNm>BANCROFT POOR</PersonNm>
+        <TitleTxt>CFO/ASST. TREASURER</TitleTxt>
+        <BaseCompensationFilingOrgAmt>266416</BaseCompensationFilingOrgAmt>
+        <CompensationBasedOnRltdOrgsAmt>0</CompensationBasedOnRltdOrgsAmt>
+        <BonusFilingOrganizationAmount>0</BonusFilingOrganizationAmount>
+        <BonusRelatedOrganizationsAmt>0</BonusRelatedOrganizationsAmt>
+        <OtherCompensationFilingOrgAmt>0</OtherCompensationFilingOrgAmt>
+        <OtherCompensationRltdOrgsAmt>0</OtherCompensationRltdOrgsAmt>
+        <DeferredCompensationFlngOrgAmt>21313</DeferredCompensationFlngOrgAmt>
+        <DeferredCompRltdOrgsAmt>0</DeferredCompRltdOrgsAmt>
+        <NontaxableBenefitsFilingOrgAmt>17295</NontaxableBenefitsFilingOrgAmt>
+        <NontaxableBenefitsRltdOrgsAmt>0</NontaxableBenefitsRltdOrgsAmt>
+        <TotalCompensationFilingOrgAmt>305024</TotalCompensationFilingOrgAmt>
+        <TotalCompensationRltdOrgsAmt>0</TotalCompensationRltdOrgsAmt>
+        <CompReportPrior990FilingOrgAmt>0</CompReportPrior990FilingOrgAmt>
+        <CompReportPrior990RltdOrgsAmt>0</CompReportPrior990RltdOrgsAmt>
+      </RltdOrgOfficerTrstKeyEmplGrp>
+      <RltdOrgOfficerTrstKeyEmplGrp>
+        <PersonNm>GAIL YEO</PersonNm>
+        <TitleTxt>VP OF WILDLIFE SANCTUARIES</TitleTxt>
+        <BaseCompensationFilingOrgAmt>203547</BaseCompensationFilingOrgAmt>
+        <CompensationBasedOnRltdOrgsAmt>0</CompensationBasedOnRltdOrgsAmt>
+        <BonusFilingOrganizationAmount>0</BonusFilingOrganizationAmount>
+        <BonusRelatedOrganizationsAmt>0</BonusRelatedOrganizationsAmt>
+        <OtherCompensationFilingOrgAmt>0</OtherCompensationFilingOrgAmt>
+        <OtherCompensationRltdOrgsAmt>0</OtherCompensationRltdOrgsAmt>
+        <DeferredCompensationFlngOrgAmt>16284</DeferredCompensationFlngOrgAmt>
+        <DeferredCompRltdOrgsAmt>0</DeferredCompRltdOrgsAmt>
+        <NontaxableBenefitsFilingOrgAmt>0</NontaxableBenefitsFilingOrgAmt>
+        <NontaxableBenefitsRltdOrgsAmt>0</NontaxableBenefitsRltdOrgsAmt>
+        <TotalCompensationFilingOrgAmt>219831</TotalCompensationFilingOrgAmt>
+        <TotalCompensationRltdOrgsAmt>0</TotalCompensationRltdOrgsAmt>
+        <CompReportPrior990FilingOrgAmt>0</CompReportPrior990FilingOrgAmt>
+        <CompReportPrior990RltdOrgsAmt>0</CompReportPrior990RltdOrgsAmt>
+      </RltdOrgOfficerTrstKeyEmplGrp>
+      <RltdOrgOfficerTrstKeyEmplGrp>
+        <PersonNm>MICHELLE MANION</PersonNm>
+        <TitleTxt>VP FOR ADVOCACY AND POLICY</TitleTxt>
+        <BaseCompensationFilingOrgAmt>188734</BaseCompensationFilingOrgAmt>
+        <CompensationBasedOnRltdOrgsAmt>0</CompensationBasedOnRltdOrgsAmt>
+        <BonusFilingOrganizationAmount>0</BonusFilingOrganizationAmount>
+        <BonusRelatedOrganizationsAmt>0</BonusRelatedOrganizationsAmt>
+        <OtherCompensationFilingOrgAmt>0</OtherCompensationFilingOrgAmt>
+        <OtherCompensationRltdOrgsAmt>0</OtherCompensationRltdOrgsAmt>
+        <DeferredCompensationFlngOrgAmt>7549</DeferredCompensationFlngOrgAmt>
+        <DeferredCompRltdOrgsAmt>0</DeferredCompRltdOrgsAmt>
+        <NontaxableBenefitsFilingOrgAmt>6918</NontaxableBenefitsFilingOrgAmt>
+        <NontaxableBenefitsRltdOrgsAmt>0</NontaxableBenefitsRltdOrgsAmt>
+        <TotalCompensationFilingOrgAmt>203201</TotalCompensationFilingOrgAmt>
+        <TotalCompensationRltdOrgsAmt>0</TotalCompensationRltdOrgsAmt>
+        <CompReportPrior990FilingOrgAmt>0</CompReportPrior990FilingOrgAmt>
+        <CompReportPrior990RltdOrgsAmt>0</CompReportPrior990RltdOrgsAmt>
+      </RltdOrgOfficerTrstKeyEmplGrp>
+      <RltdOrgOfficerTrstKeyEmplGrp>
+        <PersonNm>NIA KEITH</PersonNm>
+        <TitleTxt>VP FOR DEIJA</TitleTxt>
+        <BaseCompensationFilingOrgAmt>184001</BaseCompensationFilingOrgAmt>
+        <CompensationBasedOnRltdOrgsAmt>0</CompensationBasedOnRltdOrgsAmt>
+        <BonusFilingOrganizationAmount>0</BonusFilingOrganizationAmount>
+        <BonusRelatedOrganizationsAmt>0</BonusRelatedOrganizationsAmt>
+        <OtherCompensationFilingOrgAmt>0</OtherCompensationFilingOrgAmt>
+        <OtherCompensationRltdOrgsAmt>0</OtherCompensationRltdOrgsAmt>
+        <DeferredCompensationFlngOrgAmt>14720</DeferredCompensationFlngOrgAmt>
+        <DeferredCompRltdOrgsAmt>0</DeferredCompRltdOrgsAmt>
+        <NontaxableBenefitsFilingOrgAmt>0</NontaxableBenefitsFilingOrgAmt>
+        <NontaxableBenefitsRltdOrgsAmt>0</NontaxableBenefitsRltdOrgsAmt>
+        <TotalCompensationFilingOrgAmt>198721</TotalCompensationFilingOrgAmt>
+        <TotalCompensationRltdOrgsAmt>0</TotalCompensationRltdOrgsAmt>
+        <CompReportPrior990FilingOrgAmt>0</CompReportPrior990FilingOrgAmt>
+        <CompReportPrior990RltdOrgsAmt>0</CompReportPrior990RltdOrgsAmt>
+      </RltdOrgOfficerTrstKeyEmplGrp>
+      <RltdOrgOfficerTrstKeyEmplGrp>
+        <PersonNm>JAN O'NEIL</PersonNm>
+        <TitleTxt>DIR OF MEMBERSHIP/ASST TREASURER</TitleTxt>
+        <BaseCompensationFilingOrgAmt>145714</BaseCompensationFilingOrgAmt>
+        <CompensationBasedOnRltdOrgsAmt>0</CompensationBasedOnRltdOrgsAmt>
+        <BonusFilingOrganizationAmount>0</BonusFilingOrganizationAmount>
+        <BonusRelatedOrganizationsAmt>0</BonusRelatedOrganizationsAmt>
+        <OtherCompensationFilingOrgAmt>0</OtherCompensationFilingOrgAmt>
+        <OtherCompensationRltdOrgsAmt>0</OtherCompensationRltdOrgsAmt>
+        <DeferredCompensationFlngOrgAmt>11657</DeferredCompensationFlngOrgAmt>
+        <DeferredCompRltdOrgsAmt>0</DeferredCompRltdOrgsAmt>
+        <NontaxableBenefitsFilingOrgAmt>25598</NontaxableBenefitsFilingOrgAmt>
+        <NontaxableBenefitsRltdOrgsAmt>0</NontaxableBenefitsRltdOrgsAmt>
+        <TotalCompensationFilingOrgAmt>182969</TotalCompensationFilingOrgAmt>
+        <TotalCompensationRltdOrgsAmt>0</TotalCompensationRltdOrgsAmt>
+        <CompReportPrior990FilingOrgAmt>0</CompReportPrior990FilingOrgAmt>
+        <CompReportPrior990RltdOrgsAmt>0</CompReportPrior990RltdOrgsAmt>
+      </RltdOrgOfficerTrstKeyEmplGrp>
+      <RltdOrgOfficerTrstKeyEmplGrp>
+        <PersonNm>TIMOTHY CALABRESE</PersonNm>
+        <TitleTxt>SR. DIR.OF CORP, FND, &amp; GRANT SUPPOR</TitleTxt>
+        <BaseCompensationFilingOrgAmt>153683</BaseCompensationFilingOrgAmt>
+        <CompensationBasedOnRltdOrgsAmt>0</CompensationBasedOnRltdOrgsAmt>
+        <BonusFilingOrganizationAmount>0</BonusFilingOrganizationAmount>
+        <BonusRelatedOrganizationsAmt>0</BonusRelatedOrganizationsAmt>
+        <OtherCompensationFilingOrgAmt>0</OtherCompensationFilingOrgAmt>
+        <OtherCompensationRltdOrgsAmt>0</OtherCompensationRltdOrgsAmt>
+        <DeferredCompensationFlngOrgAmt>12295</DeferredCompensationFlngOrgAmt>
+        <DeferredCompRltdOrgsAmt>0</DeferredCompRltdOrgsAmt>
+        <NontaxableBenefitsFilingOrgAmt>0</NontaxableBenefitsFilingOrgAmt>
+        <NontaxableBenefitsRltdOrgsAmt>0</NontaxableBenefitsRltdOrgsAmt>
+        <TotalCompensationFilingOrgAmt>165978</TotalCompensationFilingOrgAmt>
+        <TotalCompensationRltdOrgsAmt>0</TotalCompensationRltdOrgsAmt>
+        <CompReportPrior990FilingOrgAmt>0</CompReportPrior990FilingOrgAmt>
+        <CompReportPrior990RltdOrgsAmt>0</CompReportPrior990RltdOrgsAmt>
+      </RltdOrgOfficerTrstKeyEmplGrp>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>PART I, LINE 7</FormAndLineReferenceDesc>
+        <ExplanationTxt>THIS DISCRETIONARY BONUS WAS AWARDED TO THE PRESIDENT OF MASS AUDUBON IN RECOGNITION OF PERFORMANCE IN FY 2024 EXCEEDING EXPECTATIONS FOR THE YEAR. AFTER AN EXTENSIVE AND INCLUSIVE 360 REVIEW PROCESS AND A REVIEW OF ORGANIZATIONAL METRICS, THE BONUS TO THE PRESIDENT WAS APPROVED BY THE FULL BOARD OF DIRECTORS.</ExplanationTxt>
+      </SupplementalInformationDetail>
+    </IRS990ScheduleJ>
+    <IRS990ScheduleM documentId="RetDoc1042900001">
+      <ClothingAndHouseholdGoodsGrp>
+        <NonCashCheckboxInd>X</NonCashCheckboxInd>
+        <NoncashContributionsRptF990Amt>13840</NoncashContributionsRptF990Amt>
+        <MethodOfDeterminingRevenuesTxt>AT NOMINAL AMOUNT</MethodOfDeterminingRevenuesTxt>
+      </ClothingAndHouseholdGoodsGrp>
+      <SecuritiesPubliclyTradedGrp>
+        <NonCashCheckboxInd>X</NonCashCheckboxInd>
+        <ContributionCnt>39</ContributionCnt>
+        <NoncashContributionsRptF990Amt>1264035</NoncashContributionsRptF990Amt>
+        <MethodOfDeterminingRevenuesTxt>FMV PER BROKER</MethodOfDeterminingRevenuesTxt>
+      </SecuritiesPubliclyTradedGrp>
+      <RealEstateOtherGrp>
+        <NonCashCheckboxInd>X</NonCashCheckboxInd>
+        <ContributionCnt>6</ContributionCnt>
+        <NoncashContributionsRptF990Amt>1287458</NoncashContributionsRptF990Amt>
+        <MethodOfDeterminingRevenuesTxt>ASSESSOR'S VALUE</MethodOfDeterminingRevenuesTxt>
+      </RealEstateOtherGrp>
+      <Form8283ReceivedCnt>0</Form8283ReceivedCnt>
+      <AnyPropertyThatMustBeHeldInd>0</AnyPropertyThatMustBeHeldInd>
+      <ReviewProcessUnusualNCGiftsInd>1</ReviewProcessUnusualNCGiftsInd>
+      <ThirdPartiesUsedInd>0</ThirdPartiesUsedInd>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>PART I, COLUMN (B):</FormAndLineReferenceDesc>
+        <ExplanationTxt>THE NUMBER IN PART I, COLUMN (B) REPRESENTS THE NUMBER OF CONTRIBUTORS OF GIFTS, NOT THE NUMBER OF ITEMS CONTRIBUTED.</ExplanationTxt>
+      </SupplementalInformationDetail>
+    </IRS990ScheduleM>
+    <IRS990ScheduleO documentId="RetDoc1044400001">
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>FORM 990, PART VI, SECTION A, LINE 6</FormAndLineReferenceDesc>
+        <ExplanationTxt>MASS AUDUBON DOES NOT HAVE ANY STOCKHOLDERS BUT IT DOES HAVE MEMBERS. MEMBERSHIP IS OPEN TO ALL INDIVIDUALS WHO SHARE THE MISSION OF PROTECTING THE MASSACHUSETTS ENVIRONMENT AND WHO PAY THE REQUIRED MEMBERSHIP DUES. BASIC MEMBERSHIP COSTS IN FY 2024 WERE $50 PER YEAR FOR AN INDIVIDUAL AND $70 PER YEAR FOR A FAMILY. MASS AUDUBON CURRENTLY HAS APPROXIMATELY 160,000 MEMBERS AND SUPPORTERS. IN ADDITION TO LENDING THEIR SUPPORT TO IMPORTANT ENVIRONMENTAL EDUCATION, ADVOCACY, LAND PROTECTION AND WILDLIFE CONSERVATION EFFORTS, MEMBERS RECEIVE FREE ADMISSION TO ALL MASS AUDUBON WILDLIFE SANCTUARIES, DISCOUNTS TO MASS AUDUBON PROGRAMS, COURSES AND GIFT SHOPS, AND A ONE-YEAR SUBSCRIPTION TO THE MASS AUDUBON NEWSLETTER (EXPLORE).</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>FORM 990, PART VI, SECTION A, LINE 7A</FormAndLineReferenceDesc>
+        <ExplanationTxt>MASS AUDUBON MEMBERS ARE INVITED TO THE ANNUAL MEETING OF MEMBERS (HELD IN OCTOBER OR NOVEMBER OF EACH YEAR) TO VOTE ON THE ELECTION OF DIRECTORS, THE MEMBERSHIP OF THE AUDIT COMMITTEE, AND ANY OTHER MATTERS WHICH PROPERLY COME BEFORE THE MEETING.</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>FORM 990, PART VI, SECTION A, LINE 7B</FormAndLineReferenceDesc>
+        <ExplanationTxt>MASS AUDUBON MEMBERS MUST APPROVE ANY AMENDMENTS OR ALTERATIONS TO THE BY-LAWS AND THE ARTICLES OF ORGANIZATION OF MASS AUDUBON AND ANY OTHER BUSINESS WHICH MAY PROPERLY COME BEFORE THE ANNUAL MEETING OR ANY OTHER MEETING OF THE MEMBERS DULY CALLED IN ACCORDANCE WITH THE BY-LAWS.</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>FORM 990, PART VI, SECTION B, LINE 11B</FormAndLineReferenceDesc>
+        <ExplanationTxt>A COPY OF THE FORM 990 WAS REVIEWED IN DETAIL BY THE MASS AUDUBON AUDIT COMMITTEE (A COMMITTEE ELECTED DIRECTLY BY THE MASS AUDUBON MEMBERSHIP EACH YEAR AT THE ANNUAL MEETING) AND WAS ALSO MADE AVAILABLE ELECTRONICALLY TO ALL MASS AUDUBON DIRECTORS FOR REVIEW AND COMMENT PRIOR TO FILING.</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>FORM 990, PART VI, SECTION B, LINE 12C</FormAndLineReferenceDesc>
+        <ExplanationTxt>MASS AUDUBON REQUIRES DIRECTORS, OFFICERS, AND KEY EMPLOYEES TO COMPLETE A CONFLICT OF INTEREST QUESTIONNAIRE EVERY YEAR. THESE INDIVIDUALS ARE INSTRUCTED TO REVIEW THE MASS AUDUBON CONFLICT OF INTEREST POLICY PRIOR TO COMPLETING THE QUESTIONNAIRE. THE COMPLETED FORMS ARE REVIEWED BY THE CHAIR OF THE BOARD OF DIRECTORS WHO REPORTS TO THE EXECUTIVE COMMITTEE. THE QUESTIONNAIRE OF THE CHAIR IS REVIEWED BY THE TREASURER WHO REPORTS TO THE EXECUTIVE COMMITTEE. THE QUESTIONNAIRES ARE ON FILE AT THE MASS AUDUBON HEADQUARTERS IN LINCOLN AND ARE AVAILABLE FOR REVIEW BY ANY INTERESTED DIRECTOR OR OFFICER. THE BOARD OF DIRECTORS AND STAFF ARE ALSO VIGILANT DURING THE YEAR FOR ANY CONFLICTS OF INTEREST WHICH MAY ARISE AFTER COMPLETING THE ANNUAL QUESTIONNAIRES. AT THE BEGINNING OF A BOARD OR BOARD COMMITTEE DISCUSSION OF ANY ISSUE IN WHICH A DIRECTOR, OFFICER OR EMPLOYEE, A CLOSE FAMILY MEMBER OF A DIRECTOR, OFFICER OR EMPLOYEE, OR ANOTHER ORGANIZATION IN WHICH THEY HOLD A POSITION OF POWER MAY HAVE AN INTEREST, THE DIRECTOR, OFFICER OR EMPLOYEE IS REQUIRED TO DISCLOSE THAT INTEREST AND ABSTAIN FROM VOTING. THE DIRECTOR, OFFICER OR EMPLOYEE IS ALSO REQUIRED TO LEAVE THE ROOM WHILE THE DISCUSSION OF THIS ISSUE AND THE VOTING IS TAKING PLACE.</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>FORM 990, PART VI, SECTION B, LINE 15</FormAndLineReferenceDesc>
+        <ExplanationTxt>THE PROCESS AND POLICY FOR DETERMINING COMPENSATION FOR KEY EXECUTIVES AT MASS AUDUBON IS AS FOLLOWS: THE POLICY OF MASS AUDUBON IS TO ATTRACT AND RETAIN KEY EXECUTIVE TALENT BY PROVIDING A COMPETITIVE TOTAL COMPENSATION PACKAGE. IN DETERMINING COMPETITIVENESS, MASS AUDUBON LOOKS PRIMARILY TO COMPENSATION OFFERED BY OTHER LOCAL NON-PROFIT ORGANIZATIONS THAT ARE SIMILAR IN SIZE AND ALSO TAKES INTO ACCOUNT ANY SPECIAL CIRCUMSTANCES AFFECTING MASS AUDUBON. THE POLICY ALSO SUPPORTS PROVIDING APPROPRIATE KEY EXECUTIVE PAY-FOR-PERFORMANCE EARNING OPPORTUNITIES FOR ACHIEVING CHALLENGING, PRE-ESTABLISHED GOALS CONSISTENT WITH THE MISSION, TAX-EXEMPT PURPOSE, AND FINANCIAL RESOURCES OF MASS AUDUBON. THE EXECUTIVE COMMITTEE OF THE BOARD OF DIRECTORS RECOMMENDS TO THE BOARD OF DIRECTORS FOR ITS ACTION THE CASH AND NON-CASH COMPENSATION POLICIES, PROGRAMS AND AMOUNTS OF COMPENSATION, AS WELL AS MAJOR CHANGES IN MASS AUDUBON'S BENEFITS PLANS, APPLICABLE TO KEY EXECUTIVES OF MASS AUDUBON AS WELL AS TO ANY INDIVIDUAL/ORGANIZATION THAT OTHERWISE MEETS THE DEFINITION OF "DISQUALIFIED PERSON" IN THE INTERNAL REVENUE CODE. "KEY EXECUTIVE" IS DEFINED AS PRESIDENT, VICE PRESIDENT FOR OPERATIONS, VICE PRESIDENT FOR WILDLIFE SANCTUARIES AND PROGRAMS, VICE PRESIDENT FOR PHILANTHROPY, VICE PRESIDENT FOR MARKETING AND COMMUNICATIONS, AND ANY OTHER EXECUTIVE EARNING OVER $100,000 PER YEAR. "DISQUALIFIED PERSON" INCLUDES FOR PURPOSES OF THIS POLICY ANYONE ON THE BOARD OF DIRECTORS AND MAY, IN SPECIFIED CIRCUMSTANCES, BE DEEMED TO INCLUDE MEMBERS OF THE MASS AUDUBON COUNCIL. THE TERM IS FURTHER DEEMED TO INCLUDE ANY OTHER MASS AUDUBON EMPLOYEE EARNING MORE THAN $100,000 PER YEAR. THE EXECUTIVE COMMITTEE WILL: ENSURE THAT NO PART OF MASS AUDUBON'S NET EARNINGS INURE TO THE PRIVATE BENEFIT OF ANY INDIVIDUAL AND THAT ANY PAYMENT OF BENEFITS OR PERSONAL EXPENSES TO OR FOR THE BENEFIT OF SELECT INDIVIDUALS AND OTHER TRANSACTIONS POTENTIALLY BENEFITING ANY SUCH INDIVIDUALS ARE ANALYZED AND CAREFULLY APPROVED AS COMPENSATION FOR SERVICES TO MASS AUDUBON WITH THE BENEFITS TO THE INDIVIDUALS CLEARLY MEASURED AND CONSIDERED BY THE EXECUTIVE COMMITTEE. ESTABLISH AND REVIEW MASS AUDUBON'S OVERALL EXECUTIVE COMPENSATION POLICY TO ENSURE THAT THE POLICY CONTINUES TO SUPPORT MASS AUDUBON'S MISSION AND PURPOSE, ATTRACTS AND RETAINS KEY EXECUTIVES, AND PROVIDES COMPETITIVE TOTAL COMPENSATION OPPORTUNITIES AT REASONABLE COST. ACT ON BEHALF OF THE BOARD OF DIRECTORS IN SETTING EXECUTIVE TOTAL COMPENSATION POLICY, COMPENSATION PLANS, BENEFIT PLANS AND EXECUTIVE CONTRACTS FOR KEY ADMINISTRATORS, AND DEVELOPING RECOMMENDATIONS FOR THE BOARD OF DIRECTORS WITH RESPECT TO THE TOTAL COMPENSATION OF MASS AUDUBON'S KEY EXECUTIVES AND OF ANY DISQUALIFIED PERSONS. THE EXECUTIVE COMMITTEE IS RESPONSIBLE FOR A THOROUGH AND DISINTERESTED REVIEW OF APPROPRIATE TOTAL COMPENSATION FOR KEY EXECUTIVES. THE COMMITTEE WILL: ASSESS THE NATURE AND SCOPE OF EACH EXECUTIVE'S POSITION UNDER REVIEW BY THE COMMITTEE. ASSESS THE BASIS BY WHICH COMPENSATION WAS PAID TO THE KEY EXECUTIVE IN EACH COVERED POSITION, AS FOR EXAMPLE, EXCEPTIONAL PERFORMANCE, ADDITIONAL DUTIES, OR THE UNIQUE BACKGROUND EXPERIENCES, PERSONAL SKILLS, SPECIAL ABILITIES, AND BUSINESS CHALLENGES FACING MASS AUDUBON THAT REQUIRE USE OF THESE SKILLS AND ATTRIBUTES. OBTAIN APPROPRIATE AND COMPARABLE COMPENSATION MARKET DATA, SUCH AS DATA ON THE FOLLOWING: - SIMILARLY SITUATED ORGANIZATIONS FOR FUNCTIONALLY COMPARABLE POSITIONS; - GEOGRAPHIC DIFFERENTIALS WHICH REFLECT THE COST OF LABOR IN THE GREATER BOSTON AREA; - THE AVAILABILITY OF SIMILAR SPECIALTIES IN THE GEOGRAPHIC AREA; - INDEPENDENT COMPENSATION SURVEYS; - IRS FORM 990 COMPENSATION INFORMATION FOR FUNCTIONALLY COMPARABLE POSITIONS; - ACTUAL WRITTEN OFFERS FROM SIMILAR ORGANIZATIONS COMPETING FOR THE SERVICES OF THE EMPLOYEE. THE EXECUTIVE COMMITTEE SHALL DOCUMENT THE BASIS FOR ITS DETERMINATION OF THE REASONABLE COMPENSATION FOR THOSE KEY EXECUTIVES UNDER ITS REVIEW INCLUDING PERFORMANCE ASSESSMENT OF THE KEY EXECUTIVE AND THE BASIS FOR DETERMINING THAT THE EXECUTIVE'S COMPENSATION WAS REASONABLE IN LIGHT OF THAT PERFORMANCE ASSESSMENT AND MARKET DATA. THE EXECUTIVE COMMITTEE WILL MAKE ITS RECOMMENDATIONS TO THE BOARD OF DIRECTORS ON AN ANNUAL BASIS. THE BOARD OF DIRECTORS WILL PERIODICALLY REVIEW THE MEMBERSHIP OF THE EXECUTIVE COMMITTEE WITH A VIEW TO MAKING SURE THAT NO MEMBER IS SUBJECT TO A CONFLICT OF INTEREST WHICH WOULD MAKE HIS OR HER PARTICIPATION IN THE REVIEW OF COMPENSATION INAPPROPRIATE.</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>FORM 990, PART VI, SECTION C, LINE 19</FormAndLineReferenceDesc>
+        <ExplanationTxt>MASS AUDUBON MAKES ITS GOVERNING DOCUMENTS, CONFLICT OF INTEREST POLICY, WHISTLEBLOWER POLICY, RECORDS RETENTION POLICY, FEDERAL TAX RETURNS, AND AUDITED FINANCIAL STATEMENTS AVAILABLE TO THE PUBLIC ON ITS WEB SITE (WWW.MASSAUDUBON.ORG) AS WELL AS UPON REQUEST.</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>FORM 990, PART XI, LINE 9:</FormAndLineReferenceDesc>
+        <ExplanationTxt>CHANGES IN SPLIT INTEREST AGREEMENTS 724,778.</ExplanationTxt>
+      </SupplementalInformationDetail>
+    </IRS990ScheduleO>
+    <IRS990ScheduleR documentId="RetDoc1043400001">
+      <IdRelatedTaxExemptOrgGrp>
+        <DisregardedEntityName>
+          <BusinessNameLine1Txt>WHETSTONE WOOD TRUST FUND CO MASSACHUSETTS AUDUBON SOCIETY</BusinessNameLine1Txt>
+        </DisregardedEntityName>
+        <USAddress>
+          <AddressLine1Txt>208 SOUTH GREAT ROAD</AddressLine1Txt>
+          <CityNm>LINCOLN</CityNm>
+          <StateAbbreviationCd>MA</StateAbbreviationCd>
+          <ZIPCd>01773</ZIPCd>
+        </USAddress>
+        <EIN>300174595</EIN>
+        <PrimaryActivitiesTxt>ACQUISITION &amp; PRESERVATION OF LAND FOR WILD HABITAT &amp; CONSERVATION PURPOSES</PrimaryActivitiesTxt>
+        <LegalDomicileStateCd>MA</LegalDomicileStateCd>
+        <ExemptCodeSectionTxt>501(C)(3)</ExemptCodeSectionTxt>
+        <PublicCharityStatusTxt>LINE 12B, II</PublicCharityStatusTxt>
+        <DirectControllingEntityName>
+          <BusinessNameLine1Txt>MASSACHUSETTS AUDUBON SOCIETY INC</BusinessNameLine1Txt>
+        </DirectControllingEntityName>
+        <ControlledOrganizationInd>1</ControlledOrganizationInd>
+      </IdRelatedTaxExemptOrgGrp>
+      <IdRelatedOrgTxblCorpTrGrp>
+        <RelatedOrganizationName>
+          <BusinessNameLine1Txt>GIFT ANNUITIES (39)</BusinessNameLine1Txt>
+        </RelatedOrganizationName>
+        <PrimaryActivitiesTxt>TRUST</PrimaryActivitiesTxt>
+        <LegalDomicileStateCd>MA</LegalDomicileStateCd>
+        <DirectControllingEntityName>
+          <BusinessNameLine1Txt>MASSACHUSETTS AUDUBON SOCIETY INC</BusinessNameLine1Txt>
+        </DirectControllingEntityName>
+        <EntityTypeTxt>T</EntityTypeTxt>
+        <ControlledOrganizationInd>1</ControlledOrganizationInd>
+      </IdRelatedOrgTxblCorpTrGrp>
+      <IdRelatedOrgTxblCorpTrGrp>
+        <RelatedOrganizationName>
+          <BusinessNameLine1Txt>POOLED INCOME (12)</BusinessNameLine1Txt>
+        </RelatedOrganizationName>
+        <PrimaryActivitiesTxt>TRUST</PrimaryActivitiesTxt>
+        <LegalDomicileStateCd>MA</LegalDomicileStateCd>
+        <DirectControllingEntityName>
+          <BusinessNameLine1Txt>MASSACHUSETTS AUDUBON SOCIETY INC</BusinessNameLine1Txt>
+        </DirectControllingEntityName>
+        <EntityTypeTxt>T</EntityTypeTxt>
+        <ControlledOrganizationInd>1</ControlledOrganizationInd>
+      </IdRelatedOrgTxblCorpTrGrp>
+      <IdRelatedOrgTxblCorpTrGrp>
+        <RelatedOrganizationName>
+          <BusinessNameLine1Txt>UNITRUSTS (10)</BusinessNameLine1Txt>
+        </RelatedOrganizationName>
+        <PrimaryActivitiesTxt>TRUST</PrimaryActivitiesTxt>
+        <LegalDomicileStateCd>MA</LegalDomicileStateCd>
+        <DirectControllingEntityName>
+          <BusinessNameLine1Txt>MASSACHUSETTS AUDUBON SOCIETY INC</BusinessNameLine1Txt>
+        </DirectControllingEntityName>
+        <EntityTypeTxt>T</EntityTypeTxt>
+        <ControlledOrganizationInd>1</ControlledOrganizationInd>
+      </IdRelatedOrgTxblCorpTrGrp>
+      <IdRelatedOrgTxblCorpTrGrp>
+        <RelatedOrganizationName>
+          <BusinessNameLine1Txt>TRUST ON OUR BEHALF (1)</BusinessNameLine1Txt>
+        </RelatedOrganizationName>
+        <PrimaryActivitiesTxt>TRUST</PrimaryActivitiesTxt>
+        <LegalDomicileStateCd>MA</LegalDomicileStateCd>
+        <DirectControllingEntityName>
+          <BusinessNameLine1Txt>MASSACHUSETTS AUDUBON SOCIETY INC</BusinessNameLine1Txt>
+        </DirectControllingEntityName>
+        <EntityTypeTxt>T</EntityTypeTxt>
+        <ControlledOrganizationInd>1</ControlledOrganizationInd>
+      </IdRelatedOrgTxblCorpTrGrp>
+      <ReceiptOfIntAnntsRntsRyltsInd>0</ReceiptOfIntAnntsRntsRyltsInd>
+      <GiftGrntOrCapContriToOthOrgInd>0</GiftGrntOrCapContriToOthOrgInd>
+      <GiftGrntCapContriFromOthOrgInd>0</GiftGrntCapContriFromOthOrgInd>
+      <LoansOrGuaranteesToOtherOrgInd>0</LoansOrGuaranteesToOtherOrgInd>
+      <LoansOrGuaranteesFromOthOrgInd>1</LoansOrGuaranteesFromOthOrgInd>
+      <DivRelatedOrganizationInd>0</DivRelatedOrganizationInd>
+      <AssetSaleToOtherOrgInd>0</AssetSaleToOtherOrgInd>
+      <AssetPurchaseFromOtherOrgInd>0</AssetPurchaseFromOtherOrgInd>
+      <AssetExchangeInd>0</AssetExchangeInd>
+      <RentalOfFacilitiesToOthOrgInd>0</RentalOfFacilitiesToOthOrgInd>
+      <RentalOfFcltsFromOthOrgInd>0</RentalOfFcltsFromOthOrgInd>
+      <PerformOfServicesForOthOrgInd>0</PerformOfServicesForOthOrgInd>
+      <PerformOfServicesByOtherOrgInd>0</PerformOfServicesByOtherOrgInd>
+      <SharingOfFacilitiesInd>0</SharingOfFacilitiesInd>
+      <PaidEmployeesSharingInd>1</PaidEmployeesSharingInd>
+      <ReimbursementPaidToOtherOrgInd>0</ReimbursementPaidToOtherOrgInd>
+      <ReimbursementPaidByOtherOrgInd>1</ReimbursementPaidByOtherOrgInd>
+      <TransferToOtherOrgInd>0</TransferToOtherOrgInd>
+      <TransferFromOtherOrgInd>0</TransferFromOtherOrgInd>
+      <TransactionsRelatedOrgGrp>
+        <OtherOrganizationName>
+          <BusinessNameLine1Txt>WHETSTONE WOOD TRUST FUND</BusinessNameLine1Txt>
+        </OtherOrganizationName>
+        <TransactionTypeTxt>E</TransactionTypeTxt>
+        <InvolvedAmt>435081</InvolvedAmt>
+        <MethodOfAmountDeterminationTxt>FAIR VALUE</MethodOfAmountDeterminationTxt>
+      </TransactionsRelatedOrgGrp>
+    </IRS990ScheduleR>
+  </ReturnData>
+</Return>

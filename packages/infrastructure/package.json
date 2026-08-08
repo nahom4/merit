@@ -1,0 +1,26 @@
+{
+  "name": "@merit/infrastructure",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "migrate": "tsx src/persistence/migrate-cli.ts"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.14.0",
+    "@merit/application": "workspace:*",
+    "@merit/domain": "workspace:*",
+    "@merit/shared": "workspace:*",
+    "fast-xml-parser": "^5.10.1",
+    "yauzl": "^3.4.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/yauzl": "^3.4.0"
+  }
+}

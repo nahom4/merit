@@ -1,0 +1,15 @@
+{
+  "name": "@merit/domain",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "comment": "Exactly one dependency, @merit/shared, which is itself dependency-free. See docs/decisions/0004. Enforced by tools/assert-domain-pure.mjs.",
+  "dependencies": {
+    "@merit/shared": "workspace:*"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "jsx": "preserve",
+    "types": ["node", "vitest/globals"],
+    "allowJs": false,
+    "baseUrl": ".",
+    "paths": {
+      "@merit/shared": ["packages/shared/src/index.ts"],
+      "@merit/domain": ["packages/domain/src/index.ts"],
+      "@merit/application": ["packages/application/src/index.ts"],
+      "@merit/infrastructure": ["packages/infrastructure/src/index.ts"],
+      "@merit/infrastructure/*": ["packages/infrastructure/src/*"],
+      "@/*": ["apps/web/src/*"]
+    },
+    "plugins": [{ "name": "next" }]
+  },
+  "include": [
+    "packages/**/*.ts",
+    "apps/**/*.ts",
+    "apps/**/*.tsx",
+    "tests/**/*.ts",
+    "evals/**/*.ts",
+    "vitest.config.ts",
+    "playwright.config.ts",
+    "apps/web/next-env.d.ts"
+  ],
+  "exclude": ["node_modules", "**/dist", "**/.next"]
+}

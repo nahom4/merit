@@ -1,0 +1,16 @@
+{
+  "name": "@merit/worker",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/main.ts"
+  },
+  "dependencies": {
+    "@merit/application": "workspace:*",
+    "@merit/domain": "workspace:*",
+    "@merit/infrastructure": "workspace:*",
+    "@merit/shared": "workspace:*",
+    "zod": "^3.24.1"
+  }
+}

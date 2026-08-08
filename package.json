@@ -1,0 +1,47 @@
+{
+  "name": "merit",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "packageManager": "pnpm@11.20.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "pnpm --filter @merit/web build",
+    "dev": "pnpm --filter @merit/web dev",
+    "worker": "pnpm --filter @merit/worker start",
+    "db:migrate": "pnpm --filter @merit/infrastructure migrate",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint . --max-warnings 0",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "boundaries": "depcruise packages apps --config .dependency-cruiser.cjs",
+    "test": "vitest run --project unit",
+    "test:watch": "vitest --project unit",
+    "test:int": "vitest run --project integration",
+    "test:contract": "vitest run --project contract",
+    "test:e2e": "playwright test",
+    "eval": "vitest run --project eval",
+    "eval:fit": "tsx --tsconfig tsconfig.json evals/fit-link-thresholds.ts",
+    "no-skipped-tests": "node tools/no-skipped-tests.mjs",
+    "domain-pure": "node tools/assert-domain-pure.mjs",
+    "boundaries:prove": "node tools/prove-boundaries-fail.mjs",
+    "gate": "pnpm format:check && pnpm typecheck && pnpm lint && pnpm boundaries && pnpm boundaries:prove && pnpm domain-pure && pnpm no-skipped-tests && pnpm test && pnpm test:int"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.5",
+    "@typescript-eslint/eslint-plugin": "^8.20.0",
+    "@typescript-eslint/parser": "^8.20.0",
+    "@vitest/coverage-v8": "^3.2.4",
+    "dependency-cruiser": "^16.9.0",
+    "eslint": "^8.57.1",
+    "eslint-plugin-boundaries": "^5.0.1",
+    "eslint-plugin-unicorn": "^56.0.1",
+    "prettier": "^3.4.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vitest": "^3.2.4"
+  }
+}

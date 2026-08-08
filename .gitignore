@@ -1,0 +1,18 @@
+node_modules/
+dist/
+.next/
+coverage/
+*.tsbuildinfo
+.env
+.env.local
+.turbo/
+
+# Local corpora and downloaded bundles are large and reproducible; never committed.
+/data/
+*.db
+*.db-journal
+*.zip
+!tests/fixtures/**/*.zip
+
+test-results/
+playwright-report/

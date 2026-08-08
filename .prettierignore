@@ -1,0 +1,10 @@
+node_modules
+dist
+.next
+coverage
+pnpm-lock.yaml
+tests/fixtures
+validation
+submission_docs
+tools/node_modules
+*.md

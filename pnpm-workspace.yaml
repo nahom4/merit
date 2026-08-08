@@ -1,0 +1,7 @@
+packages:
+  - 'packages/*'
+  - 'apps/*'
+
+# esbuild ships prebuilt binaries; its install script only unpacks them.
+allowBuilds:
+  esbuild: true

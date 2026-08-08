@@ -1,0 +1,58 @@
+{
+  "$comment": [
+    "Committed thresholds. A metric that drops below its floor (or above its ceiling) fails",
+    "the build exactly like a unit test. Raising a floor is a normal PR; lowering one needs",
+    "an ADR saying why the system got worse and that we accepted it."
+  ],
+  "entity_resolution": {
+    "precision_floor": 0.97,
+    "recall_floor": 0.62,
+    "review_rate_ceiling": 0.1,
+    "$comment": [
+      "Measured on the labelled set built by withholding Schedule I recipient EINs.",
+      "Precision is weighted far above recall on purpose: a wrong link corrupts every",
+      "downstream signal for that funder, while a missed link only costs coverage, and the",
+      "record still counts toward funder-side statistics.",
+      "",
+      "Floors set from the fitted operating point (link 0.80, reject 0.70, margin 0.08),",
+      "verified on a held-out half of the labelled set at 98.1% precision and 65.7% recall",
+      "with 8.5% routed to review -- see evals/link-threshold-curve.json and ADR-0009. The",
+      "floors sit a little under the measurement so ordinary corpus-to-corpus drift is not",
+      "a build failure, while a real regression is."
+    ]
+  },
+  "held_out_funder_recovery": {
+    "recall_at_50_floor": 0.25,
+    "organisations_measured_floor": 10,
+    "$comment": [
+      "For organisations already in the graph with known funders, hide their real funders and",
+      "measure whether the recommender surfaces them in the top 50. This is the central claim",
+      "of the product made testable without waiting for a user to apply and hear back.",
+      "",
+      "Measured at 32.1% mean recall@50 across all 12 organisations in the sample on the",
+      "2025 corpus. The floor sits under that to absorb corpus drift, not to excuse a",
+      "regression.",
+      "",
+      "organisations_measured_floor exists because the sample used to shrink in silence: a",
+      "parse failure dropped 7 of 12 and the mean was reported over whatever survived. The",
+      "number a mean is taken over is part of the result, so it is asserted like any other."
+    ]
+  },
+  "ingestion_integrity": {
+    "parse_fault_rate_ceiling": 0.02,
+    "reconciliation_divergence_ceiling": 0.1,
+    "$comment": [
+      "Parse faults are rows in a grant table that could not be turned into a record.",
+      "Reconciliation divergence is 990-PF filings whose itemised rows differ from their own",
+      "stated total by more than 1%."
+    ]
+  },
+  "coverage_benchmark": {
+    "cape_fear_credible_funders_floor": 15,
+    "$comment": [
+      "The bar set before any data was ingested: a $656k literacy council in Wilmington NC",
+      "must surface at least 15 credible funders. Cleared on 17% of one year's data during",
+      "validation (validation/RESULTS.txt), so this is a floor, not a hope."
+    ]
+  }
+}

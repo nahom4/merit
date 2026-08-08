@@ -1,0 +1,77 @@
+CORPUS: 1,481,866 grant records | 73,988 distinct funders | 13/13 bundles ['01A', '02A', '03A', '04A', '05A', '05B', '06A', '07A', '08A', '09A', '10A', '11A', '12A']
+  tax years present: [(2024, 892513), (2023, 582101), (2022, 7119), (2021, 133)]
+
+==============================================================================
+Cape Fear Literacy Council  (Wilmington, NC | revenue $655,738)
+  category: adult literacy   materiality floor: $3,279
+==============================================================================
+  peer grant records matched   : 1,913   (in-state 101 / in-region 250)
+  distinct funders of peers    : 1,079
+  CREDIBLE + MATERIAL funders  : 130
+    of which fund in-region    : 66
+
+  Top prospects (regional first):
+    [REGION] Enterprise Holdings Foundation           |  5 peers | median    $9,500
+    [REGION] Sunstone Foundation                      |  5 peers | median    $5,982
+    [REGION] MORGAN CREEK FOUNDATION                  |  3 peers | median   $15,000
+    [REGION] CRIMSONBRIDGE FOUNDATION INC             |  3 peers | median   $15,000
+    [REGION] UNION PACIFIC FOUNDATION                 |  3 peers | median   $10,000
+    [REGION] THE LEON LEVINE FOUNDATION               |  2 peers | median   $50,000
+    [REGION] THE MORRIS AND GWENDOLYN CAFRITZ         |  2 peers | median   $35,000
+    [REGION] THE BOYD FOUNDATION                      |  2 peers | median   $30,000
+    [REGION] ADELE M THOMAS CHARITABLE FOUNDATION INC |  2 peers | median   $25,000
+    [REGION] TUA THE ANNE POTTER WILSON FDN           |  2 peers | median   $17,500
+    [REGION] The Jolley Foundation                    |  2 peers | median   $15,000
+    [REGION] CARLSON FAMILY FOUNDATION                |  2 peers | median   $11,250
+
+==============================================================================
+Boys & Girls Club of Cabarrus County  (Concord, NC | revenue $4,536,790)
+  category: youth development   materiality floor: $22,684
+==============================================================================
+  peer grant records matched   : 11,524   (in-state 354 / in-region 1,333)
+  distinct funders of peers    : 5,579
+  CREDIBLE + MATERIAL funders  : 426
+    of which fund in-region    : 172
+
+  Top prospects (regional first):
+    [REGION] THE CANNON FOUNDATION INC                | 14 peers | median  $100,000
+    [REGION] LILLY ENDOWMENT INC                      | 12 peers | median   $41,500
+    [REGION] Wells Fargo Foundation                   |  8 peers | median   $32,500
+    [REGION] THE CALIFORNIA ENDOWMENT                 |  7 peers | median   $92,500
+    [REGION] DPR Foundation                           |  6 peers | median   $50,000
+    [REGION] FIDELITY FOUNDATION                      |  5 peers | median  $200,000
+    [REGION] SURDNA FOUNDATION INC                    |  5 peers | median   $50,000
+    [REGION] THE CARRIE MEEK FOUNDATION INC           |  5 peers | median   $30,000
+    [REGION] THE ROBERT P HOLDING FOUNDATION INC      |  5 peers | median   $25,000
+    [REGION] THE WILLIAM PENN FOUNDATION              |  4 peers | median  $117,822
+    [REGION] THE LEON LEVINE FOUNDATION               |  4 peers | median   $87,500
+    [REGION] THE UNITED COMPANY FOUNDATION            |  4 peers | median   $60,000
+
+==============================================================================
+Lake County Free Clinic  (Painesville, OH | revenue $1,200,000)
+  category: free / community clinic   materiality floor: $6,000
+==============================================================================
+  peer grant records matched   : 6,620   (in-state 452 / in-region 997)
+  distinct funders of peers    : 3,713
+  CREDIBLE + MATERIAL funders  : 647
+    of which fund in-region    : 324
+
+  Top prospects (regional first):
+    [REGION] DELTA DENTAL COMMUNITY CARE FOUNDATION   | 84 peers | median   $50,000
+    [REGION] THE LEONA M AND HARRY B HELMSLEY         | 12 peers | median  $334,407
+    [REGION] PATTERSON FOUNDATION                     | 12 peers | median   $10,000
+    [REGION] TD CHARITABLE FOUNDATION                 | 10 peers | median    $8,750
+    [REGION] WK Kellogg Foundation                    |  4 peers | median  $162,500
+    [REGION] MICHIGAN FOUNDATION FOR VISION AWARENESS |  4 peers | median   $16,152
+    [REGION] PALLOTTINE FOUNDATION OF HUNTINGTON      |  4 peers | median   $11,374
+    [REGION] NICHOLAS H NOYES JR MEMORIAL             |  4 peers | median   $10,000
+    [REGION] AJ AND SIGISMUNDA PALUMBO CHARITABLE TRU |  3 peers | median   $70,000
+    [REGION] TING TSUNG & WEI FONG CHAO FOUNDATION    |  3 peers | median   $50,000
+    [REGION] HOOVER FOUNDATION INCOME ACCOUNT         |  3 peers | median   $40,000
+    [REGION] MILLSTONE FUND                           |  3 peers | median   $25,000
+
+==============================================================================
+SUMMARY   credible+material / of which regional
+  Cape Fear Literacy Council                       130 / 66
+  Boys & Girls Club of Cabarrus County             426 / 172
+  Lake County Free Clinic                          647 / 324

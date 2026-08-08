@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<irs:Return returnVersion="2022v5.0" xmlns="http://www.irs.gov/efile" xmlns:irs="http://www.irs.gov/efile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <irs:ReturnHeader binaryAttachmentCnt="0">
+    <irs:ReturnTs>2025-02-03T17:02:56-08:00</irs:ReturnTs>
+    <irs:TaxPeriodEndDt>2023-06-30</irs:TaxPeriodEndDt>
+    <irs:PreparerFirmGrp>
+      <irs:PreparerFirmEIN>954793490</irs:PreparerFirmEIN>
+      <irs:PreparerFirmName>
+        <irs:BusinessNameLine1Txt>IMM MANAGEMENT</irs:BusinessNameLine1Txt>
+      </irs:PreparerFirmName>
+      <irs:PreparerUSAddress>
+        <irs:AddressLine1Txt>15941 AMBER VALLEY DRIVE</irs:AddressLine1Txt>
+        <irs:CityNm>WHITTIER</irs:CityNm>
+        <irs:StateAbbreviationCd>CA</irs:StateAbbreviationCd>
+        <irs:ZIPCd>90604</irs:ZIPCd>
+      </irs:PreparerUSAddress>
+    </irs:PreparerFirmGrp>
+    <irs:ReturnTypeCd>990EZ</irs:ReturnTypeCd>
+    <irs:TaxPeriodBeginDt>2022-07-01</irs:TaxPeriodBeginDt>
+    <irs:Filer>
+      <irs:EIN>880542528</irs:EIN>
+      <irs:BusinessName>
+        <irs:BusinessNameLine1Txt>LATINA GOLFERS ASSOCIATION FOUNDATION INC</irs:BusinessNameLine1Txt>
+      </irs:BusinessName>
+      <irs:BusinessNameControlTxt>LATI</irs:BusinessNameControlTxt>
+      <irs:PhoneNum>2138048091</irs:PhoneNum>
+      <irs:USAddress>
+        <irs:AddressLine1Txt>1832 BOUETT STREET</irs:AddressLine1Txt>
+        <irs:CityNm>LOS ANGELES</irs:CityNm>
+        <irs:StateAbbreviationCd>CA</irs:StateAbbreviationCd>
+        <irs:ZIPCd>90012</irs:ZIPCd>
+      </irs:USAddress>
+    </irs:Filer>
+    <irs:BusinessOfficerGrp>
+      <irs:PersonNm>ELIZBETH MALDONADO</irs:PersonNm>
+      <irs:PersonTitleTxt>CEO</irs:PersonTitleTxt>
+      <irs:PhoneNum>2138048091</irs:PhoneNum>
+      <irs:SignatureDt>2025-01-30</irs:SignatureDt>
+      <irs:DiscussWithPaidPreparerInd>true</irs:DiscussWithPaidPreparerInd>
+    </irs:BusinessOfficerGrp>
+    <irs:IRSResponsiblePrtyInfoCurrInd>false</irs:IRSResponsiblePrtyInfoCurrInd>
+    <irs:PreparerPersonGrp>
+      <irs:PreparerPersonNm>MAX A ORDONEZ</irs:PreparerPersonNm>
+      <irs:PTIN>P01468016</irs:PTIN>
+      <irs:PhoneNum>7146005692</irs:PhoneNum>
+      <irs:PreparationDt>2025-01-30</irs:PreparationDt>
+    </irs:PreparerPersonGrp>
+    <irs:TaxYr>2022</irs:TaxYr>
+    <irs:BuildTS>2025-03-06 01:10:19Z</irs:BuildTS>
+  </irs:ReturnHeader>
+  <irs:ReturnData documentCnt="3">
+    <irs:IRS990EZ documentId="USXE01">
+      <irs:InitialReturnInd>X</irs:InitialReturnInd>
+      <irs:AmendedReturnInd>X</irs:AmendedReturnInd>
+      <irs:MethodOfAccountingCashInd>X</irs:MethodOfAccountingCashInd>
+      <irs:ScheduleBNotRequiredInd>X</irs:ScheduleBNotRequiredInd>
+      <irs:Organization501c3Ind referenceDocumentId="BX0101">X</irs:Organization501c3Ind>
+      <irs:TypeOfOrganizationCorpInd>X</irs:TypeOfOrganizationCorpInd>
+      <irs:GrossReceiptsAmt>18342</irs:GrossReceiptsAmt>
+      <irs:InfoInScheduleOPartIInd>X</irs:InfoInScheduleOPartIInd>
+      <irs:ContributionsGiftsGrantsEtcAmt>18342</irs:ContributionsGiftsGrantsEtcAmt>
+      <irs:GamingGrossIncomeAmt>0</irs:GamingGrossIncomeAmt>
+      <irs:FundraisingGrossIncomeAmt fndrsngEventContriPrevRptAmt="0">0</irs:FundraisingGrossIncomeAmt>
+      <irs:TotalRevenueAmt>18342</irs:TotalRevenueAmt>
+      <irs:OtherExpensesTotalAmt>3645</irs:OtherExpensesTotalAmt>
+      <irs:TotalExpensesAmt>3645</irs:TotalExpensesAmt>
+      <irs:ExcessOrDeficitForYearAmt>14697</irs:ExcessOrDeficitForYearAmt>
+      <irs:NetAssetsOrFundBalancesEOYAmt>14697</irs:NetAssetsOrFundBalancesEOYAmt>
+      <irs:Form990TotalAssetsGrp>
+        <irs:BOYAmt>0</irs:BOYAmt>
+        <irs:EOYAmt>0</irs:EOYAmt>
+      </irs:Form990TotalAssetsGrp>
+      <irs:NetAssetsOrFundBalancesGrp>
+        <irs:BOYAmt>0</irs:BOYAmt>
+        <irs:EOYAmt>0</irs:EOYAmt>
+      </irs:NetAssetsOrFundBalancesGrp>
+      <irs:PrimaryExemptPurposeTxt>Provide leadership skills that impact the lives of</irs:PrimaryExemptPurposeTxt>
+      <irs:ProgramSrvcAccomplishmentGrp>
+        <irs:DescriptionProgramSrvcAccomTxt>WOMEN'S LEADERSHIP AND GOLF LESSONS. WOMEN'S GROUP MENTORSHI PROGRAM FOR 85 WOMEN TO HOW INTERPERSONAL RELATIONSHIPS BUIL ON THE GOLF COURSE TRANSLATE INTO BOARDROOM THEN TO PROMOTIO</irs:DescriptionProgramSrvcAccomTxt>
+        <irs:ProgramServiceExpensesAmt>5826</irs:ProgramServiceExpensesAmt>
+      </irs:ProgramSrvcAccomplishmentGrp>
+      <irs:TotalProgramServiceExpensesAmt>5826</irs:TotalProgramServiceExpensesAmt>
+      <irs:OfficerDirectorTrusteeEmplGrp>
+        <irs:PersonNm>ELIZABETH MALDONADO</irs:PersonNm>
+        <irs:TitleTxt>PRESIDENT AND CEO</irs:TitleTxt>
+        <irs:AverageHrsPerWkDevotedToPosRt>10</irs:AverageHrsPerWkDevotedToPosRt>
+        <irs:CompensationAmt>0</irs:CompensationAmt>
+      </irs:OfficerDirectorTrusteeEmplGrp>
+      <irs:ActivitiesNotPreviouslyRptInd>false</irs:ActivitiesNotPreviouslyRptInd>
+      <irs:ChgMadeToOrgnzngDocNotRptInd>false</irs:ChgMadeToOrgnzngDocNotRptInd>
+      <irs:OrganizationHadUBIInd>false</irs:OrganizationHadUBIInd>
+      <irs:SubjectToProxyTaxInd>false</irs:SubjectToProxyTaxInd>
+      <irs:OrganizationDissolvedEtcInd>false</irs:OrganizationDissolvedEtcInd>
+      <irs:Form1120PolFiledInd>false</irs:Form1120PolFiledInd>
+      <irs:MadeLoansToFromOfficersInd>false</irs:MadeLoansToFromOfficersInd>
+      <irs:InitiationFeesAndCapContriAmt>0</irs:InitiationFeesAndCapContriAmt>
+      <irs:GrossReceiptsForPublicUseAmt>0</irs:GrossReceiptsForPublicUseAmt>
+      <irs:EngagedInExcessBenefitTransInd>false</irs:EngagedInExcessBenefitTransInd>
+      <irs:ProhibitedTaxShelterTransInd>false</irs:ProhibitedTaxShelterTransInd>
+      <irs:BooksInCareOfDetail>
+        <irs:PersonNm>ELIZBETH MALDONADO</irs:PersonNm>
+        <irs:USAddress>
+          <irs:AddressLine1Txt>1832 BOUETT STREET</irs:AddressLine1Txt>
+          <irs:CityNm>LOS ANGELES</irs:CityNm>
+          <irs:StateAbbreviationCd>CA</irs:StateAbbreviationCd>
+          <irs:ZIPCd>90012</irs:ZIPCd>
+        </irs:USAddress>
+        <irs:PhoneNum>2138048091</irs:PhoneNum>
+      </irs:BooksInCareOfDetail>
+      <irs:ForeignFinancialAccountInd>false</irs:ForeignFinancialAccountInd>
+      <irs:ForeignOfficeInd>false</irs:ForeignOfficeInd>
+      <irs:DonorAdvisedFndsInd>false</irs:DonorAdvisedFndsInd>
+      <irs:OperateHospitalInd>false</irs:OperateHospitalInd>
+      <irs:TanningServicesProvidedInd>false</irs:TanningServicesProvidedInd>
+      <irs:RelatedOrganizationCtrlEntInd>false</irs:RelatedOrganizationCtrlEntInd>
+      <irs:TransactionWithControlEntInd>false</irs:TransactionWithControlEntInd>
+      <irs:PoliticalCampaignActyInd>false</irs:PoliticalCampaignActyInd>
+      <irs:LobbyingActivitiesInd>false</irs:LobbyingActivitiesInd>
+      <irs:SchoolOperatingInd>false</irs:SchoolOperatingInd>
+      <irs:TrnsfrExmptNonChrtblRltdOrgInd>false</irs:TrnsfrExmptNonChrtblRltdOrgInd>
+      <irs:PartVIOfCompOfHghstPdEmplTxt>NONE</irs:PartVIOfCompOfHghstPdEmplTxt>
+      <irs:PartVIHghstPdCntrctProfSrvcTxt>NONE</irs:PartVIHghstPdCntrctProfSrvcTxt>
+      <irs:FiledScheduleAInd>true</irs:FiledScheduleAInd>
+    </irs:IRS990EZ>
+    <irs:IRS990ScheduleA documentId="BX0101">
+      <irs:PubliclySupportedOrg509a2Ind>X</irs:PubliclySupportedOrg509a2Ind>
+      <irs:GiftsGrantsContrisRcvd509Grp>
+        <irs:CurrentTaxYearAmt>18342</irs:CurrentTaxYearAmt>
+        <irs:TotalAmt>18342</irs:TotalAmt>
+      </irs:GiftsGrantsContrisRcvd509Grp>
+      <irs:Total509Grp>
+        <irs:CurrentTaxYearAmt>18342</irs:CurrentTaxYearAmt>
+        <irs:TotalAmt>18342</irs:TotalAmt>
+      </irs:Total509Grp>
+      <irs:PublicSupportTotal509Amt>18342</irs:PublicSupportTotal509Amt>
+      <irs:TotalSupportCalendarYearGrp>
+        <irs:CurrentTaxYearAmt>18342</irs:CurrentTaxYearAmt>
+        <irs:TotalAmt>18342</irs:TotalAmt>
+      </irs:TotalSupportCalendarYearGrp>
+      <irs:PublicSupportCY509Pct>1.00000</irs:PublicSupportCY509Pct>
+      <irs:InvestmentIncomeCYPct>0</irs:InvestmentIncomeCYPct>
+      <irs:ThirtyThrPctSuprtTestsCY509Ind>X</irs:ThirtyThrPctSuprtTestsCY509Ind>
+    </irs:IRS990ScheduleA>
+    <irs:IRS990ScheduleO documentId="BX1501">
+      <irs:SupplementalInformationDetail>
+        <irs:FormAndLineReferenceDesc>990-EZ, Part I, Line 8</irs:FormAndLineReferenceDesc>
+        <irs:ExplanationTxt>AMENDED TAX RETURN FOR 2022 FORM 990-EZ, HEADER LINE B - AMENDED DUE TO CORRECTING ACCOUTING PERIOD. CORRECT FILING PERIOD IS JULY 1 2022 THRU JUNE 30, 2023 PER LEGAL REVIEW OF IRS LETTER.</irs:ExplanationTxt>
+      </irs:SupplementalInformationDetail>
+      <irs:SupplementalInformationDetail>
+        <irs:FormAndLineReferenceDesc>990-EZ, Part I, Line 16</irs:FormAndLineReferenceDesc>
+        <irs:ExplanationTxt>EVENT EXPENSES $658 EVENT GOODS $300 AUTO EXP $ 15 OFFICE SUPPLIES $24</irs:ExplanationTxt>
+      </irs:SupplementalInformationDetail>
+      <irs:SupplementalInformationDetail>
+        <irs:FormAndLineReferenceDesc>990-EZ, Part I, Line 16</irs:FormAndLineReferenceDesc>
+        <irs:ExplanationTxt>CONTINUED OTHER ORGANIZATION EXPENSES $550 TRANSPORTATION EXPENSES $2098 TOTAL LINE 16 OTHER EXPENSES = $3,645</irs:ExplanationTxt>
+      </irs:SupplementalInformationDetail>
+    </irs:IRS990ScheduleO>
+  </irs:ReturnData>
+</irs:Return>
