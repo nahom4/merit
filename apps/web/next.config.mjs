@@ -1,3 +1,6 @@
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -5,6 +8,10 @@ const nextConfig = {
   transpilePackages: ['@merit/shared', '@merit/domain', '@merit/application', '@merit/infrastructure'],
   experimental: {
     serverComponentsExternalPackages: ['@libsql/client'],
+    // The driver is left external below, so it has to be a real file in the deployed function's
+    // node_modules. pnpm keeps it at the workspace root, which tracing rooted at apps/web never
+    // walks into -- hence a build that succeeds and a serverless function that cannot require it.
+    outputFileTracingRoot: join(dirname(fileURLToPath(import.meta.url)), '../..'),
   },
   webpack: (config, { isServer }) => {
     if (isServer) {

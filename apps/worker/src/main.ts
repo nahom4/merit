@@ -2,6 +2,7 @@ import { consoleLogger } from '@merit/shared';
 import { dailySweep } from './jobs/daily-sweep.job.js';
 import { ingestCorpus } from './jobs/ingest-corpus.job.js';
 import { loadBmf } from './jobs/load-bmf.job.js';
+import { pushDemoSubset } from './jobs/push-demo-subset.job.js';
 import { deadlineWatch } from './jobs/deadline-watch.job.js';
 import { resolveRecipients } from './jobs/resolve-recipients.job.js';
 import { sweepFederal } from './jobs/sweep-federal.job.js';
@@ -19,6 +20,7 @@ const JOBS: Record<string, (args: readonly string[]) => Promise<void>> = {
   'daily-sweep': () => dailySweep(),
   'deadline-watch': () => deadlineWatch(),
   'weekly-briefing': () => weeklyBriefing(),
+  'push-demo-subset': (args) => pushDemoSubset(args),
 };
 
 const [job, ...args] = process.argv.slice(2);

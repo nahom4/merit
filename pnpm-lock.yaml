@@ -50,6 +50,9 @@ importers:
 
   apps/web:
     dependencies:
+      '@libsql/client':
+        specifier: ^0.14.0
+        version: 0.14.0
       '@merit/application':
         specifier: workspace:*
         version: link:../../packages/application

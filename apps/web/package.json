@@ -8,6 +8,7 @@
     "start": "next start -p 3100"
   },
   "dependencies": {
+    "@libsql/client": "^0.14.0",
     "@merit/application": "workspace:*",
     "@merit/domain": "workspace:*",
     "@merit/infrastructure": "workspace:*",

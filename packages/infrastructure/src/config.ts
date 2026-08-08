@@ -111,6 +111,13 @@ const ConfigSchema = z.object({
         .filter((value) => value.length > 0),
     ),
 
+  /**
+   * The shared secret the scheduler presents as `Authorization: Bearer <secret>`.
+   * Unset, the scheduled endpoints refuse every request rather than running unauthenticated:
+   * a sweep anyone can trigger is a way to burn a day's model quota from outside.
+   */
+  CRON_SECRET: z.string().min(16).optional(),
+
   /** Every outbound call has an explicit timeout. A default is not a policy. */
   HTTP_TIMEOUT_MS: z.coerce.number().int().positive().default(120_000),
 });

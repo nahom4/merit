@@ -1,0 +1,8 @@
+# The local corpus is 1.1GB of IRS filings and is never deployed: the hosted app reads Turso.
+/data/
+/validation/
+/evals/
+/tests/
+/e2e/
+**/*.test.ts
+**/*.spec.ts
