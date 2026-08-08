@@ -35,6 +35,20 @@ export interface FederalOpportunity {
   readonly awardFloorCents: number | null;
   readonly estimatedFundingCents: number | null;
   readonly expectedAwardCount: number | null;
-  /** Attachment ids on the full announcement, which S4 downloads the rubric from. */
-  readonly attachmentIds: readonly string[];
+  /** Attachments on the full announcement, which S4 downloads the rubric from. */
+  readonly attachments: readonly OpportunityAttachment[];
+}
+
+/**
+ * One file on the full announcement.
+ *
+ * The media type and the file name are carried rather than the id alone because S4 has to
+ * choose which file to read: a "Full Announcement" folder routinely holds the NOFO beside a
+ * budget spreadsheet and a webinar flyer, and handing `pdftotext` an `.xlsx` produces silence,
+ * not a rubric.
+ */
+export interface OpportunityAttachment {
+  readonly id: string;
+  readonly fileName: string;
+  readonly mimeType: string;
 }

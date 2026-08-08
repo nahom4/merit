@@ -35,6 +35,24 @@ const StringList = z.string().transform((raw, context) => {
   return z.NEVER;
 });
 
+/** `{ id, fileName, mimeType }` per attachment. An unparseable list is a fault, not an empty
+ *  list -- an announcement whose files we cannot read must say so, not look file-less. */
+const AttachmentList = z.string().transform((raw, context) => {
+  try {
+    const parsed: unknown = JSON.parse(raw);
+    const shape = z.array(z.object({ id: z.string(), fileName: z.string(), mimeType: z.string() }));
+    const checked = shape.safeParse(parsed);
+    if (checked.success) return checked.data;
+  } catch {
+    // Falls through to the issue below.
+  }
+  context.addIssue({
+    code: z.ZodIssueCode.custom,
+    message: 'expected a JSON array of { id, fileName, mimeType }',
+  });
+  return z.NEVER;
+});
+
 const OpportunityRowSchema = z.object({
   id: z.string(),
   number: z.string(),
@@ -51,7 +69,7 @@ const OpportunityRowSchema = z.object({
   award_floor_cents: z.number().nullable(),
   estimated_funding_cents: z.number().nullable(),
   expected_award_count: z.number().nullable(),
-  attachment_ids: StringList,
+  attachments: AttachmentList,
 });
 
 const CheckSchema = z.object({
@@ -83,7 +101,7 @@ export class LibsqlOpportunityRepository implements OpportunityRepository {
             sql: `INSERT INTO opportunities (
                     id, number, title, agency, status, open_date, close_date, applicant_type_codes,
                     eligibility_text, summary, funding_categories, award_ceiling_cents,
-                    award_floor_cents, estimated_funding_cents, expected_award_count, attachment_ids)
+                    award_floor_cents, estimated_funding_cents, expected_award_count, attachments)
                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                   ON CONFLICT (id) DO UPDATE SET
                     number = excluded.number,
@@ -100,7 +118,7 @@ export class LibsqlOpportunityRepository implements OpportunityRepository {
                     award_floor_cents = excluded.award_floor_cents,
                     estimated_funding_cents = excluded.estimated_funding_cents,
                     expected_award_count = excluded.expected_award_count,
-                    attachment_ids = excluded.attachment_ids`,
+                    attachments = excluded.attachments`,
             args: [
               opportunity.id,
               opportunity.number,
@@ -117,7 +135,7 @@ export class LibsqlOpportunityRepository implements OpportunityRepository {
               opportunity.awardFloorCents,
               opportunity.estimatedFundingCents,
               opportunity.expectedAwardCount,
-              JSON.stringify(opportunity.attachmentIds),
+              JSON.stringify(opportunity.attachments),
             ],
           });
 
@@ -377,7 +395,7 @@ export class LibsqlOpportunityRepository implements OpportunityRepository {
         awardFloorCents: parsed.award_floor_cents,
         estimatedFundingCents: parsed.estimated_funding_cents,
         expectedAwardCount: parsed.expected_award_count,
-        attachmentIds: parsed.attachment_ids,
+        attachments: parsed.attachments,
       };
     });
   }

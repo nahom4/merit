@@ -23,7 +23,7 @@ const opportunity = (id: string, number: string): FederalOpportunity => ({
   awardFloorCents: 150_000_00,
   estimatedFundingCents: 2_100_000_00,
   expectedAwardCount: 7,
-  attachmentIds: ['344872'],
+  attachments: [{ id: '344872', fileName: 'nofo.pdf', mimeType: 'application/pdf' }],
 });
 
 const NOW = '2026-08-08T06:00:00.000Z';

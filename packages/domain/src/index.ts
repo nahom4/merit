@@ -71,7 +71,11 @@ export type {
   FunderBriefInput,
 } from './funder/funder-brief.js';
 
-export type { FederalOpportunity, OpportunityStatus } from './opportunity/federal-opportunity.js';
+export type {
+  FederalOpportunity,
+  OpportunityAttachment,
+  OpportunityStatus,
+} from './opportunity/federal-opportunity.js';
 export { ApplicantType } from './opportunity/applicant-type.js';
 export type { ApplicantTypeAdmission } from './opportunity/applicant-type.js';
 export {
@@ -90,6 +94,19 @@ export type {
   EligibilityScreening,
 } from './opportunity/eligibility-screening.js';
 export { FitAssessment, HIGH_FIT_THRESHOLD, isHighFit } from './opportunity/fit-assessment.js';
+
+export { isTrustworthy, Rubric, RUBRIC_CONFIDENCE_THRESHOLD } from './draft/rubric.js';
+export type { RubricCriterion } from './draft/rubric.js';
+export {
+  conditioningFor,
+  DraftSection,
+  normalizeForCitation,
+  sentencesOf,
+  SUMMARY_SECTION_HEADING,
+} from './draft/draft.js';
+export type { Draft, DraftConditioning } from './draft/draft.js';
+export { Critique, revisionOrder } from './draft/critique.js';
+export type { CriterionCritique, RevisionTarget } from './draft/critique.js';
 
 export { computeProspectScore, COMPONENT_WEIGHTS } from './prospect/prospect-score.js';
 export type { CredibilityReason, ProspectInput, ProspectScore } from './prospect/prospect-score.js';

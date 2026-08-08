@@ -64,7 +64,16 @@ describe('toFederalOpportunity', () => {
 
   it('keeps only the full announcement’s attachments, which is where the rubric is', () => {
     // HRSA-26-045 has a "Full Announcement" folder and an "Other Supporting Documents" folder.
-    expect(mapped(HRSA_DELTA).attachmentIds.length).toBeGreaterThan(0);
+    expect(mapped(HRSA_DELTA).attachments.length).toBeGreaterThan(0);
+  });
+
+  it('keeps each attachment’s media type and file name, so S4 can pick the PDF to read', () => {
+    // Without these two fields the rubric extractor cannot tell a 60-page NOFO from a budget
+    // spreadsheet, and `pdftotext` would be handed a file it cannot read.
+    const attachment = mapped(HRSA_DELTA).attachments[0];
+
+    expect(attachment).toMatchObject({ mimeType: 'application/pdf' });
+    expect(attachment?.fileName).toContain('HRSA-26-045');
   });
 
   it('refuses an unrecognised status rather than calling a closed announcement open', () => {

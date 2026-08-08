@@ -154,8 +154,16 @@ export const toFederalOpportunity = (
     expectedAwardCount: awards.value,
     // Only the full announcement carries the rubric S4 extracts. Supporting documents are not
     // it, and folding them in here would send S4 looking for criteria in a budget template.
-    attachmentIds: (data.synopsisAttachmentFolders ?? [])
+    attachments: (data.synopsisAttachmentFolders ?? [])
       .filter((folder) => (folder.folderType ?? '').toLowerCase() === 'full announcement')
-      .flatMap((folder) => (folder.synopsisAttachments ?? []).map((attachment) => attachment.id)),
+      .flatMap((folder) =>
+        (folder.synopsisAttachments ?? []).map((attachment) => ({
+          id: attachment.id,
+          // The feed states both, but not always. An unnamed file is still downloadable, and
+          // the extractor sniffs what it got rather than refusing to try.
+          fileName: attachment.fileName ?? '',
+          mimeType: attachment.mimeType ?? '',
+        })),
+      ),
   });
 };
