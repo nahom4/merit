@@ -107,6 +107,7 @@ export {
   conditioningFor,
   DraftSection,
   normalizeForCitation,
+  observedPurposeLanguage,
   sentencesOf,
   SUMMARY_SECTION_HEADING,
 } from './draft/draft.js';

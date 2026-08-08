@@ -5,7 +5,7 @@ One slice at a time, each working end to end before the next begins.
 A slice is **not** done because the backend works. It is done when a real user can do the
 thing on a real screen against real data, with tests at every tier proving it.
 
-**Current slice: S4.** S0, S1, S2 and S3 are complete.
+**Current slice: S5.** S0, S1, S2, S3 and S4 are complete.
 
 ---
 
@@ -21,7 +21,7 @@ Everything before it exists to make S1 possible; everything after it is leverage
 | **S1** | **Prospect discovery** — profile in, ranked funders with evidence out | ☑ |
 | **S2** | Funder reachability report — "should we bother" | ☑ |
 | **S3** | Federal sweep, eligibility screening, fit scoring | ☑ |
-| **S4** | Rubric extraction, drafting, self-critique | ☐ |
+| **S4** | Rubric extraction, drafting, self-critique | ☑ |
 | **S5** | Competitive positioning from award history | ☐ |
 | **S6** | Scheduled jobs, Calendar milestones, Gmail digests | ☐ |
 | **S7** | Ask the graph — conversational query | ☐ |
@@ -183,15 +183,50 @@ keeps that shape true.
 
 ## S4 — Rubric extraction, drafting, self-critique
 
-- [ ] Attachment download and `pdftotext -layout` extraction
-- [ ] Rubric parsed into criteria, sub-criteria, and point values, with a confidence score
-- [ ] Below the confidence threshold: fall back to summary-conditioned drafting **and say so**
-- [ ] Section drafting conditioned on the sub-criteria that section is scored against
-- [ ] Critique pass scoring per criterion; **every score must cite a supporting sentence or the validator rejects it**
-- [ ] Revision weighted by points available
-- [ ] Draft studio UI: draft beside rubric, per-criterion scores before and after, weak criteria flagged with what the human must supply
-- [ ] Foundation drafting conditioned on the funder's own observed purpose language
-- [ ] Eval: rubric extraction accuracy, critique calibration against human scores
+- [x] Attachment download and `pdftotext -layout` extraction
+- [x] Rubric parsed into criteria, sub-criteria, and point values, with a confidence score
+- [x] Below the confidence threshold: fall back to summary-conditioned drafting **and say so**
+- [x] Section drafting conditioned on the sub-criteria that section is scored against
+- [x] Critique pass scoring per criterion; **every score must cite a supporting sentence or the validator rejects it**
+- [x] Revision weighted by points available
+- [x] Draft studio UI: draft beside rubric, per-criterion scores before and after, weak criteria flagged with what the human must supply
+- [x] Foundation drafting conditioned on the funder's own observed purpose language
+- [x] Eval: rubric extraction accuracy — **partial**, see the limit stated below
+
+**Done when:** a user opens an announcement they can apply for and gets a draft whose every
+section names the criteria it was written against, whose every score names the sentence it
+judged, and which says on the screen what it was conditioned on — verified by an E2E test that
+reads the rubric out of a real 60-page PDF and asserts a cited sentence really is in the draft.
+
+**Result on the real announcement.** HHS-2026-ACF-OCS-EAH-0027, attachment 354136, recorded from
+the live service on 8 August 2026 and committed as a fixture: 303,791 bytes, 105,727 characters
+of extracted text, a seven-row scoring table summing to the 115 points the document states. The
+window handed to the extractor is 11.3% of the document and contains all seven criteria and the
+stated total. A three-call revision budget covers 88% of the points recoverable.
+
+**Decisions this slice forced:** rubric extraction reads layout-preserving text and its
+self-reported confidence is capped by arithmetic it cannot influence
+([ADR 0014](decisions/0014-rubric-extraction-is-layout-text-and-a-checked-confidence.md)).
+
+**Three limits, stated rather than hidden.**
+
+*The eval measures Merit's half, not the model's.* It proves the window cannot lose the criteria
+and that a dropped 50-point criterion is distrusted whatever confidence the model claims. It does
+not measure how often Gemini reads the table correctly, and **critique calibration against human
+scores is not built**: it needs a labelled set of human-scored drafts, which does not exist yet.
+`RUBRIC_CONFIDENCE_THRESHOLD` is therefore argued for in ADR 0014, not measured. Building that
+set is the remaining work on this criterion.
+
+*A foundation letter is never scored.* Foundations publish no criteria, so there is nothing to
+critique against and no per-criterion score is invented to fill the shape. The letter states what
+it was conditioned on and stops there.
+
+*The heading list is drawn from documents, not from the federal template.* The fixture
+announcement contains none of the standard-form headings — "Application Review Information"
+appears nowhere in it — and its first mention of "Scoring criteria" is a cross-reference 10,000
+characters before the section. Both were found by probing the real file, and the window is chosen
+by scoring candidates on how often "points" follows them. An announcement laid out unlike any yet
+seen will window badly, and the confidence check is what catches it.
 
 ---
 

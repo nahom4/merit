@@ -109,6 +109,45 @@ export const sentencesOf = (text: string): readonly string[] =>
  *  a line break or a double space, and failing a citation over that would be pedantry. */
 export const normalizeForCitation = (text: string): string => text.replace(/\s+/gu, ' ').trim().toLowerCase();
 
+/**
+ * What a foundation has actually funded, in its own words, most frequent first.
+ *
+ * A private foundation publishes no rubric, so there is nothing to condition a draft on the way
+ * a federal announcement allows. But it has already said what it funds, several hundred times,
+ * in the purpose lines of its own 990 filings — and those lines are evidence in a way a mission
+ * statement on a website is not, because each one describes a grant it really made.
+ *
+ * Ordered by how often a purpose recurs, because a phrase used forty times is this foundation's
+ * language and a phrase used once is a single grant's paperwork. Deduplicated case- and
+ * whitespace-insensitively: filing text is typed by hand, and "Adult Literacy" and
+ * "adult  literacy" are one purpose stated twice, not two purposes.
+ */
+export const observedPurposeLanguage = (
+  grants: readonly { readonly purpose: string | null }[],
+  limit: number,
+): readonly string[] => {
+  const counts = new Map<string, { readonly text: string; count: number }>();
+
+  for (const grant of grants) {
+    const purpose = grant.purpose?.trim() ?? '';
+    if (purpose.length === 0) continue;
+
+    const key = purpose.replace(/\s+/gu, ' ').toLowerCase();
+    const seen = counts.get(key);
+    if (seen === undefined) counts.set(key, { text: purpose.replace(/\s+/gu, ' '), count: 1 });
+    else seen.count += 1;
+  }
+
+  return (
+    [...counts.values()]
+      // Ties break on the wording itself, so the prompt is byte-identical across runs — the
+      // prompt is part of the cache key, and a reordered list is a cache miss for no reason.
+      .sort((a, b) => b.count - a.count || a.text.localeCompare(b.text))
+      .slice(0, limit)
+      .map((entry) => entry.text)
+  );
+};
+
 const parse = (raw: unknown): Result<string, ParseError> => {
   if (typeof raw !== 'object' || raw === null || Array.isArray(raw)) {
     return err(

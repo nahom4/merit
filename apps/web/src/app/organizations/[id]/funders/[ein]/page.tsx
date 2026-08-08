@@ -50,6 +50,14 @@ export default async function FunderReachabilityPage({ params }: { params: { id:
         {view.coverage}
       </p>
 
+      <a
+        href={`/organizations/${params.id}/funders/${params.ein}/letter`}
+        className="mt-3 inline-block text-sm text-accent"
+        data-testid="letter-link"
+      >
+        Draft a letter of inquiry in this funder’s own language →
+      </a>
+
       <section className="mt-10">
         <h2 className="text-lg font-semibold tracking-tight">Who it funds, by year</h2>
         {view.yearsEmptyReason === null ? (

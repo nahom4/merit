@@ -1,5 +1,11 @@
 import { describe, expect, it } from 'vitest';
-import { conditioningFor, DraftSection, normalizeForCitation, sentencesOf } from './draft.js';
+import {
+  conditioningFor,
+  DraftSection,
+  normalizeForCitation,
+  observedPurposeLanguage,
+  sentencesOf,
+} from './draft.js';
 import { Rubric } from './rubric.js';
 import { unwrapOrThrow } from '@merit/shared';
 
@@ -92,5 +98,48 @@ describe('DraftSection.parse', () => {
   it('tells the model to bracket a fact the profile does not contain rather than invent it', () => {
     expect(DraftSection.responseContract()).toContain('square');
     expect(DraftSection.responseContract()).toContain('Do not invent');
+  });
+});
+
+describe('observedPurposeLanguage', () => {
+  const grant = (purpose: string | null) =>
+    ({ purpose }) as Parameters<typeof observedPurposeLanguage>[0][number];
+
+  it('returns the purposes a foundation has actually funded, most frequent first', () => {
+    const purposes = observedPurposeLanguage(
+      [
+        grant('Adult literacy programming'),
+        grant('General operating support'),
+        grant('Adult literacy programming'),
+        grant('General operating support'),
+        grant('General operating support'),
+      ],
+      10,
+    );
+
+    expect(purposes).toEqual(['General operating support', 'Adult literacy programming']);
+  });
+
+  it('treats casing and spacing as the same purpose, because filings are typed by hand', () => {
+    const purposes = observedPurposeLanguage(
+      [grant('Adult   literacy'), grant('adult literacy'), grant('ADULT LITERACY')],
+      10,
+    );
+
+    expect(purposes).toHaveLength(1);
+  });
+
+  it('drops purposes the filings do not state rather than inventing a placeholder', () => {
+    expect(observedPurposeLanguage([grant(null), grant('   '), grant('Literacy')], 10)).toEqual(['Literacy']);
+  });
+
+  it('caps the list, because a prompt is not a data dump', () => {
+    const many = Array.from({ length: 40 }, (_, index) => grant(`Purpose ${index}`));
+
+    expect(observedPurposeLanguage(many, 12)).toHaveLength(12);
+  });
+
+  it('returns nothing when no grant states a purpose, so the caller can say so', () => {
+    expect(observedPurposeLanguage([grant(null), grant(null)], 10)).toEqual([]);
   });
 });

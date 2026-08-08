@@ -2,6 +2,7 @@ import 'server-only';
 import {
   CreateOrganization,
   DraftApplication,
+  DraftFoundationLetter,
   GetOrganization,
   ReportFunderReachability,
   ReportRunLog,
@@ -127,6 +128,19 @@ export const draftApplication = () => {
     systemClock,
   );
 };
+
+/**
+ * S4, the foundation half. It needs the funder repository rather than the opportunity one:
+ * a foundation's criteria are not published, so what conditions the letter is the purpose
+ * language in its own filings, which is already in the giving graph.
+ */
+export const draftFoundationLetter = () =>
+  new DraftFoundationLetter(
+    new LibsqlFunderRepository(database()),
+    new LibsqlDraftRepository(database()),
+    modelGateway(),
+    systemClock,
+  );
 
 export const reportRunLog = () =>
   new ReportRunLog(

@@ -117,6 +117,11 @@ export {
   sectionPrompt,
   summarySectionPrompt,
 } from './use-cases/draft-application/draft.prompts.js';
+export { DraftFoundationLetter } from './use-cases/draft-application/draft-foundation-letter.use-case.js';
+export type {
+  DraftFoundationLetterInput,
+  DraftFoundationLetterOutput,
+} from './use-cases/draft-application/draft-foundation-letter.use-case.js';
 export { ReportRunLog } from './use-cases/report-run-log/report-run-log.use-case.js';
 export type { ReportRunLogInput, RunLog } from './use-cases/report-run-log/report-run-log.use-case.js';
 export { InMemoryOpportunityRepository } from './testing/in-memory-opportunity.repository.js';
