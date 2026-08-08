@@ -77,8 +77,17 @@ const ConfigSchema = z.object({
 
   /** Scheduled work can deliver to Google Calendar and Gmail when OAuth is configured. */
   GOOGLE_OAUTH_ACCESS_TOKEN: z.string().optional(),
+  GOOGLE_OAUTH_CLIENT_ID: z.string().optional(),
+  GOOGLE_OAUTH_CLIENT_SECRET: z.string().optional(),
+  GOOGLE_GMAIL_REDIRECT_URI: z.string().url().optional(),
+  GOOGLE_GMAIL_WATCH_TOPIC_NAME: z.string().optional(),
+  /** Sign-in reuses the same OAuth client; only the redirect differs. */
+  GOOGLE_AUTH_REDIRECT_URI: z.string().url().default('http://localhost:3000/api/auth/google/callback'),
   GOOGLE_CALENDAR_BASE_URL: z.string().url().default('https://www.googleapis.com/calendar/v3'),
   GOOGLE_CALENDAR_ID: z.string().default('primary'),
+  // Where this Merit is reachable, for links that leave the app and have to come back --
+  // a calendar reminder is read on a phone, days later, with no tab open.
+  MERIT_APP_BASE_URL: z.string().url().default('http://localhost:3100'),
   GOOGLE_GMAIL_BASE_URL: z.string().url().default('https://gmail.googleapis.com/gmail/v1'),
   GOOGLE_GMAIL_USER_ID: z.string().default('me'),
 
@@ -86,11 +95,21 @@ const ConfigSchema = z.object({
   SCHEDULED_ALERT_RECIPIENTS: z
     .string()
     .default('')
-    .transform((raw) => raw.split(',').map((value) => value.trim()).filter((value) => value.length > 0)),
+    .transform((raw) =>
+      raw
+        .split(',')
+        .map((value) => value.trim())
+        .filter((value) => value.length > 0),
+    ),
   SCHEDULED_BRIEFING_RECIPIENTS: z
     .string()
     .default('')
-    .transform((raw) => raw.split(',').map((value) => value.trim()).filter((value) => value.length > 0)),
+    .transform((raw) =>
+      raw
+        .split(',')
+        .map((value) => value.trim())
+        .filter((value) => value.length > 0),
+    ),
 
   /** Every outbound call has an explicit timeout. A default is not a policy. */
   HTTP_TIMEOUT_MS: z.coerce.number().int().positive().default(120_000),

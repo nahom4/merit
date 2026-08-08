@@ -7,7 +7,7 @@ import type { ScoreBarView } from '../view-model.js';
 export const ScoreBars = ({ bars }: { bars: readonly ScoreBarView[] }) => (
   <dl className="grid gap-3 sm:grid-cols-2">
     {bars.map((bar) => (
-      <div key={bar.label}>
+      <div key={bar.label} className="rounded-2xl border border-line/70 bg-white/80 p-4">
         <div className="flex items-baseline justify-between gap-2">
           <dt className="text-sm font-medium" title={bar.explanation}>
             {bar.label}

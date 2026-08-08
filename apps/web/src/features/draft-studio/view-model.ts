@@ -53,6 +53,8 @@ export interface DraftStudioView {
   readonly organizationName: string;
   readonly opportunityNumber: string;
   readonly opportunityTitle: string;
+  /** The announcement's close date, for the deadline reminder. Null when it states none. */
+  readonly closeDate: string | null;
   readonly backHref: string;
   /** The roadmap's "**and say so**", rendered above the draft in every case. */
   readonly conditioning: { readonly kind: 'rubric' | 'summary'; readonly note: string };
@@ -142,6 +144,7 @@ export const toDraftStudioView = (
     organizationName,
     opportunityNumber: opportunity.number,
     opportunityTitle: opportunity.title,
+    closeDate: opportunity.closeDate,
     backHref: `/organizations/${organizationId}/opportunities`,
     conditioning: { kind: draft.conditioning.kind, note: draft.conditioning.note },
     sections,

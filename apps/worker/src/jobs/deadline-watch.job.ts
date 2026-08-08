@@ -6,7 +6,9 @@ export const deadlineWatch = async (): Promise<void> => {
   const { logger, organizations, gmail, notifications, milestones, config } = await wire();
   const allOrganizations = await organizations.listAll();
   if (!allOrganizations.ok) {
-    logger.error('deadline watch failed while loading organizations', { reason: allOrganizations.error.message });
+    logger.error('deadline watch failed while loading organizations', {
+      reason: allOrganizations.error.message,
+    });
     process.exitCode = 1;
     return;
   }
@@ -18,7 +20,10 @@ export const deadlineWatch = async (): Promise<void> => {
       horizonDays: 7,
     });
     if (!result.ok) {
-      logger.error('deadline watch failed', { organizationId: organization.id, reason: result.error.message });
+      logger.error('deadline watch failed', {
+        organizationId: organization.id,
+        reason: result.error.message,
+      });
       process.exitCode = 1;
       return;
     }

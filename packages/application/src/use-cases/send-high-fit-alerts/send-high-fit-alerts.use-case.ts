@@ -26,7 +26,9 @@ export class SendHighFitAlerts {
     private readonly gmail: GmailGateway,
   ) {}
 
-  async execute(input: SendHighFitAlertsInput): Promise<Result<HighFitAlertSummary, RepositoryUnavailable | GmailUnavailable>> {
+  async execute(
+    input: SendHighFitAlertsInput,
+  ): Promise<Result<HighFitAlertSummary, RepositoryUnavailable | GmailUnavailable>> {
     const board = await this.opportunities.loadBoard(input.organization.id as string, input.boardLimit);
     if (!board.ok) return board;
 

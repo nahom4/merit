@@ -1,7 +1,8 @@
 'use server';
 
 import { redirect } from 'next/navigation';
-import { createOrganization } from '../../composition/container.js';
+import { createOrganization, users } from '../../composition/container.js';
+import { currentUser } from '../../lib/session.js';
 
 export interface CreateOrganizationFormState {
   readonly error: string | null;
@@ -27,6 +28,13 @@ export async function submitOrganizationProfile(
   if (!result.ok) {
     return { error: messageFor(result.error.code, result.error.message) };
   }
+
+  // The whole point of signing in: the profile is remembered, not typed into the URL.
+  const user = await currentUser();
+  if (user !== null) {
+    await users().linkOrganization({ email: user.email, organizationId: result.value.id as string });
+  }
+
   redirect(`/organizations/${result.value.id}`);
 }
 

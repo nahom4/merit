@@ -1,6 +1,13 @@
 import { notFound } from 'next/navigation';
-import { draftFoundationLetter, getOrganization } from '../../../../../../composition/container.js';
+import Link from 'next/link';
+import {
+  draftFoundationLetter,
+  getFoundationOutreach,
+  getOrganization,
+} from '../../../../../../composition/container.js';
 import { DraftSections } from '../../../../../../features/draft-studio/components/draft-sections.js';
+import { OutreachCard } from '../../../../../../features/outreach-tracking/components/outreach-card.js';
+import { buildFoundationOutreachView } from '../../../../../../features/outreach-tracking/view-model.js';
 
 export const dynamic = 'force-dynamic';
 
@@ -30,6 +37,30 @@ export default async function FoundationLetterPage({ params }: { params: { id: s
   }
 
   const { draft, funderName } = drafted.value;
+  const outreach = await getFoundationOutreach().execute({
+    organizationId: params.id,
+    targetId: params.ein,
+  });
+  if (!outreach.ok) {
+    return <Unavailable />;
+  }
+
+  const outreachView = buildFoundationOutreachView({
+    funderName,
+    recipientEmail: null,
+    body: [
+      `Dear ${funderName},`,
+      '',
+      ...draft.sections.flatMap((section) => [section.heading, '', section.text, '']),
+      draft.note === null ? null : `Note: ${draft.note}`,
+      '',
+      `Best,`,
+      organization.value.name,
+    ]
+      .filter((line): line is string => line !== null)
+      .join('\n'),
+    existing: outreach.value,
+  });
   const sections = draft.sections.map((section) => ({
     heading: section.heading,
     text: section.text,
@@ -43,50 +74,72 @@ export default async function FoundationLetterPage({ params }: { params: { id: s
   }));
 
   return (
-    <section>
-      <a href={`/organizations/${params.id}/funders/${params.ein}`} className="text-sm text-accent">
-        ← Back to {funderName}
-      </a>
-
-      <h1 className="mt-2 text-2xl font-semibold tracking-tight">Letter of inquiry</h1>
-      <p className="mt-1 text-sm text-muted">{funderName}</p>
-
-      {/* Stated in both branches, as everywhere in S4: a letter written against a funder's own
-          language and one written against nothing read identically on the page. */}
-      <p
-        className={`mt-4 max-w-prose rounded border p-4 text-sm ${
-          draft.conditioning.kind === 'rubric'
-            ? 'border-line bg-gray-50'
-            : 'border-amber-300 bg-amber-50 text-amber-900'
-        }`}
-        data-testid="conditioning-note"
-      >
-        {draft.conditioning.note}
-      </p>
-
-      {draft.note === null ? null : (
-        <p
-          className="mt-3 max-w-prose rounded border border-line bg-gray-50 p-4 text-sm"
-          data-testid="draft-note"
+    <section className="grid gap-8">
+      <div className="shell-card p-6 sm:p-8">
+        <Link
+          href={`/organizations/${params.id}/funders/${params.ein}`}
+          className="text-sm font-medium text-accent"
         >
-          {draft.note}
-        </p>
-      )}
+          ← Back to {funderName}
+        </Link>
 
-      <p className="mt-4 max-w-prose text-sm text-muted">
-        This is a first draft for a human to take over, not a submission. Merit never submits anything and
-        never contacts a funder.
-      </p>
+        <div className="mt-4 flex flex-wrap items-start justify-between gap-4">
+          <div>
+            <span className="soft-label">Foundation letter</span>
+            <h1 className="mt-4 text-4xl font-semibold tracking-tight">Letter of inquiry</h1>
+            <p className="mt-2 text-base text-muted">{funderName}</p>
+          </div>
+          <div className="panel p-4">
+            <p className="text-xs uppercase tracking-[0.24em] text-muted">What this page shows</p>
+            <p className="mt-2 max-w-sm text-sm leading-7 text-muted">
+              The letter is conditioned on the funder’s own observed purpose language. Because foundations do
+              not publish a rubric, there is no per-criterion score here.
+            </p>
+          </div>
+        </div>
+
+        <p
+          className={`mt-6 max-w-prose rounded-2xl border p-4 text-sm ${
+            draft.conditioning.kind === 'rubric'
+              ? 'border-line bg-white/90'
+              : 'border-amber-300 bg-amber-50 text-amber-900'
+          }`}
+          data-testid="conditioning-note"
+        >
+          {draft.conditioning.note}
+        </p>
+
+        {draft.note === null ? null : (
+          <p
+            className="mt-3 max-w-prose rounded-2xl border border-line bg-white/90 p-4 text-sm"
+            data-testid="draft-note"
+          >
+            {draft.note}
+          </p>
+        )}
+
+        <p className="mt-4 max-w-prose text-sm leading-7 text-muted">
+          This is a first draft for a human to take over, not a submission. Merit never submits anything and
+          never contacts a funder.
+        </p>
+      </div>
 
       {sections.length === 0 ? (
-        <p
-          className="mt-8 max-w-prose rounded border border-line bg-gray-50 p-4 text-sm"
-          data-testid="empty-reason"
-        >
+        <p className="panel p-5 text-sm leading-7" data-testid="empty-reason">
           No letter could be drafted. The reason is stated above.
         </p>
       ) : (
-        <DraftSections sections={sections} />
+        <div className="grid gap-8">
+          <section className="panel p-6">
+            <DraftSections sections={sections} />
+          </section>
+          <OutreachCard
+            organizationId={params.id}
+            targetId={params.ein}
+            targetName={funderName}
+            initialView={outreachView}
+          />
+        </div>
       )}
     </section>
   );

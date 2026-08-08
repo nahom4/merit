@@ -27,12 +27,15 @@ export class SendWeeklyBriefing {
     private readonly clock: Clock,
   ) {}
 
-  async execute(input: SendWeeklyBriefingInput): Promise<Result<WeeklyBriefingSummary, RepositoryUnavailable | GmailUnavailable>> {
+  async execute(
+    input: SendWeeklyBriefingInput,
+  ): Promise<Result<WeeklyBriefingSummary, RepositoryUnavailable | GmailUnavailable>> {
     const board = await this.opportunities.loadBoard(input.organization.id as string, input.boardLimit);
     if (!board.ok) return board;
 
     const highFitCount = board.value.filter(
-      (row) => row.assessment?.fitState === 'scored' && (row.assessment.fit?.fitScore ?? 0) >= HIGH_FIT_THRESHOLD,
+      (row) =>
+        row.assessment?.fitState === 'scored' && (row.assessment.fit?.fitScore ?? 0) >= HIGH_FIT_THRESHOLD,
     ).length;
     const queuedCount = board.value.filter((row) => row.assessment?.fitState === 'queued').length;
     const weekStart = this.clock.now().toISOString().slice(0, 10);

@@ -14,12 +14,12 @@ export const FinancialTrend = ({
   trend: FinancialTrendView | null;
   unavailable: string | null;
 }) => (
-  <section className="mt-10" data-testid="financial-trend">
+  <section data-testid="financial-trend">
     <h2 className="text-lg font-semibold tracking-tight">Financial trend and capacity</h2>
 
     {trend === null ? (
       <p
-        className="mt-3 max-w-prose rounded border border-amber-300 bg-amber-50 p-4 text-sm text-amber-900"
+        className="mt-3 max-w-prose rounded-2xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-900"
         data-testid="financials-unavailable"
       >
         {unavailable}
@@ -35,7 +35,7 @@ export const FinancialTrend = ({
               This funder’s reported revenue, expenses, assets, and grants paid by year
             </caption>
             <thead>
-              <tr className="border-b border-line text-muted">
+              <tr className="border-b border-line/70 text-muted">
                 <th scope="col" className="py-1 pr-3 font-medium">
                   Year
                 </th>

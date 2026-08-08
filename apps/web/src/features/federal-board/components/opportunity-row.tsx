@@ -2,12 +2,12 @@ import type { OpportunityRowView } from '../view-model.js';
 
 /** Presentational. Every string was formatted by the view-model. */
 export const OpportunityRow = ({ row }: { row: OpportunityRowView }) => (
-  <li className="rounded border border-line p-5" data-testid="opportunity-row">
+  <li className="panel p-5 sm:p-6" data-testid="opportunity-row">
     <div className="flex flex-wrap items-baseline justify-between gap-2">
-      <h2 className="text-lg font-semibold tracking-tight">{row.title}</h2>
+      <h2 className="text-2xl font-semibold tracking-tight">{row.title}</h2>
       {row.fit === null ? null : (
         <span
-          className={`rounded px-2 py-0.5 text-sm font-medium tabular-nums ${
+          className={`rounded-full px-3 py-1 text-sm font-medium tabular-nums ${
             row.fit.isHighFit ? 'bg-accent/10 text-accent' : 'bg-gray-100 text-gray-700'
           }`}
           data-testid="fit-score"
@@ -17,33 +17,33 @@ export const OpportunityRow = ({ row }: { row: OpportunityRowView }) => (
       )}
     </div>
 
-    <p className="mt-1 text-sm text-muted">
+    <p className="mt-2 text-sm text-muted">
       {row.number} · {row.agency}
     </p>
 
-    <dl className="mt-4 flex flex-wrap gap-x-8 gap-y-2 text-sm">
-      <div>
-        <dt className="text-muted">Closes</dt>
-        <dd className="tabular-nums">{row.closes}</dd>
+    <dl className="mt-5 flex flex-wrap gap-4 text-sm">
+      <div className="rounded-2xl border border-line/70 bg-white/90 px-4 py-3">
+        <dt className="text-xs uppercase tracking-[0.2em] text-muted">Closes</dt>
+        <dd className="mt-1 tabular-nums">{row.closes}</dd>
       </div>
-      <div>
-        <dt className="text-muted">Award range</dt>
-        <dd className="tabular-nums">{row.awardRange}</dd>
+      <div className="rounded-2xl border border-line/70 bg-white/90 px-4 py-3">
+        <dt className="text-xs uppercase tracking-[0.2em] text-muted">Award range</dt>
+        <dd className="mt-1 tabular-nums">{row.awardRange}</dd>
       </div>
-      <div>
-        <dt className="text-muted">Expected awards</dt>
-        <dd className="tabular-nums">{row.expectedAwards}</dd>
+      <div className="rounded-2xl border border-line/70 bg-white/90 px-4 py-3">
+        <dt className="text-xs uppercase tracking-[0.2em] text-muted">Expected awards</dt>
+        <dd className="mt-1 tabular-nums">{row.expectedAwards}</dd>
       </div>
-      <div>
-        <dt className="text-muted">Federal program</dt>
-        <dd className="tabular-nums" data-testid="program-number">
+      <div className="rounded-2xl border border-line/70 bg-white/90 px-4 py-3">
+        <dt className="text-xs uppercase tracking-[0.2em] text-muted">Federal program</dt>
+        <dd className="mt-1 tabular-nums" data-testid="program-number">
           {row.programNumber}
         </dd>
       </div>
     </dl>
 
     {row.fit === null ? null : (
-      <div className="mt-4 space-y-3 border-t border-line pt-4">
+      <div className="mt-5 space-y-3 border-t border-line/70 pt-4">
         <p className="text-sm" data-testid="fit-rationale">
           {row.fit.rationale}
         </p>
@@ -81,13 +81,16 @@ export const OpportunityRow = ({ row }: { row: OpportunityRowView }) => (
     )}
 
     {row.notScoredReason === null ? null : (
-      <p className="mt-4 rounded border border-line bg-gray-50 p-3 text-sm" data-testid="not-scored-reason">
+      <p
+        className="mt-4 rounded-2xl border border-line/70 bg-white/90 p-3 text-sm"
+        data-testid="not-scored-reason"
+      >
         {row.notScoredReason}
       </p>
     )}
 
     {row.rejections.length === 0 ? null : (
-      <div className="mt-4 rounded border border-line bg-gray-50 p-3">
+      <div className="mt-4 rounded-2xl border border-line/70 bg-white/90 p-3">
         <h3 className="text-xs font-medium uppercase tracking-wide text-muted">
           Screened out before any model was asked
         </h3>
@@ -113,7 +116,11 @@ export const OpportunityRow = ({ row }: { row: OpportunityRowView }) => (
 
     {/* Absent on anything screened out. The view-model decides; this only renders. */}
     {row.draftHref === null ? null : (
-      <a href={row.draftHref} className="mt-4 inline-block text-sm text-accent" data-testid="draft-link">
+      <a
+        href={row.draftHref}
+        className="mt-4 inline-block text-sm font-medium text-accent"
+        data-testid="draft-link"
+      >
         Draft against this announcement →
       </a>
     )}

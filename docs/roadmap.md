@@ -5,7 +5,9 @@ One slice at a time, each working end to end before the next begins.
 A slice is **not** done because the backend works. It is done when a real user can do the
 thing on a real screen against real data, with tests at every tier proving it.
 
-**Current slice: S5.** S0, S1, S2, S3 and S4 are complete.
+**Current slice: S6.** S0, S1, S2, S3 and S4 are complete. **S5 is deliberately skipped for
+now** — competitive positioning is leverage on a pipeline, and there was no pipeline to leverage
+until outreach was tracked. It stays unchecked below rather than being quietly renumbered.
 
 ---
 
@@ -22,8 +24,8 @@ Everything before it exists to make S1 possible; everything after it is leverage
 | **S2** | Funder reachability report — "should we bother" | ☑ |
 | **S3** | Federal sweep, eligibility screening, fit scoring | ☑ |
 | **S4** | Rubric extraction, drafting, self-critique | ☑ |
-| **S5** | Competitive positioning from award history | ☐ |
-| **S6** | Scheduled jobs, Calendar milestones, Gmail digests | ☐ |
+| **S5** | Competitive positioning from award history | ☐ skipped for now |
+| **S6** | Scheduled jobs, Calendar milestones, foundation outreach through Gmail | ☐ in progress |
 | **S7** | Ask the graph — conversational query | ☐ |
 | **S8** | Feedback learning, portfolio planner, review queue | ☐ |
 
@@ -247,6 +249,34 @@ seen will window badly, and the confidence check is what catches it.
 - [ ] **Alerts only above threshold — silence is a feature**
 - [ ] Job handlers idempotent; a duplicate scheduler delivery sends nothing twice
 - [ ] Contract tests for Calendar and Gmail (the only unverified dependencies in the design)
+
+**Foundation outreach, tracked** — the private-funder half of this slice, and the one that made
+S5 wait. A letter of inquiry is worth nothing until somebody sends it and somebody answers.
+
+- [x] An outreach record per organisation and funder: recipient, subject, body, status, Gmail
+      message and thread ids
+- [x] The foundation letter page saves the recipient and hands the draft to Gmail's compose
+      window prefilled — **Merit opens the window, the human presses send**
+- [x] Gmail OAuth connect flow, tokens stored, `users.watch` registered against a Pub/Sub topic
+- [x] Pub/Sub push endpoint walks the history since the last cursor and moves a pursuit from
+      draft to sent, replied, or follow-up-needed
+- [x] A duplicate push delivery changes nothing: the history cursor is the idempotency key
+- [x] Outreach list page: every pursued funder, its status, and whether Gmail is connected at all
+- [ ] `users.watch` renewal — Gmail expires the subscription after seven days and nothing
+      re-registers it yet, so sync goes quiet rather than wrong
+- [ ] Push endpoint authentication — `/api/gmail/webhook` accepts any POST today
+- [ ] More than one mailbox: `accountId` is hardcoded to `'primary'`
+
+**Done when:** a user saves a recipient on a foundation letter, sends it from Gmail, and the
+outreach list shows it as sent without anyone telling Merit — verified by an E2E test for
+Merit's half (`tests/e2e/s6-outreach-tracking.spec.ts`) and an integration test for the push
+half against a real database (`tests/integration/sync-gmail-outreach.int.test.ts`).
+
+**The limit, stated rather than hidden.** The E2E tier stops at Gmail's door because Merit does:
+it never sends and never contacts a funder, so there is no send for a test to drive. What the
+push path does with a real mailbox change is proved at the integration tier against a real
+libSQL database, with only Google's responses stood in — and holding that envelope true needs
+the Gmail contract test this slice still owes.
 
 ---
 

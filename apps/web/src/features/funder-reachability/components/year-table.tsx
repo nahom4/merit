@@ -14,7 +14,7 @@ export const YearTable = ({ rows }: { rows: readonly YearRowView[] }) => (
         This funder’s grantees by filing year, with turnover, new grantees, and amounts
       </caption>
       <thead>
-        <tr className="border-b border-line text-muted">
+        <tr className="border-b border-line/70 text-muted">
           <th scope="col" className="py-1 pr-3 font-medium">
             Year
           </th>
@@ -40,7 +40,7 @@ export const YearTable = ({ rows }: { rows: readonly YearRowView[] }) => (
       </thead>
       <tbody>
         {rows.map((row) => (
-          <tr key={row.year} className="border-b border-line/60 align-top">
+          <tr key={row.year} className="border-b border-line/60 align-top hover:bg-white/50">
             <th scope="row" className="py-2 pr-3 font-normal tabular-nums">
               {row.year}
             </th>

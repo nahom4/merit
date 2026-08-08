@@ -54,7 +54,9 @@ describe('PublishMilestones', () => {
     });
 
     expect(result.ok ? result.value.committed : -1).toBe(0);
-    expect(result.ok ? result.value.planned.map((milestone) => milestone.dueDate)[0] : null).toBe('2026-08-08');
+    expect(result.ok ? result.value.planned.map((milestone) => milestone.dueDate)[0] : null).toBe(
+      '2026-08-08',
+    );
   });
 
   it('writes approved milestones to Calendar and stores them once', async () => {

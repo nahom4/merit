@@ -99,16 +99,19 @@ export class ReportFunderReachability {
     });
     if (!peers.ok) return peers;
 
-    const paths = await this.funders.findSharedFunderPaths(
-      funderEin,
-      peers.value.map((peer) => peer.ein),
-      MAX_SHARED_FUNDER_EDGES,
-    );
+    // The graph walk and the ProPublica call need nothing from each other, and the slowest
+    // page is not the place to wait for them in turn.
+    const [paths, fetched] = await Promise.all([
+      this.funders.findSharedFunderPaths(
+        funderEin,
+        peers.value.map((peer) => peer.ein),
+        MAX_SHARED_FUNDER_EDGES,
+      ),
+      // The one place a failure is absorbed rather than returned. ProPublica is supplementary:
+      // it enriches a report the IRS filings already support on their own.
+      this.financials.fetchFinancials(funderEin),
+    ]);
     if (!paths.ok) return paths;
-
-    // The one place a failure is absorbed rather than returned. ProPublica is supplementary:
-    // it enriches a report the IRS filings already support on their own.
-    const fetched = await this.financials.fetchFinancials(funderEin);
     const financials = fetched.ok ? computeFinancialTrend(fetched.value) : null;
     const financialsError = fetched.ok ? null : fetched.error.message;
 

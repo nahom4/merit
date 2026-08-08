@@ -10,11 +10,7 @@ export interface GoogleGmailGatewayOptions {
 }
 
 const base64Url = (value: string): string =>
-  Buffer.from(value, 'utf8')
-    .toString('base64')
-    .replaceAll('+', '-')
-    .replaceAll('/', '_')
-    .replaceAll('=', '');
+  Buffer.from(value, 'utf8').toString('base64').replaceAll('+', '-').replaceAll('/', '_').replaceAll('=', '');
 
 export class GoogleGmailGateway implements GmailGateway {
   constructor(private readonly options: GoogleGmailGatewayOptions) {}

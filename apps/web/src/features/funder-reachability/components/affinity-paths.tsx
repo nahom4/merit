@@ -8,10 +8,10 @@ import type { AffinityView } from '../view-model.js';
  * are explicit that this is never presented as a personal connection.
  */
 export const AffinityPaths = ({ affinity }: { affinity: AffinityView }) => (
-  <section className="mt-10" data-testid="affinity-paths">
+  <section data-testid="affinity-paths">
     <h2 className="text-lg font-semibold tracking-tight">Proximity</h2>
 
-    <p className="mt-1 max-w-prose text-sm">
+    <p className="mt-1 max-w-prose text-sm leading-7">
       This section shows <strong>{affinity.label}</strong>. {affinity.disclaimer}
     </p>
 
@@ -20,7 +20,7 @@ export const AffinityPaths = ({ affinity }: { affinity: AffinityView }) => (
     {affinity.emptyReason === null ? (
       <ul className="mt-4 grid gap-3">
         {affinity.paths.map((path) => (
-          <li key={path.grantee} className="rounded border border-line p-4">
+          <li key={path.grantee} className="rounded-2xl border border-line/70 bg-white/90 p-4">
             <div className="flex flex-wrap items-baseline justify-between gap-2">
               <h3 className="font-medium">{path.grantee}</h3>
               <span className="text-xs text-muted">{path.location}</span>

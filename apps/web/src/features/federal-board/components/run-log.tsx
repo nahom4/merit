@@ -5,8 +5,8 @@ import type { RunLogView } from '../view-model.js';
  * and silently degraded on quota exhaustion" look identical from this screen.
  */
 export const RunLog = ({ log }: { log: RunLogView }) => (
-  <section className="mt-10 rounded border border-line bg-gray-50 p-4" data-testid="run-log">
-    <h2 className="text-xs font-medium uppercase tracking-wide text-muted">Run log</h2>
+  <section className="panel mt-10 p-5" data-testid="run-log">
+    <h2 className="text-xs font-medium uppercase tracking-[0.24em] text-muted">Run log</h2>
     <ul className="mt-2 space-y-1 text-sm">
       {log.lines.map((line) => (
         <li key={line}>{line}</li>

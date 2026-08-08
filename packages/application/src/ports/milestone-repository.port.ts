@@ -14,6 +14,11 @@ export interface ScheduledMilestoneRecord {
 }
 
 export interface MilestoneRepository {
-  upsertMilestones(records: readonly ScheduledMilestoneRecord[]): Promise<Result<number, RepositoryUnavailable>>;
-  listDueMilestones(organizationId: string, dueBeforeIso: string): Promise<Result<readonly ScheduledMilestoneRecord[], RepositoryUnavailable>>;
+  upsertMilestones(
+    records: readonly ScheduledMilestoneRecord[],
+  ): Promise<Result<number, RepositoryUnavailable>>;
+  listDueMilestones(
+    organizationId: string,
+    dueBeforeIso: string,
+  ): Promise<Result<readonly ScheduledMilestoneRecord[], RepositoryUnavailable>>;
 }

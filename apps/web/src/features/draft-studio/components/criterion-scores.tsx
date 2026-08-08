@@ -25,7 +25,7 @@ export const CriterionScores = ({ criteria }: { criteria: readonly CriterionScor
     {criteria.map((criterion) => (
       <li
         key={criterion.criterionId}
-        className="rounded border border-line p-4"
+        className="rounded-2xl border border-line/70 bg-white/90 p-4"
         data-testid="criterion-score"
       >
         <div className="flex flex-wrap items-baseline justify-between gap-2">

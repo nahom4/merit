@@ -27,14 +27,24 @@ export class LibsqlNotificationRepository implements NotificationRepository {
                 (dedupe_key, kind, organization_id, opportunity_id, subject, body, sent_at)
               VALUES (?, ?, ?, ?, ?, ?, ?)
               ON CONFLICT (dedupe_key) DO NOTHING`,
-        args: [record.dedupeKey, record.kind, record.organizationId, record.opportunityId, record.subject, record.body, sentAt],
+        args: [
+          record.dedupeKey,
+          record.kind,
+          record.organizationId,
+          record.opportunityId,
+          record.subject,
+          record.body,
+          sentAt,
+        ],
       });
       return ok(written.rowsAffected > 0);
     } catch (cause) {
-      return err(new RepositoryUnavailable(cause instanceof Error ? cause.message : String(cause), {
-        operation: 'reserveNotification',
-        table: 'scheduled_notifications',
-      }));
+      return err(
+        new RepositoryUnavailable(cause instanceof Error ? cause.message : String(cause), {
+          operation: 'reserveNotification',
+          table: 'scheduled_notifications',
+        }),
+      );
     }
   }
 
@@ -65,10 +75,12 @@ export class LibsqlNotificationRepository implements NotificationRepository {
         }),
       );
     } catch (cause) {
-      return err(new RepositoryUnavailable(cause instanceof Error ? cause.message : String(cause), {
-        operation: 'listNotifications',
-        table: 'scheduled_notifications',
-      }));
+      return err(
+        new RepositoryUnavailable(cause instanceof Error ? cause.message : String(cause), {
+          operation: 'listNotifications',
+          table: 'scheduled_notifications',
+        }),
+      );
     }
   }
 }

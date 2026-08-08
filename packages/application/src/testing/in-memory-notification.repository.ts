@@ -1,5 +1,9 @@
 import { err, ok, type Result } from '@merit/shared';
-import type { NotificationKind, NotificationRecord, NotificationRepository } from '../ports/notification-repository.port.js';
+import type {
+  NotificationKind,
+  NotificationRecord,
+  NotificationRepository,
+} from '../ports/notification-repository.port.js';
 import { RepositoryUnavailable } from '../errors.js';
 
 export class InMemoryNotificationRepository implements NotificationRepository {
@@ -15,11 +19,16 @@ export class InMemoryNotificationRepository implements NotificationRepository {
   ): Promise<Result<boolean, RepositoryUnavailable>> {
     if (this.failsOnce) {
       this.failsOnce = false;
-      return err(new RepositoryUnavailable('notification write failed', { operation: 'reserveNotification' }));
+      return err(
+        new RepositoryUnavailable('notification write failed', { operation: 'reserveNotification' }),
+      );
     }
     const exists = this.notifications.has(record.dedupeKey);
     if (exists) return ok(false);
-    this.notifications.set(record.dedupeKey, { ...record, sentAt: new Date('2026-08-08T00:00:00.000Z').toISOString() });
+    this.notifications.set(record.dedupeKey, {
+      ...record,
+      sentAt: new Date('2026-08-08T00:00:00.000Z').toISOString(),
+    });
     return ok(true);
   }
 

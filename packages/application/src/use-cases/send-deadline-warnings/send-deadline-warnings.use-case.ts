@@ -27,8 +27,12 @@ export class SendDeadlineWarnings {
     private readonly clock: Clock,
   ) {}
 
-  async execute(input: SendDeadlineWarningsInput): Promise<Result<DeadlineWarningSummary, RepositoryUnavailable | GmailUnavailable>> {
-    const dueBefore = new Date(this.clock.now().getTime() + input.horizonDays * DAY_MS).toISOString().slice(0, 10);
+  async execute(
+    input: SendDeadlineWarningsInput,
+  ): Promise<Result<DeadlineWarningSummary, RepositoryUnavailable | GmailUnavailable>> {
+    const dueBefore = new Date(this.clock.now().getTime() + input.horizonDays * DAY_MS)
+      .toISOString()
+      .slice(0, 10);
     const due = await this.milestones.listDueMilestones(input.organizationId, dueBefore);
     if (!due.ok) return due;
 

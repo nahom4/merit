@@ -6,6 +6,47 @@
   color-scheme: light;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  @apply bg-white text-ink antialiased;
+  @apply min-h-screen text-ink antialiased;
+  background:
+    radial-gradient(circle at top left, rgba(15, 118, 110, 0.14), transparent 30%),
+    radial-gradient(circle at top right, rgba(180, 83, 9, 0.08), transparent 28%),
+    linear-gradient(180deg, #f8fafc 0%, #eef5f4 55%, #f8fafc 100%);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+  letter-spacing: -0.02em;
+}
+
+a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+
+::selection {
+  background: rgba(15, 118, 110, 0.18);
+}
+
+@layer components {
+  .shell-card {
+    @apply rounded-[2rem] border border-line/80 bg-white/80 shadow-[0_24px_80px_rgba(15,23,42,0.08)] backdrop-blur;
+  }
+
+  .panel {
+    @apply rounded-[1.5rem] border border-line/80 bg-white/85 shadow-[0_16px_40px_rgba(15,23,42,0.06)];
+  }
+
+  .soft-label {
+    @apply inline-flex items-center rounded-full border border-line/80 bg-white/70 px-3 py-1 text-xs font-medium uppercase tracking-[0.24em] text-muted;
+  }
 }

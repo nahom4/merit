@@ -10,11 +10,17 @@ import type { DraftSectionView } from '../view-model.js';
 export const DraftSections = ({ sections }: { sections: readonly DraftSectionView[] }) => (
   <div className="mt-4 grid gap-6">
     {sections.map((section) => (
-      <article key={section.heading} className="rounded border border-line p-5" data-testid="draft-section">
+      <article
+        key={section.heading}
+        className="rounded-2xl border border-line/70 bg-white/90 p-5"
+        data-testid="draft-section"
+      >
         <div className="flex flex-wrap items-baseline justify-between gap-2">
           <h3 className="text-lg font-medium tracking-tight">{section.heading}</h3>
           {section.wasRevised ? (
-            <span className="rounded bg-accent/10 px-2 py-0.5 text-xs font-medium text-accent">Revised</span>
+            <span className="rounded-full bg-accentSoft px-3 py-1 text-xs font-medium text-accentStrong">
+              Revised
+            </span>
           ) : null}
         </div>
 

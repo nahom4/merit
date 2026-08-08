@@ -59,7 +59,10 @@ const assessment = (opportunityId: string, fitScore: number) => ({
 
 describe('SendHighFitAlerts', () => {
   it('alerts only above threshold and stays quiet on duplicate deliveries', async () => {
-    const repository = new InMemoryOpportunityRepository([opportunity('opp_1', 'A-1'), opportunity('opp_2', 'A-2')]);
+    const repository = new InMemoryOpportunityRepository([
+      opportunity('opp_1', 'A-1'),
+      opportunity('opp_2', 'A-2'),
+    ]);
     await repository.saveAssessments([assessment('opp_1', 78), assessment('opp_2', 42)]);
     const notifications = new InMemoryNotificationRepository();
     const gmail = new StubGmailGateway();
@@ -88,7 +91,11 @@ describe('SendHighFitAlerts', () => {
   it('remains silent below the threshold', async () => {
     const repository = new InMemoryOpportunityRepository([opportunity('opp_1', 'A-1')]);
     await repository.saveAssessments([assessment('opp_1', 55)]);
-    const useCase = new SendHighFitAlerts(repository, new InMemoryNotificationRepository(), new StubGmailGateway());
+    const useCase = new SendHighFitAlerts(
+      repository,
+      new InMemoryNotificationRepository(),
+      new StubGmailGateway(),
+    );
 
     const result = await useCase.execute({
       organization,

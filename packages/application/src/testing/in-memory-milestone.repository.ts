@@ -32,7 +32,9 @@ export class InMemoryMilestoneRepository implements MilestoneRepository {
     return ok(
       [...this.milestones.values()].filter(
         (record) =>
-          record.organizationId === organizationId && record.approvedAt !== null && record.dueDate <= dueBeforeIso,
+          record.organizationId === organizationId &&
+          record.approvedAt !== null &&
+          record.dueDate <= dueBeforeIso,
       ),
     );
   }

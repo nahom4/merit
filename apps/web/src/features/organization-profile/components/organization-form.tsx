@@ -19,7 +19,7 @@ const Field = ({
       id={name}
       name={name}
       required
-      className="w-full rounded border border-line px-3 py-2 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/30"
+      className="w-full rounded-2xl border border-line bg-white/90 px-4 py-3 text-sm shadow-sm outline-none transition placeholder:text-muted/70 focus:border-accent focus:ring-4 focus:ring-accent/10"
       {...input}
     />
     {hint === undefined ? null : <p className="text-xs text-muted">{hint}</p>}
@@ -32,7 +32,7 @@ const SubmitButton = () => {
     <button
       type="submit"
       disabled={pending}
-      className="rounded bg-accent px-4 py-2 font-medium text-white disabled:opacity-60"
+      className="rounded-full bg-ink px-5 py-3 font-medium text-white shadow-lg shadow-emerald-950/10 transition hover:bg-accentStrong disabled:cursor-not-allowed disabled:opacity-60"
     >
       {pending ? 'Saving…' : 'Save profile'}
     </button>
@@ -43,12 +43,19 @@ export const OrganizationForm = () => {
   const [state, action] = useFormState(submitOrganizationProfile, INITIAL);
 
   return (
-    <form action={action} className="grid gap-5">
+    <form action={action} className="panel grid gap-5 p-6 sm:p-8">
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <h2 className="text-2xl font-semibold tracking-tight">Create your profile</h2>
+          <p className="mt-1 text-sm text-muted">Just enough detail for Merit to build a peer set.</p>
+        </div>
+        <span className="soft-label">Foundation for every screen</span>
+      </div>
       {state.error === null ? null : (
         <p
           role="alert"
           data-testid="form-error"
-          className="rounded border border-red-300 bg-red-50 px-3 py-2 text-sm text-red-800"
+          className="rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800"
         >
           {state.error}
         </p>
@@ -70,7 +77,7 @@ export const OrganizationForm = () => {
           step={1}
         />
       </div>
-      <div>
+      <div className="pt-2">
         <SubmitButton />
       </div>
     </form>

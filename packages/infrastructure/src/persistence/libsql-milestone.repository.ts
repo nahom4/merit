@@ -57,10 +57,12 @@ export class LibsqlMilestoneRepository implements MilestoneRepository {
       }
       return ok(records.length);
     } catch (cause) {
-      return err(new RepositoryUnavailable(cause instanceof Error ? cause.message : String(cause), {
-        operation: 'upsertMilestones',
-        table: 'scheduled_milestones',
-      }));
+      return err(
+        new RepositoryUnavailable(cause instanceof Error ? cause.message : String(cause), {
+          operation: 'upsertMilestones',
+          table: 'scheduled_milestones',
+        }),
+      );
     }
   }
 
@@ -92,10 +94,12 @@ export class LibsqlMilestoneRepository implements MilestoneRepository {
         }),
       );
     } catch (cause) {
-      return err(new RepositoryUnavailable(cause instanceof Error ? cause.message : String(cause), {
-        operation: 'listDueMilestones',
-        table: 'scheduled_milestones',
-      }));
+      return err(
+        new RepositoryUnavailable(cause instanceof Error ? cause.message : String(cause), {
+          operation: 'listDueMilestones',
+          table: 'scheduled_milestones',
+        }),
+      );
     }
   }
 }

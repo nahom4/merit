@@ -6,7 +6,9 @@ export const weeklyBriefing = async (): Promise<void> => {
   const { db, logger, organizations, gmail, notifications, config } = await wire();
   const allOrganizations = await organizations.listAll();
   if (!allOrganizations.ok) {
-    logger.error('weekly briefing failed while loading organizations', { reason: allOrganizations.error.message });
+    logger.error('weekly briefing failed while loading organizations', {
+      reason: allOrganizations.error.message,
+    });
     process.exitCode = 1;
     return;
   }
@@ -23,7 +25,10 @@ export const weeklyBriefing = async (): Promise<void> => {
       boardLimit: 100,
     });
     if (!result.ok) {
-      logger.error('weekly briefing failed', { organizationId: organization.id, reason: result.error.message });
+      logger.error('weekly briefing failed', {
+        organizationId: organization.id,
+        reason: result.error.message,
+      });
       process.exitCode = 1;
       return;
     }

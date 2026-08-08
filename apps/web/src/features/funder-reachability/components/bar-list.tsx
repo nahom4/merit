@@ -16,10 +16,13 @@ export const BarList = ({
   caption: string;
   testId: string;
 }) => (
-  <dl className="grid gap-2" data-testid={testId} aria-label={caption}>
+  <dl className="grid gap-3" data-testid={testId} aria-label={caption}>
     {bars.map((bar) => (
-      <div key={bar.label} className="grid grid-cols-[minmax(6rem,9rem)_1fr_auto] items-center gap-3">
-        <dt className="truncate text-sm" title={bar.label}>
+      <div
+        key={bar.label}
+        className="grid grid-cols-[minmax(6rem,9rem)_1fr_auto] items-center gap-3 rounded-2xl border border-line/70 bg-white/90 px-4 py-3"
+      >
+        <dt className="truncate text-sm font-medium" title={bar.label}>
           {bar.label}
         </dt>
         <div

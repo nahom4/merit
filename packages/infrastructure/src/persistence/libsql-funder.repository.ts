@@ -5,8 +5,6 @@ import type { FunderProfile, FunderRepository } from '@merit/application';
 import type { Database } from './database.js';
 
 /** SQLite has a bound on host parameters; large id lists go in as chunks. */
-const PARAM_CHUNK = 400;
-
 export class LibsqlFunderRepository implements FunderRepository {
   constructor(private readonly db: Database) {}
 
@@ -108,59 +106,64 @@ export class LibsqlFunderRepository implements FunderRepository {
     if (peerEins.length === 0 || limit <= 0) return ok([]);
 
     try {
+      const placeholders = peerEins.map(() => '?').join(',');
       const rows: SharedFunderRow[] = [];
 
-      for (const chunk of chunks(peerEins, PARAM_CHUNK)) {
-        if (rows.length >= limit) break;
-        const placeholders = chunk.map(() => '?').join(',');
+      /**
+       * Driven from this funder's own grantees, which are few, rather than from the peer set,
+       * which is thousands.
+       *
+       * The peer-first shape had to be run once per chunk of peers, and each run walked every
+       * grant of every funder that touched that chunk: thirty-two seconds for a report, and a
+       * per-chunk LIMIT that truncated the answer arbitrarily. Starting from `our_grantees`
+       * narrows to a handful of intermediary funders before any large table is touched, and
+       * the whole peer set fits in one statement, so the LIMIT applies to the real result.
+       */
+      const result = await this.db.execute({
+        sql: `
+          WITH our_grantees AS (
+            SELECT DISTINCT l.entity_ein AS ein
+            FROM grant_records g
+            JOIN entity_links l ON l.grant_record_id = g.id AND l.decision = 'linked'
+            WHERE g.funder_ein = ? AND l.entity_ein IS NOT NULL
+              AND l.entity_ein NOT IN (${placeholders})
+          ),
+          via_funders AS (
+            SELECT DISTINCT g.funder_ein AS via_ein, og.ein AS grantee_ein
+            FROM our_grantees og
+            JOIN entity_links l ON l.entity_ein = og.ein AND l.decision = 'linked'
+            JOIN grant_records g ON g.id = l.grant_record_id
+            WHERE g.funder_ein <> ?
+          )
+          SELECT DISTINCT
+            vf.grantee_ein    AS grantee_ein,
+            ge.canonical_name AS grantee_name,
+            ge.state          AS grantee_state,
+            vf.via_ein        AS via_ein,
+            f.name            AS via_name,
+            l2.entity_ein     AS peer_ein,
+            pe.canonical_name AS peer_name
+          FROM via_funders vf
+          JOIN grant_records g2 ON g2.funder_ein = vf.via_ein
+          JOIN entity_links l2 ON l2.grant_record_id = g2.id AND l2.decision = 'linked'
+          JOIN funders f ON f.ein = vf.via_ein
+          LEFT JOIN entities ge ON ge.ein = vf.grantee_ein
+          LEFT JOIN entities pe ON pe.ein = l2.entity_ein
+          WHERE l2.entity_ein IN (${placeholders})
+          LIMIT ?`,
+        args: [funderEin, ...peerEins, funderEin, ...peerEins, limit],
+      });
 
-        const result = await this.db.execute({
-          sql: `
-            WITH our_grantees AS (
-              SELECT DISTINCT l.entity_ein AS ein
-              FROM grant_records g
-              JOIN entity_links l ON l.grant_record_id = g.id AND l.decision = 'linked'
-              WHERE g.funder_ein = ? AND l.entity_ein IS NOT NULL
-                AND l.entity_ein NOT IN (${placeholders})
-            ),
-            peer_funders AS (
-              SELECT DISTINCT g.funder_ein AS via_ein, l.entity_ein AS peer_ein
-              FROM entity_links l
-              JOIN grant_records g ON g.id = l.grant_record_id
-              WHERE l.decision = 'linked'
-                AND l.entity_ein IN (${placeholders})
-                AND g.funder_ein <> ?
-            )
-            SELECT DISTINCT
-              og.ein            AS grantee_ein,
-              ge.canonical_name AS grantee_name,
-              ge.state          AS grantee_state,
-              pf.via_ein        AS via_ein,
-              vf.name           AS via_name,
-              pf.peer_ein       AS peer_ein,
-              pe.canonical_name AS peer_name
-            FROM peer_funders pf
-            JOIN grant_records g2 ON g2.funder_ein = pf.via_ein
-            JOIN entity_links l2 ON l2.grant_record_id = g2.id AND l2.decision = 'linked'
-            JOIN our_grantees og ON og.ein = l2.entity_ein
-            JOIN funders vf ON vf.ein = pf.via_ein
-            LEFT JOIN entities ge ON ge.ein = og.ein
-            LEFT JOIN entities pe ON pe.ein = pf.peer_ein
-            LIMIT ?`,
-          args: [funderEin, ...chunk, ...chunk, funderEin, limit - rows.length],
+      for (const row of result.rows) {
+        rows.push({
+          granteeEin: String(row['grantee_ein']),
+          granteeName: String(row['grantee_name'] ?? 'Unnamed organisation'),
+          granteeState: row['grantee_state'] === null ? null : String(row['grantee_state']),
+          viaFunderEin: String(row['via_ein']),
+          viaFunderName: String(row['via_name'] ?? 'Unnamed funder'),
+          peerEin: String(row['peer_ein']),
+          peerName: String(row['peer_name'] ?? 'Unnamed organisation'),
         });
-
-        for (const row of result.rows) {
-          rows.push({
-            granteeEin: String(row['grantee_ein']),
-            granteeName: String(row['grantee_name'] ?? 'Unnamed organisation'),
-            granteeState: row['grantee_state'] === null ? null : String(row['grantee_state']),
-            viaFunderEin: String(row['via_ein']),
-            viaFunderName: String(row['via_name'] ?? 'Unnamed funder'),
-            peerEin: String(row['peer_ein']),
-            peerName: String(row['peer_name'] ?? 'Unnamed organisation'),
-          });
-        }
       }
 
       return ok(rows.slice(0, limit));
@@ -169,12 +172,6 @@ export class LibsqlFunderRepository implements FunderRepository {
     }
   }
 }
-
-const chunks = <T>(items: readonly T[], size: number): T[][] => {
-  const result: T[][] = [];
-  for (let i = 0; i < items.length; i += size) result.push(items.slice(i, i + size));
-  return result;
-};
 
 const unavailable = (operation: string, table: string, cause: unknown): RepositoryUnavailable =>
   new RepositoryUnavailable(cause instanceof Error ? cause.message : String(cause), {

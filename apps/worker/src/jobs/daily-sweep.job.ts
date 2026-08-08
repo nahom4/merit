@@ -33,7 +33,9 @@ export const dailySweep = async (): Promise<void> => {
 
   const allOrganizations = await organizations.listAll();
   if (!allOrganizations.ok) {
-    logger.error('daily sweep failed while loading organizations', { reason: allOrganizations.error.message });
+    logger.error('daily sweep failed while loading organizations', {
+      reason: allOrganizations.error.message,
+    });
     process.exitCode = 1;
     return;
   }

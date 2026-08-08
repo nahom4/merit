@@ -6,13 +6,16 @@ export interface PlannedMilestone {
   readonly dueDate: string;
 }
 
-const MILESTONES: readonly { readonly kind: MilestoneKind; readonly label: string; readonly offsetDays: number }[] =
-  [
-    { kind: 'draft_complete', label: 'Draft complete', offsetDays: 21 },
-    { kind: 'board_signoff', label: 'Board sign-off', offsetDays: 14 },
-    { kind: 'letters_requested', label: 'Letters of support requested', offsetDays: 7 },
-    { kind: 'final_review', label: 'Final review', offsetDays: 2 },
-  ];
+const MILESTONES: readonly {
+  readonly kind: MilestoneKind;
+  readonly label: string;
+  readonly offsetDays: number;
+}[] = [
+  { kind: 'draft_complete', label: 'Draft complete', offsetDays: 21 },
+  { kind: 'board_signoff', label: 'Board sign-off', offsetDays: 14 },
+  { kind: 'letters_requested', label: 'Letters of support requested', offsetDays: 7 },
+  { kind: 'final_review', label: 'Final review', offsetDays: 2 },
+];
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 

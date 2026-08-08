@@ -14,6 +14,11 @@ export interface NotificationRecord {
 }
 
 export interface NotificationRepository {
-  reserveNotification(record: Omit<NotificationRecord, 'sentAt'>): Promise<Result<boolean, RepositoryUnavailable>>;
-  listNotifications(organizationId: string, kind: NotificationKind): Promise<Result<readonly NotificationRecord[], RepositoryUnavailable>>;
+  reserveNotification(
+    record: Omit<NotificationRecord, 'sentAt'>,
+  ): Promise<Result<boolean, RepositoryUnavailable>>;
+  listNotifications(
+    organizationId: string,
+    kind: NotificationKind,
+  ): Promise<Result<readonly NotificationRecord[], RepositoryUnavailable>>;
 }

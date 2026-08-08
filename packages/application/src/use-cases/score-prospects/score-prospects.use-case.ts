@@ -6,42 +6,22 @@ import {
   NteeCode,
   Organization,
   UsState,
-  type FunderSignals,
   type Organization as OrganizationType,
-  type ProspectScore,
 } from '@merit/domain';
-import type {
-  CandidateFunder,
-  PeerGranteeEvidence,
-  ProspectRepository,
-} from '../../ports/prospect-repository.port.js';
+import type { CandidateFunder, ProspectRepository } from '../../ports/prospect-repository.port.js';
 import type { RepositoryUnavailable } from '../../errors.js';
+import type {
+  Prospect,
+  ProspectCoverage,
+  ProspectListingCache,
+} from '../../ports/prospect-listing-cache.port.js';
 
-export interface Prospect {
-  readonly funderEin: string;
-  readonly funderName: string;
-  readonly funderState: string | null;
-  readonly score: ProspectScore;
-  readonly signals: FunderSignals;
-  readonly peerGranteeCount: number;
-  readonly regionalGranteeCount: number;
-  /** The grantee rows behind the score. Expandable from any component in the UI. */
-  readonly evidence: readonly PeerGranteeEvidence[];
-}
+export type { Prospect, ProspectCoverage } from '../../ports/prospect-listing-cache.port.js';
 
 export interface ProspectListing {
   readonly organization: OrganizationType;
   readonly prospects: readonly Prospect[];
-  /**
-   * Coverage, stated rather than implied. "12 comparable organisations found" is a claim
-   * the interface must make; silence would imply completeness we cannot promise.
-   */
-  readonly coverage: {
-    readonly peersFound: number;
-    readonly candidateFundersConsidered: number;
-    readonly credibleFunders: number;
-    readonly materialityFloorCents: number;
-  };
+  readonly coverage: ProspectCoverage;
 }
 
 /**
@@ -64,7 +44,49 @@ const MAX_CANDIDATE_FUNDERS = 400;
  * four separate score components and the grantee rows behind them.
  */
 export class ScoreProspects {
-  constructor(private readonly prospects: ProspectRepository) {}
+  constructor(
+    private readonly prospects: ProspectRepository,
+    /** Null in the eval harness, which wants the computation rather than yesterday's answer. */
+    private readonly cache: ProspectListingCache | null = null,
+  ) {}
+
+  /**
+   * The computed listing, and when it was computed.
+   *
+   * Scoring reads roughly 290,000 grant rows, so it is not something to do on every page load
+   * for an answer that only changes when the profile or the corpus does. `refresh` is the
+   * user's way of saying they know that and want it done again anyway.
+   */
+  async listing(
+    organization: OrganizationType,
+    options: { readonly refresh?: boolean } = {},
+  ): Promise<Result<{ listing: ProspectListing; computedAt: string }, RepositoryUnavailable>> {
+    const organizationId = organization.id as string;
+
+    if (this.cache !== null && options.refresh !== true) {
+      const cached = await this.cache.readCached(organizationId);
+      if (!cached.ok) return cached;
+      if (cached.value !== null) {
+        return ok({
+          listing: { organization, ...cached.value.payload },
+          computedAt: cached.value.computedAt,
+        });
+      }
+    }
+
+    const computed = await this.execute(organization);
+    if (!computed.ok) return computed;
+
+    const computedAt = new Date().toISOString();
+    if (this.cache !== null) {
+      const written = await this.cache.writeCached(organizationId, {
+        prospects: computed.value.prospects,
+        coverage: computed.value.coverage,
+      });
+      if (!written.ok) return written;
+    }
+    return ok({ listing: computed.value, computedAt });
+  }
 
   async execute(organization: OrganizationType): Promise<Result<ProspectListing, RepositoryUnavailable>> {
     const revenue = organization.annualRevenue as number;

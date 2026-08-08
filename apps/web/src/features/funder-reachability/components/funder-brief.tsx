@@ -15,12 +15,16 @@ export const FunderBrief = ({
   claims: readonly BriefClaimView[];
   limitations: readonly string[];
 }) => (
-  <section className="mt-10" data-testid="funder-brief">
+  <section data-testid="funder-brief">
     <h2 className="text-lg font-semibold tracking-tight">Brief</h2>
 
     <ul className="mt-3 grid gap-4">
       {claims.map((claim) => (
-        <li key={claim.id} className="border-l-2 border-line pl-4" data-testid="brief-claim">
+        <li
+          key={claim.id}
+          className="rounded-2xl border border-line/70 bg-white/90 p-4"
+          data-testid="brief-claim"
+        >
           <p className="max-w-prose text-sm">{claim.statement}</p>
           <ul className="mt-1 grid gap-0.5">
             {claim.citations.map((citation) => (

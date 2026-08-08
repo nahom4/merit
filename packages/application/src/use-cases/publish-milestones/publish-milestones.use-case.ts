@@ -25,7 +25,9 @@ export class PublishMilestones {
     private readonly clock: Clock,
   ) {}
 
-  async execute(input: PublishMilestonesInput): Promise<Result<PublishedMilestones, RepositoryUnavailable | CalendarUnavailable>> {
+  async execute(
+    input: PublishMilestonesInput,
+  ): Promise<Result<PublishedMilestones, RepositoryUnavailable | CalendarUnavailable>> {
     if (input.opportunity.closeDate === null) {
       return ok({ planned: [], committed: 0 });
     }

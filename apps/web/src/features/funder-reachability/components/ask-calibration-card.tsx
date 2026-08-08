@@ -8,10 +8,10 @@ import type { CalibrationView } from '../view-model.js';
  * organisation's own revenue -- that is said rather than silently applied.
  */
 export const AskCalibrationCard = ({ calibration }: { calibration: CalibrationView }) => (
-  <section className="mt-10 rounded border border-line p-5" data-testid="ask-calibration">
+  <section className="panel p-5" data-testid="ask-calibration">
     <h2 className="text-lg font-semibold tracking-tight">What to ask for</h2>
 
-    <p className="mt-2 text-3xl font-semibold tabular-nums" data-testid="recommended-ask">
+    <p className="mt-2 text-4xl font-semibold tabular-nums" data-testid="recommended-ask">
       {calibration.recommended}
     </p>
 
@@ -26,7 +26,7 @@ export const AskCalibrationCard = ({ calibration }: { calibration: CalibrationVi
     </p>
 
     {calibration.caveat === null ? null : (
-      <p className="mt-3 max-w-prose rounded border border-line bg-gray-50 p-3 text-sm">
+      <p className="mt-3 max-w-prose rounded-2xl border border-line/70 bg-white/90 p-3 text-sm">
         {calibration.caveat}
       </p>
     )}
