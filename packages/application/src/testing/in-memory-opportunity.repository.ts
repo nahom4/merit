@@ -62,6 +62,12 @@ export class InMemoryOpportunityRepository implements OpportunityRepository {
     return ok([...this.opportunities.values()].slice(0, limit));
   }
 
+  async findOpportunity(id: string): Promise<Result<FederalOpportunity | null, RepositoryUnavailable>> {
+    const failure = this.guard<FederalOpportunity | null>('findOpportunity');
+    if (failure !== null) return failure;
+    return ok(this.opportunities.get(id) ?? null);
+  }
+
   async saveAssessments(
     assessments: readonly StoredAssessment[],
   ): Promise<Result<number, RepositoryUnavailable>> {

@@ -53,6 +53,10 @@ export interface OpportunityRepository {
 
   listOpportunities(limit: number): Promise<Result<readonly FederalOpportunity[], RepositoryUnavailable>>;
 
+  /** One announcement by its Grants.gov id. Null when the sweep has never seen it — a URL can
+   *  name anything, and drafting against an announcement we do not hold is not a thing to do. */
+  findOpportunity(id: string): Promise<Result<FederalOpportunity | null, RepositoryUnavailable>>;
+
   saveAssessments(assessments: readonly StoredAssessment[]): Promise<Result<number, RepositoryUnavailable>>;
 
   loadBoard(

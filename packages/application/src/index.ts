@@ -2,6 +2,7 @@ export type { OrganizationRepository } from './ports/organization-repository.por
 export type { Clock } from './ports/clock.port.js';
 export type { IdGenerator } from './ports/id-generator.port.js';
 export {
+  DocumentUnavailable,
   DuplicateOrganization,
   FinancialsUnavailable,
   FunderNotFound,
@@ -73,6 +74,8 @@ export type {
   SweepRun,
 } from './ports/opportunity-repository.port.js';
 export type { RegistryStatus, RegistryStatusReader } from './ports/registry-status.port.js';
+export type { AnnouncementDocumentGateway } from './ports/announcement-document.port.js';
+export type { DraftRepository, DraftTargetKind, StoredDraft } from './ports/draft-repository.port.js';
 export type {
   ModelCompletion,
   ModelError,
@@ -101,9 +104,23 @@ export {
   fitScorePrompt,
   programAreaMenu,
 } from './use-cases/screen-federal-opportunities/fit-score.prompt.js';
+export { DraftApplication } from './use-cases/draft-application/draft-application.use-case.js';
+export type {
+  DraftApplicationInput,
+  DraftApplicationOutput,
+} from './use-cases/draft-application/draft-application.use-case.js';
+export {
+  critiquePrompt,
+  foundationSectionPrompt,
+  revisionPrompt,
+  rubricPrompt,
+  sectionPrompt,
+  summarySectionPrompt,
+} from './use-cases/draft-application/draft.prompts.js';
 export { ReportRunLog } from './use-cases/report-run-log/report-run-log.use-case.js';
 export type { ReportRunLogInput, RunLog } from './use-cases/report-run-log/report-run-log.use-case.js';
 export { InMemoryOpportunityRepository } from './testing/in-memory-opportunity.repository.js';
+export { InMemoryDraftRepository } from './testing/in-memory-draft.repository.js';
 export { StubOpportunityGateway } from './testing/stub-opportunity.gateway.js';
 export { StubRegistryStatusReader } from './testing/stub-registry-status.reader.js';
 export { NeverCalledModelGateway, StubModelGateway } from './testing/stub-model.gateway.js';

@@ -95,8 +95,14 @@ export type {
 } from './opportunity/eligibility-screening.js';
 export { FitAssessment, HIGH_FIT_THRESHOLD, isHighFit } from './opportunity/fit-assessment.js';
 
-export { isTrustworthy, Rubric, RUBRIC_CONFIDENCE_THRESHOLD } from './draft/rubric.js';
-export type { RubricCriterion } from './draft/rubric.js';
+export {
+  isTrustworthy,
+  reviewSectionOf,
+  Rubric,
+  RUBRIC_CONFIDENCE_THRESHOLD,
+  selectRubricSource,
+} from './draft/rubric.js';
+export type { ReviewSection, RubricCriterion } from './draft/rubric.js';
 export {
   conditioningFor,
   DraftSection,

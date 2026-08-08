@@ -1,4 +1,5 @@
 import { err, ok, ParseError, type Result } from '@merit/shared';
+import type { OpportunityAttachment } from '../opportunity/federal-opportunity.js';
 
 /**
  * The announcement's own scoring sheet, extracted from its PDF by a model.
@@ -44,6 +45,20 @@ export interface Rubric {
 export const RUBRIC_CONFIDENCE_THRESHOLD = 0.6;
 
 export const isTrustworthy = (rubric: Rubric): boolean => rubric.confidence >= RUBRIC_CONFIDENCE_THRESHOLD;
+
+/**
+ * File names that are never the notice of funding opportunity.
+ *
+ * A "Full Announcement" folder is not one document. It routinely holds the NOFO beside a
+ * webinar flyer, a fillable form, and an errata sheet, and every one of them is a PDF. Reading
+ * the wrong one costs a model call over 40 pages and yields a confident rubric extracted from
+ * a slide deck — the expensive kind of wrong.
+ *
+ * The list is deliberately short and matched conservatively: excluding too much falls back to
+ * summary-conditioned drafting, which announces itself, while excluding too little produces a
+ * rubric nobody can trace. Add to it only from a file name actually seen in the feed.
+ */
+const NEVER_THE_NOFO = ['webinar', 'faq', 'fillable', 'template', 'errata', 'q&a', 'transcript', 'slides'];
 
 /** Bounds. A model returning 400 criteria has found a table of contents, not a rubric. */
 const MAX_CRITERIA = 30;
@@ -232,5 +247,96 @@ const responseContract = (): string =>
     'do not invent point values, and do not renumber. If the document contains no review',
     'criteria, return an empty criteria array and a confidence of 0.',
   ].join('\n');
+
+/**
+ * Headings a federal NOFO puts its scoring criteria under, in the order worth trying.
+ *
+ * "Application Review Information" is the standard-form heading mandated for federal
+ * announcements, which is why it leads. The rest are what agencies actually write.
+ */
+const REVIEW_HEADINGS = [
+  'application review information',
+  'review and selection process',
+  'evaluation criteria',
+  'review criteria',
+  'selection criteria',
+  'scoring criteria',
+  'merit review',
+];
+
+/** How much of the document to keep before the heading. The point total is routinely stated in
+ *  the sentence introducing the criteria, which sits just above the heading itself. */
+const LEAD_IN = 600;
+
+export interface ReviewSection {
+  readonly text: string;
+  /** True when the document was cut down. The caller says so in the run log. */
+  readonly windowed: boolean;
+  /** False when no review heading was found and the head of the document was taken instead —
+   *  a materially weaker basis, and the confidence check is what catches an extraction made
+   *  from the wrong 4,000 characters. */
+  readonly headingFound: boolean;
+}
+
+/**
+ * The part of a 60-page announcement that plausibly contains the rubric.
+ *
+ * Sending the whole PDF would work and would cost roughly fifteen times as much per extraction,
+ * which on a free tier is the difference between drafting being available and not. The window
+ * is generous rather than tight: cutting the criteria in half is a much worse failure than
+ * spending a few thousand extra tokens, so it keeps a lead-in for the point total and runs well
+ * past the heading.
+ *
+ * ponytail: string search over headings, not a PDF outline parser — `pdftotext` output has no
+ * structure to parse. Revisit only if extraction accuracy in the eval blames the window.
+ */
+export const reviewSectionOf = (documentText: string, budget: number): ReviewSection => {
+  if (documentText.length <= budget) {
+    return { text: documentText, windowed: false, headingFound: true };
+  }
+
+  const haystack = documentText.toLowerCase();
+  for (const heading of REVIEW_HEADINGS) {
+    const at = haystack.indexOf(heading);
+    if (at === -1) continue;
+    const from = Math.max(0, at - LEAD_IN);
+    return { text: documentText.slice(from, from + budget), windowed: true, headingFound: true };
+  }
+
+  return { text: documentText.slice(0, budget), windowed: true, headingFound: false };
+};
+
+/**
+ * Which of an announcement's files to read the rubric out of.
+ *
+ * Only PDFs, because `pdftotext` is what reads them and handing it a spreadsheet returns
+ * nothing — and nothing, silently, is the failure this codebase refuses. Among the PDFs, the
+ * one named after the announcement wins; anything on `NEVER_THE_NOFO` is skipped unless it is
+ * all that is left, in which case nothing is returned and drafting falls back to the summary
+ * and says so.
+ *
+ * Returns null rather than a guess. A wrong document is worse than no document, because the
+ * rubric it yields is indistinguishable from a right one.
+ */
+export const selectRubricSource = (
+  attachments: readonly OpportunityAttachment[],
+  opportunityNumber: string,
+): OpportunityAttachment | null => {
+  const pdfs = attachments.filter(
+    (attachment) =>
+      attachment.mimeType.toLowerCase() === 'application/pdf' ||
+      attachment.fileName.toLowerCase().endsWith('.pdf'),
+  );
+
+  const plausible = pdfs.filter(
+    (attachment) => !NEVER_THE_NOFO.some((marker) => attachment.fileName.toLowerCase().includes(marker)),
+  );
+  if (plausible.length === 0) return null;
+
+  const number = opportunityNumber.toLowerCase();
+  return (
+    plausible.find((attachment) => attachment.fileName.toLowerCase().includes(number)) ?? plausible[0] ?? null
+  );
+};
 
 export const Rubric = { parse, responseContract } as const;

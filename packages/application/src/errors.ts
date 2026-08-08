@@ -37,6 +37,19 @@ export class OpportunitySourceUnavailable extends DomainError {
 }
 
 /**
+ * An announcement's document could not be turned into text — the download failed, or the
+ * extractor could not read the file.
+ *
+ * Expected, and never fatal. Federal agencies post scanned PDFs with no text layer, and files
+ * disappear from the attachment service. Drafting falls back to the announcement's summary and
+ * says so, which is the honest answer; refusing to draft would be worse, and pretending the
+ * rubric was read would be much worse.
+ */
+export class DocumentUnavailable extends DomainError {
+  readonly code = 'document_unavailable';
+}
+
+/**
  * No model call could be made: the daily quota is spent, or the API could not be reached.
  *
  * Expected, and never fatal. On exhaustion, persisted results are served and new work is

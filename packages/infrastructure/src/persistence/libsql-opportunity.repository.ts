@@ -179,6 +179,15 @@ export class LibsqlOpportunityRepository implements OpportunityRepository {
     }
   }
 
+  async findOpportunity(id: string): Promise<Result<FederalOpportunity | null, RepositoryUnavailable>> {
+    try {
+      const [opportunity] = await this.loadOpportunities(1, id);
+      return ok(opportunity ?? null);
+    } catch (cause) {
+      return err(unavailable('findOpportunity', 'opportunities', cause));
+    }
+  }
+
   async loadBoard(
     organizationId: string,
     limit: number,
@@ -347,13 +356,19 @@ export class LibsqlOpportunityRepository implements OpportunityRepository {
   }
 
   /** Open work first: an announcement that closes soonest is the one a user must decide on. */
-  private async loadOpportunities(limit: number): Promise<readonly FederalOpportunity[]> {
-    const result = await this.db.execute({
-      sql: `SELECT * FROM opportunities
-            ORDER BY (status = 'posted') DESC, close_date IS NULL, close_date ASC, id ASC
-            LIMIT ?`,
-      args: [limit],
-    });
+  /** One announcement by id, or null. Shares `loadOpportunities`' row mapping rather than
+   *  repeating it: two places parsing one table is how the two drift apart. */
+  private async loadOpportunities(limit: number, id?: string): Promise<readonly FederalOpportunity[]> {
+    const result = await this.db.execute(
+      id === undefined
+        ? {
+            sql: `SELECT * FROM opportunities
+                  ORDER BY (status = 'posted') DESC, close_date IS NULL, close_date ASC, id ASC
+                  LIMIT ?`,
+            args: [limit],
+          }
+        : { sql: 'SELECT * FROM opportunities WHERE id = ?', args: [id] },
+    );
 
     const programs = await this.db.execute(
       'SELECT opportunity_id, program_number, program_title FROM opportunity_programs ORDER BY program_number',

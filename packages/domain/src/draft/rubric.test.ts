@@ -1,5 +1,11 @@
 import { describe, expect, it } from 'vitest';
-import { isTrustworthy, Rubric, RUBRIC_CONFIDENCE_THRESHOLD } from './rubric.js';
+import {
+  isTrustworthy,
+  reviewSectionOf,
+  Rubric,
+  RUBRIC_CONFIDENCE_THRESHOLD,
+  selectRubricSource,
+} from './rubric.js';
 
 /**
  * A rubric is the announcement's own scoring sheet, read out of 60 pages of PDF by a model.
@@ -137,6 +143,103 @@ describe('Rubric.parse', () => {
     expect(Rubric.parse(['1', '2']).ok).toBe(false);
     expect(Rubric.parse(null).ok).toBe(false);
     expect(Rubric.parse('a rubric').ok).toBe(false);
+  });
+});
+
+describe('selectRubricSource', () => {
+  const pdf = (id: string, fileName: string) => ({ id, fileName, mimeType: 'application/pdf' });
+
+  it('picks the PDF and ignores the spreadsheets and templates beside it', () => {
+    // The real shape of a "Full Announcement" folder: the NOFO, plus everything else.
+    const chosen = selectRubricSource(
+      [
+        { id: '1', fileName: 'Budget Narrative Template.xlsx', mimeType: 'application/vnd.ms-excel' },
+        pdf('2', 'HRSA-26-045 Final.pdf'),
+      ],
+      'HRSA-26-045',
+    );
+
+    expect(chosen?.id).toBe('2');
+  });
+
+  it('prefers the file named after the announcement over other PDFs in the folder', () => {
+    const chosen = selectRubricSource(
+      [pdf('1', 'TA Webinar Announcement (pre-recorded).pdf'), pdf('2', 'HRSA-26-045 Final.pdf')],
+      'HRSA-26-045',
+    );
+
+    expect(chosen?.id).toBe('2');
+  });
+
+  it('skips a webinar flyer or a fillable form, which carry no rubric', () => {
+    const chosen = selectRubricSource(
+      [
+        pdf('1', 'TA Webinar Announcement.pdf'),
+        pdf('2', 'Statement of Interest Form fillable.pdf'),
+        pdf('3', 'NOFO.pdf'),
+      ],
+      'ABC-1',
+    );
+
+    expect(chosen?.id).toBe('3');
+  });
+
+  it('trusts the file extension when the feed states no media type', () => {
+    const chosen = selectRubricSource([{ id: '1', fileName: 'announcement.pdf', mimeType: '' }], 'ABC-1');
+
+    expect(chosen?.id).toBe('1');
+  });
+
+  it('returns nothing when the announcement has no readable document, rather than guessing', () => {
+    expect(selectRubricSource([], 'ABC-1')).toBeNull();
+    expect(
+      selectRubricSource(
+        [{ id: '1', fileName: 'Proposal Template.docx', mimeType: 'application/msword' }],
+        'ABC-1',
+      ),
+    ).toBeNull();
+  });
+});
+
+describe('reviewSectionOf', () => {
+  const filler = (label: string, times: number) => `${label} boilerplate paragraph. `.repeat(times);
+
+  it('returns a short document whole rather than cutting it for no reason', () => {
+    const short = 'Section I. Funding Opportunity Description. We fund adult literacy.';
+
+    expect(reviewSectionOf(short, 5_000).text).toBe(short);
+    expect(reviewSectionOf(short, 5_000).windowed).toBe(false);
+  });
+
+  it('windows a long document around the heading that names the review criteria', () => {
+    const document =
+      filler('front matter', 400) +
+      'E. Application Review Information\n1. Criteria\nNeed and Significance (40 points)\n' +
+      filler('back matter', 400);
+
+    const found = reviewSectionOf(document, 4_000);
+
+    expect(found.windowed).toBe(true);
+    expect(found.text).toContain('Need and Significance (40 points)');
+    expect(found.text.length).toBeLessThanOrEqual(4_000);
+  });
+
+  it('keeps context before the heading, where the point total is usually stated', () => {
+    const document = `${filler('front', 400)}The total is 100 points. Application Review Information${filler('back', 400)}`;
+
+    expect(reviewSectionOf(document, 4_000).text).toContain('The total is 100 points.');
+  });
+
+  it('falls back to the head of the document when no review heading is found, and says so', () => {
+    // Not a silent truncation: the caller lowers its expectations, and the confidence check
+    // catches an extraction made from the wrong 4,000 characters.
+    const document = filler('nothing relevant here', 800);
+
+    const found = reviewSectionOf(document, 4_000);
+
+    expect(found.windowed).toBe(true);
+    expect(found.headingFound).toBe(false);
+    expect(found.text.length).toBeLessThanOrEqual(4_000);
   });
 });
 
