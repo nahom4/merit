@@ -10,9 +10,20 @@ import { createServer, type Server } from 'node:http';
  * `GEMINI_API_KEY` is set. That contract test is what keeps this shape honest; this server is
  * what lets the repair loop, the cache, and the board be exercised without a key.
  */
+export type GeminiReply = string | { readonly status: number; readonly body: string };
+
 export interface GeminiScript {
   /** One entry per call, in order. The last is repeated if more calls arrive. */
-  readonly replies: readonly (string | { readonly status: number; readonly body: string })[];
+  readonly replies: readonly GeminiReply[];
+  /**
+   * Answers by what was asked rather than by call order.
+   *
+   * S4 makes four different kinds of call in one page load -- extract a rubric, draft a section,
+   * critique, revise -- and each one is parsed by a different schema, so a positional script
+   * cannot serve them: insert one extra call anywhere and every later reply is being read by the
+   * wrong parser. Returning `null` falls through to `replies`.
+   */
+  readonly route?: (prompt: string) => GeminiReply | null;
 }
 
 export interface GeminiFixtureServer {
@@ -52,7 +63,9 @@ export const startGeminiFixtureServer = async (
         prompts.push('');
       }
 
-      const reply = script.replies[Math.min(call, script.replies.length - 1)] ?? '{}';
+      const prompt = prompts[prompts.length - 1] ?? '';
+      const routed = script.route?.(prompt) ?? null;
+      const reply = routed ?? script.replies[Math.min(call, script.replies.length - 1)] ?? '{}';
       call += 1;
 
       if (typeof reply === 'string') {

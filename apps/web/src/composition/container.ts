@@ -1,6 +1,7 @@
 import 'server-only';
 import {
   CreateOrganization,
+  DraftApplication,
   GetOrganization,
   ReportFunderReachability,
   ReportRunLog,
@@ -11,7 +12,9 @@ import {
 import {
   createDatabase,
   GeminiGateway,
+  GrantsGovAttachmentGateway,
   loadConfig,
+  LibsqlDraftRepository,
   LibsqlFunderRepository,
   LibsqlModelCallLog,
   LibsqlModelResponseCache,
@@ -103,6 +106,27 @@ export const screenFederalOpportunities = () =>
     modelGateway(),
     systemClock,
   );
+
+/**
+ * S4: the draft studio.
+ *
+ * The attachment gateway is constructed here rather than shared with the search gateway because
+ * they speak to different hosts -- `api.grants.gov` answers 403 for attachments -- and because
+ * reading a 60-page PDF deserves a much longer timeout than a JSON search does.
+ */
+export const draftApplication = () => {
+  const config = loadConfig();
+  return new DraftApplication(
+    new LibsqlOpportunityRepository(database()),
+    new LibsqlDraftRepository(database()),
+    new GrantsGovAttachmentGateway({
+      baseUrl: config.GRANTS_GOV_ATTACHMENT_BASE_URL,
+      timeoutMs: config.GRANTS_GOV_ATTACHMENT_TIMEOUT_MS,
+    }),
+    modelGateway(),
+    systemClock,
+  );
+};
 
 export const reportRunLog = () =>
   new ReportRunLog(

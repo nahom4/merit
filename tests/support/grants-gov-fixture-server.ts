@@ -3,6 +3,11 @@ import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 const FIXTURES = resolve('tests/fixtures/grants-gov');
+const ATTACHMENTS = resolve('tests/fixtures/grants-gov/attachments');
+
+/** The one announcement whose PDF is recorded. Its "Full Announcement" folder names this file,
+ *  so `selectRubricSource` picks it the same way it would in production. */
+export const RECORDED_ATTACHMENT_ID = '354136';
 
 /**
  * The three search terms whose live responses are recorded. A term with no recording returns an
@@ -31,6 +36,22 @@ const EMPTY_SEARCH = JSON.stringify({
  */
 export const startGrantsGovFixtureServer = async (port: number): Promise<Server> => {
   const server = createServer((request, response) => {
+    // Attachments are a GET on a different path, and they are what S4 reads the rubric out of.
+    // The bytes are the real 303,791-byte HHS-2026-ACF-OCS-EAH-0027 announcement, recorded from
+    // the live service -- so E2E exercises the actual `pdftotext -layout` path, not a stand-in.
+    const attachment = /\/att\/download\/(\d+)$/u.exec((request.url ?? '').split('?')[0] ?? '');
+    if (attachment !== null) {
+      const file = resolve(ATTACHMENTS, `${attachment[1]}-hhs-2026-acf-ocs-eah-0027.pdf`);
+      if (!existsSync(file)) {
+        response.writeHead(404).end('no such attachment');
+        return;
+      }
+      const bytes = readFileSync(file);
+      response.writeHead(200, { 'content-type': 'application/pdf', 'content-length': bytes.byteLength });
+      response.end(bytes);
+      return;
+    }
+
     let body = '';
     request.on('data', (chunk) => {
       body += String(chunk);

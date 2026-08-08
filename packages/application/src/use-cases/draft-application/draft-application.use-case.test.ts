@@ -313,6 +313,50 @@ describe('DraftApplication', () => {
     expect(result.error.code).toBe('not_found');
   });
 
+  it('serves the stored draft on a reload rather than re-buying every model call', async () => {
+    // Drafting a three-criterion rubric costs eight model calls. A page that re-drafts on every
+    // load spends the daily quota on refreshes, so a complete stored draft is served as-is.
+    const built = build();
+    await run(built);
+    const spentFirstTime = built.model.requests.length;
+    expect(spentFirstTime).toBeGreaterThan(1);
+
+    const again = await run(built);
+
+    expect(again.ok).toBe(true);
+    if (!again.ok) return;
+    expect(built.model.requests).toHaveLength(spentFirstTime);
+    expect(again.value.draft.sections).toHaveLength(2);
+  });
+
+  it('re-drafts a partial draft, because the reason it was partial may have passed', async () => {
+    // A draft cut short by a spent quota is not a draft to serve for ever. Tomorrow the quota
+    // is back, and the user asking again is asking for the rest of it.
+    let quotaSpent = true;
+    const model = new StubModelGateway((request) => {
+      if (request.purpose === 'rubric') return { kind: 'raw', raw: RUBRIC_REPLY };
+      if (quotaSpent) {
+        return {
+          kind: 'error',
+          error: new ModelUnavailable('the daily model quota is spent', { reason: 'daily_quota' }),
+        };
+      }
+      if (request.purpose === 'critique') return { kind: 'raw', raw: { scores: [] } };
+      return { kind: 'raw', raw: { text: SECTION_TEXT } };
+    });
+
+    const built = build({ model });
+    const partial = await run(built);
+    expect(partial.ok && partial.value.draft.note).toContain('quota');
+
+    quotaSpent = false;
+    const retried = await run(built);
+
+    expect(retried.ok).toBe(true);
+    if (!retried.ok) return;
+    expect(retried.value.draft.sections).toHaveLength(2);
+  });
+
   it('persists the draft so a reload does not re-buy every model call', async () => {
     const built = build();
     await run(built);

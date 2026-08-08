@@ -67,9 +67,27 @@ export default defineConfig({
       MERIT_E2E_DATABASE_URL: DATABASE_URL,
       PROPUBLICA_BASE_URL,
       GRANTS_GOV_BASE_URL: `http://127.0.0.1:${GRANTS_GOV_PORT}`,
+      // Attachments are a different host in production (api.grants.gov answers 403 for them),
+      // so they are a different path on the same fixture server here. The bytes served are the
+      // real recorded announcement PDF, and `pdftotext` really runs on them.
+      GRANTS_GOV_ATTACHMENT_BASE_URL: `http://127.0.0.1:${GRANTS_GOV_PORT}/att/download`,
       GEMINI_BASE_URL: `http://127.0.0.1:${GEMINI_PORT}`,
       GEMINI_API_KEY: 'e2e-fixture-key',
       GEMINI_MODEL: 'gemini-2.5-flash',
+      /**
+       * The rate limit is raised for E2E, and only for E2E.
+       *
+       * 15 a minute is the free tier's real ceiling and the number the app runs with. It exists
+       * to protect a quota that does not exist here: these calls go to a fixture server on
+       * localhost. Leaving it at 15 makes the suite spend minutes asleep inside the token
+       * bucket — S3 alone scores dozens of pairs before S4 asks for its first draft — and what
+       * that would be testing is `setTimeout`.
+       *
+       * The bucket itself is not going untested. `token-bucket.test.ts` proves it meters, and
+       * `orchestrator.test.ts` proves the queue drains in priority order under exhaustion, both
+       * against an injected clock rather than by waiting.
+       */
+      GEMINI_REQUESTS_PER_MINUTE: '600',
     },
   },
   metadata: { databaseUrl: DATABASE_URL },

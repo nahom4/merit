@@ -45,7 +45,10 @@ export default async function globalSetup(): Promise<() => Promise<void>> {
   const seeded = await seedGivingGraph(db);
 
   const grantsGov = await startGrantsGovFixtureServer(E2E_GRANTS_GOV_PORT);
-  const gemini = await startGeminiFixtureServer(E2E_GEMINI_PORT, { replies: [FIT_SCORE_REPLY] });
+  const gemini = await startGeminiFixtureServer(E2E_GEMINI_PORT, {
+    replies: [FIT_SCORE_REPLY],
+    route: routeByPurpose,
+  });
 
   // The federal board is a board of what the sweep found, so the sweep runs here -- through
   // the real gateway, the real use case, and the real repository, over payloads the live
@@ -94,6 +97,73 @@ const FIT_SCORE_REPLY = geminiEnvelope(
     matchedProgramAreas: ['Education'],
     gaps: ['No evaluation partner is named in the profile.'],
   }),
+);
+
+/**
+ * S4's four kinds of call, answered by what was asked rather than by call order.
+ *
+ * A positional script cannot serve the draft studio: it makes a rubric call, one call per
+ * section, a critique, up to three revisions and a second critique, each parsed by a different
+ * schema. Routing on the prompt is what keeps the reply and the parser in step.
+ *
+ * The rubric answered here is the one the real fixture PDF actually contains — seven criteria
+ * summing to the 115 points the document states — so the arithmetic confidence check passes for
+ * the reason it would pass in production, not because the numbers were chosen to make it.
+ */
+const DRAFT_SECTION_TEXT =
+  'Cape Fear Reading Partners has served adults in New Hanover County since it was founded. ' +
+  'It would enrol [the number of new learners] over the grant period and report against ' +
+  '[the outcome measure the programme uses].';
+
+/** Every criterion is scored, and every score cites a sentence that really is in the text above
+ *  — otherwise the real validator rejects the critique and the page shows no scores at all. */
+const critiqueReply = (needScore: number) =>
+  geminiEnvelope(
+    JSON.stringify({
+      scores: REAL_CRITERIA.map((criterion, index) => ({
+        criterionId: criterion.id,
+        score: index === 0 ? needScore : Math.floor(criterion.points / 4),
+        citedSentence:
+          index % 2 === 0
+            ? 'Cape Fear Reading Partners has served adults in New Hanover County since it was founded.'
+            : 'It would enrol [the number of new learners] over the grant period and report against [the outcome measure the programme uses].',
+        comment:
+          'The section states the intent but leaves the supporting figure as a placeholder the ' +
+          'organisation has to fill in.',
+      })),
+    }),
+  );
+
+const routeByPurpose = (prompt: string) => {
+  if (prompt.includes('extracted from PDF')) return RUBRIC_REPLY;
+  if (prompt.includes('You are revising one section')) {
+    return geminiEnvelope(JSON.stringify({ text: DRAFT_SECTION_TEXT }));
+  }
+  if (prompt.includes('You are drafting')) {
+    return geminiEnvelope(JSON.stringify({ text: DRAFT_SECTION_TEXT }));
+  }
+  // The second critique scores higher, so the studio has a real before/after to render.
+  if (prompt.includes('You are a grant reviewer')) {
+    revisionPasses += 1;
+    return critiqueReply(revisionPasses > 1 ? 8 : 2);
+  }
+  return null;
+};
+
+let revisionPasses = 0;
+
+const REAL_CRITERIA = [
+  { id: '1', name: 'Purpose and need', points: 10, subCriteria: ['Demonstrates understanding of the need'] },
+  { id: '2', name: 'Response', points: 50, subCriteria: ['States measurable objectives'] },
+  { id: '3', name: 'Impact', points: 15, subCriteria: [] },
+  { id: '4', name: 'Resources and capabilities', points: 15, subCriteria: [] },
+  { id: '5', name: 'Line-item budget and budget narrative', points: 10, subCriteria: [] },
+  { id: '6', name: 'ACF Priority Alignment', points: 10, subCriteria: [] },
+  { id: '7', name: 'Bonus Points', points: 5, subCriteria: [] },
+];
+
+const RUBRIC_REPLY = geminiEnvelope(
+  JSON.stringify({ confidence: 0.9, totalPointsStated: 115, criteria: REAL_CRITERIA }),
 );
 
 /**

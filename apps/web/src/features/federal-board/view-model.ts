@@ -33,6 +33,14 @@ export interface OpportunityRowView {
   readonly notScoredReason: string | null;
   readonly rejections: readonly string[];
   readonly unresolved: readonly string[];
+  /**
+   * Where to draft against this announcement, or null when drafting would be wrong to offer.
+   *
+   * Null on anything screened out: a draft studio link on an opportunity the organisation cannot
+   * legally apply for invites a user to spend an afternoon on an application that will be
+   * rejected unread, and the cascade's whole point is not doing that.
+   */
+  readonly draftHref: string | null;
 }
 
 export interface RunLogView {
@@ -101,7 +109,7 @@ const fitView = (row: ScreenedOpportunity): FitView | null => {
   };
 };
 
-const rowView = (row: ScreenedOpportunity): OpportunityRowView => ({
+const rowView = (row: ScreenedOpportunity, organizationId: string): OpportunityRowView => ({
   id: row.opportunity.id,
   number: row.opportunity.number,
   title: row.opportunity.title,
@@ -120,6 +128,10 @@ const rowView = (row: ScreenedOpportunity): OpportunityRowView => ({
   notScoredReason: row.fit === null && row.fitState === 'queued' ? row.fitStateReason : null,
   rejections: row.screening.rejections.map((check) => check.reason),
   unresolved: row.screening.unresolved.map((check) => check.reason),
+  draftHref:
+    row.screening.outcome === 'ineligible'
+      ? null
+      : `/organizations/${organizationId}/opportunities/${row.opportunity.id}/draft`,
 });
 
 const runLogView = (log: RunLog): RunLogView => {
@@ -162,7 +174,7 @@ export const toFederalBoardView = (board: FederalBoard, log: RunLog): FederalBoa
       'A fit score says how closely an announcement matches what this organisation already does. ' +
       'It is not a prediction of whether an application would succeed: public data records who ' +
       'won, never who applied, so there is no denominator to compute one from.',
-    rows: board.rows.map(rowView),
+    rows: board.rows.map((row) => rowView(row, board.organization.id as string)),
     emptyReason:
       board.rows.length > 0
         ? null

@@ -110,5 +110,12 @@ export const OpportunityRow = ({ row }: { row: OpportunityRowView }) => (
         ))}
       </ul>
     )}
+
+    {/* Absent on anything screened out. The view-model decides; this only renders. */}
+    {row.draftHref === null ? null : (
+      <a href={row.draftHref} className="mt-4 inline-block text-sm text-accent" data-testid="draft-link">
+        Draft against this announcement →
+      </a>
+    )}
   </li>
 );

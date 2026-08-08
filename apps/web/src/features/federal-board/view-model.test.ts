@@ -220,3 +220,20 @@ describe('toFederalBoardView', () => {
     expect(rendered.scoreCaveat).toContain('not a prediction');
   });
 });
+
+describe('the draft studio link', () => {
+  it('offers drafting on an announcement the organisation may apply for', () => {
+    expect(view([row()]).rows[0]?.draftHref).toBe('/organizations/org_1/opportunities/362839/draft');
+  });
+
+  it('offers no drafting on an announcement that was screened out', () => {
+    // A studio link on an opportunity the organisation cannot legally apply for invites a user
+    // to spend an afternoon on an application that will be rejected unread.
+    const stateGovernmentsOnly = opportunity({ applicantTypeCodes: ['00'] });
+    const rendered = view([
+      row({ opportunity: stateGovernmentsOnly, screening: screening(stateGovernmentsOnly), fit: null }),
+    ]);
+
+    expect(rendered.rows[0]?.draftHref).toBeNull();
+  });
+});

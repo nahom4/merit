@@ -92,6 +92,17 @@ export class DraftApplication {
     }
 
     const opportunity = found.value;
+
+    // Drafting a three-criterion rubric costs eight model calls, so a page that re-drafts on
+    // every load spends the daily quota on refreshes. A *complete* stored draft is served as-is.
+    // A partial one is not: it was cut short by a spent quota or an unreadable document, and the
+    // user asking again tomorrow is asking for the rest of it, not for yesterday's fragment.
+    const existing = await this.drafts.findDraft(input.organization.id as string, opportunity.id);
+    if (!existing.ok) return existing;
+    if (existing.value !== null && existing.value.note === null) {
+      return ok({ opportunity, draft: existing.value });
+    }
+
     const notes: string[] = [];
 
     const rubric = await this.extractRubric(opportunity, notes);
