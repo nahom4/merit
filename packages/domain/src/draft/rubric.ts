@@ -249,24 +249,39 @@ const responseContract = (): string =>
   ].join('\n');
 
 /**
- * Headings a federal NOFO puts its scoring criteria under, in the order worth trying.
+ * Headings a federal NOFO puts its scoring criteria under.
  *
- * "Application Review Information" is the standard-form heading mandated for federal
- * announcements, which is why it leads. The rest are what agencies actually write.
+ * "Application Review Information" is the heading the standard federal form mandates. The rest
+ * are what agencies actually write — `criteria summary` and `scoring criteria` are taken from
+ * HHS-2026-ACF-OCS-EAH-0027, which contains neither the mandated heading nor anything close to
+ * it. Order does not matter; see `reviewSectionOf` for how a match is chosen.
  */
 const REVIEW_HEADINGS = [
   'application review information',
   'review and selection process',
   'evaluation criteria',
+  'criteria summary',
+  'scoring criteria',
   'review criteria',
   'selection criteria',
-  'scoring criteria',
   'merit review',
 ];
 
-/** How much of the document to keep before the heading. The point total is routinely stated in
- *  the sentence introducing the criteria, which sits just above the heading itself. */
-const LEAD_IN = 600;
+/** Counts the scoring vocabulary in a window. A real rubric says "points" over and over; a
+ *  sentence pointing at one says it once or not at all. */
+const POINTS_MENTIONS = /\bpoints?\b/giu;
+
+/**
+ * How much of the document to keep before the chosen heading.
+ *
+ * Sized from a real announcement rather than guessed. HHS-2026-ACF-OCS-EAH-0027 states its
+ * total under a "Criteria summary" table and then repeats every criterion in detail under
+ * "Scoring criteria" 772 characters later — and the detail is where the word "points" is dense,
+ * so that is what the window anchors on. A short lead-in wins the criteria and loses the total,
+ * which is precisely the number `confidenceOf` checks the extraction against. 2,000 characters
+ * buys the summary table back for a rounding error in tokens.
+ */
+const LEAD_IN = 2_000;
 
 export interface ReviewSection {
   readonly text: string;
@@ -287,7 +302,14 @@ export interface ReviewSection {
  * spending a few thousand extra tokens, so it keeps a lead-in for the point total and runs well
  * past the heading.
  *
- * ponytail: string search over headings, not a PDF outline parser — `pdftotext` output has no
+ * A heading may appear several times, and the first appearance is routinely the wrong one: a
+ * NOFO says "as identified in Step 4, under Merit review process, Scoring criteria" ten thousand
+ * characters before the section it is pointing at. So every occurrence of every heading is a
+ * candidate, and the winner is the one whose window says "points" most often — a real rubric
+ * repeats the word once per criterion, while a sentence referring to one does not repeat it at
+ * all. Ties go to the later match, since cross-references precede what they cite.
+ *
+ * ponytail: string search and a word count, not a PDF outline parser — `pdftotext` output has no
  * structure to parse. Revisit only if extraction accuracy in the eval blames the window.
  */
 export const reviewSectionOf = (documentText: string, budget: number): ReviewSection => {
@@ -296,14 +318,21 @@ export const reviewSectionOf = (documentText: string, budget: number): ReviewSec
   }
 
   const haystack = documentText.toLowerCase();
+  const windowAt = (at: number): string =>
+    documentText.slice(Math.max(0, at - LEAD_IN), Math.max(0, at - LEAD_IN) + budget);
+
+  let best: { readonly at: number; readonly mentions: number } | null = null;
   for (const heading of REVIEW_HEADINGS) {
-    const at = haystack.indexOf(heading);
-    if (at === -1) continue;
-    const from = Math.max(0, at - LEAD_IN);
-    return { text: documentText.slice(from, from + budget), windowed: true, headingFound: true };
+    for (let at = haystack.indexOf(heading); at !== -1; at = haystack.indexOf(heading, at + 1)) {
+      const mentions = (windowAt(at).match(POINTS_MENTIONS) ?? []).length;
+      if (best === null || mentions > best.mentions || (mentions === best.mentions && at > best.at)) {
+        best = { at, mentions };
+      }
+    }
   }
 
-  return { text: documentText.slice(0, budget), windowed: true, headingFound: false };
+  if (best === null) return { text: documentText.slice(0, budget), windowed: true, headingFound: false };
+  return { text: windowAt(best.at), windowed: true, headingFound: true };
 };
 
 /**

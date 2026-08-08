@@ -34,6 +34,18 @@ const ConfigSchema = z.object({
   GRANTS_GOV_BASE_URL: z.string().url().default('https://api.grants.gov/v1/api'),
   GRANTS_GOV_TIMEOUT_MS: z.coerce.number().int().positive().default(20_000),
   /**
+   * Attachments come from a different host than the API. `api.grants.gov/v1/api` answers 403
+   * for them; the file itself is at `grants.gov/grantsws/rest/opportunity/att/download/{id}`.
+   * Verified live on 8 August 2026 -- attachment 354136 returns 200, application/pdf, 303,791
+   * bytes -- and kept honest by `tests/contract/grants-gov.contract.test.ts`.
+   */
+  GRANTS_GOV_ATTACHMENT_BASE_URL: z
+    .string()
+    .url()
+    .default('https://grants.gov/grantsws/rest/opportunity/att/download'),
+  /** A 60-page NOFO is a few hundred kilobytes; the ceiling is for what is not a NOFO. */
+  GRANTS_GOV_ATTACHMENT_TIMEOUT_MS: z.coerce.number().int().positive().default(45_000),
+  /**
    * What the sweep searches for. Comma-separated, because a sweep with no terms finds nothing
    * and a sweep of everything is 40,000 announcements. In production these track the
    * organisation's program area.

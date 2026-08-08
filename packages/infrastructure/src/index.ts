@@ -30,7 +30,10 @@ export {
 } from './grants-gov/opportunity.schema.js';
 export type { GrantsGovOpportunityPayload, GrantsGovSearchPayload } from './grants-gov/opportunity.schema.js';
 export { parseGrantsGovDate, toFederalOpportunity } from './grants-gov/opportunity-mapper.js';
+export { GrantsGovAttachmentGateway } from './grants-gov/grants-gov-attachment.gateway.js';
+export type { GrantsGovAttachmentGatewayOptions } from './grants-gov/grants-gov-attachment.gateway.js';
 export { LibsqlOpportunityRepository } from './persistence/libsql-opportunity.repository.js';
+export { LibsqlDraftRepository } from './persistence/libsql-draft.repository.js';
 export { LibsqlRegistryStatusReader } from './persistence/libsql-registry-status.reader.js';
 export { LibsqlModelCallLog, LibsqlModelResponseCache } from './persistence/libsql-model-telemetry.js';
 export { TokenBucket } from './model/token-bucket.js';

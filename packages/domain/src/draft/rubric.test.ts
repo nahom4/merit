@@ -230,6 +230,24 @@ describe('reviewSectionOf', () => {
     expect(reviewSectionOf(document, 4_000).text).toContain('The total is 100 points.');
   });
 
+  it('ignores a cross-reference to the criteria and finds the criteria themselves', () => {
+    // The trap the real HHS-2026-ACF-OCS-EAH-0027 announcement sets: the phrase "scoring
+    // criteria" appears first in a sentence pointing at the section, 10,000 characters before
+    // the section. Anchoring on the first match windows the wrong part of the document.
+    const document =
+      filler('front', 200) +
+      'as identified in Step 4, under Merit review process, Scoring criteria, and Alignment.' +
+      filler('middle', 400) +
+      'Criteria summary\nTotal number of points = 115\n1. Purpose and need 10 points\n' +
+      '2. Response 50 points\n3. Impact 15 points\n' +
+      filler('back', 200);
+
+    const found = reviewSectionOf(document, 4_000);
+
+    expect(found.text).toContain('Total number of points = 115');
+    expect(found.text).toContain('2. Response 50 points');
+  });
+
   it('falls back to the head of the document when no review heading is found, and says so', () => {
     // Not a silent truncation: the caller lowers its expectations, and the confidence check
     // catches an extraction made from the wrong 4,000 characters.
