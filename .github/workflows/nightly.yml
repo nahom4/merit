@@ -17,6 +17,8 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
+      # Contract tests pull live announcement PDFs, which means the real extractor runs here too.
+      - run: sudo apt-get update && sudo apt-get install -y poppler-utils
       - run: pnpm install --frozen-lockfile
       - run: pnpm test:contract
       - name: Open an issue when a source changed under us

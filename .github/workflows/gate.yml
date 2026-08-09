@@ -19,6 +19,9 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
+      # The attachment tests run the real `pdftotext` on real announcement bytes rather than a
+      # stub, so the binary is part of the environment the suite needs, not an optional extra.
+      - run: sudo apt-get update && sudo apt-get install -y poppler-utils
       - run: pnpm install --frozen-lockfile
       # Exactly the command a contributor runs locally. No surprises in CI.
       - run: pnpm gate
@@ -32,6 +35,8 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
+      # The draft studio reads a real PDF announcement end to end, same as the gate job.
+      - run: sudo apt-get update && sudo apt-get install -y poppler-utils
       - run: pnpm install --frozen-lockfile
       - run: pnpm exec playwright install --with-deps chromium
       - run: pnpm test:e2e
