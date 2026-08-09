@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import { boardRow } from '../support/board-row.js';
 import type { Page } from '@playwright/test';
 
 /**
@@ -143,8 +144,7 @@ test('offers no draft studio on an announcement screened out by rule', async ({ 
 
   // PAR-25-003 is open to state governments only. Offering to draft against it would invite a
   // user to spend an afternoon on an application that gets rejected unread.
-  const row = page.getByTestId('opportunity-row').filter({ hasText: 'PAR-25-003' });
-  await expect(row).toBeVisible();
+  const row = await boardRow(page, organizationUrl, 'PAR-25-003');
   await expect(row.getByTestId('draft-link')).toHaveCount(0);
 });
 

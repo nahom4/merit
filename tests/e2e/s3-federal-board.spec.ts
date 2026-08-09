@@ -1,5 +1,6 @@
 import { expect, test } from '@playwright/test';
 import type { Page } from '@playwright/test';
+import { boardRow } from '../support/board-row.js';
 
 /**
  * S3's acceptance criteria, executable: a federal opportunity board where every row is either
@@ -23,7 +24,7 @@ const einFor = (title: string): string => {
 
 /** North Carolina, deliberately: the Delta States announcement in the fixture limits itself to
  *  eight states that do not include it, which is what exercises the geography rule end to end. */
-const openBoard = async (page: Page, title: string): Promise<void> => {
+const openBoard = async (page: Page, title: string): Promise<string> => {
   const ein = einFor(title);
   await page.goto('/organizations/new');
   await page.getByLabel('Organisation name').fill(`Cape Fear Reading Partners ${ein}`);
@@ -35,8 +36,10 @@ const openBoard = async (page: Page, title: string): Promise<void> => {
   await page.getByRole('button', { name: 'Save profile' }).click();
   await expect(page).toHaveURL(/\/organizations\/org_/);
 
-  await page.goto(`${page.url()}/opportunities`);
+  const organizationUrl = page.url();
+  await page.goto(`${organizationUrl}/opportunities`);
   await expect(page.getByTestId('opportunity-row').first()).toBeVisible();
+  return organizationUrl;
 };
 
 test('lists the swept federal opportunities with their program numbers', async ({ page }) => {
@@ -52,20 +55,18 @@ test('lists the swept federal opportunities with their program numbers', async (
 test('screens out an announcement open only to state governments, with a readable reason', async ({
   page,
 }) => {
-  await openBoard(page, test.info().title);
+  const organizationUrl = await openBoard(page, test.info().title);
 
-  const row = page.getByTestId('opportunity-row').filter({ hasText: 'PAR-25-003' });
-  await expect(row).toBeVisible();
+  const row = await boardRow(page, organizationUrl, 'PAR-25-003');
   await expect(row.getByTestId('screening-reason')).toContainText('State governments');
   // No model was asked about an opportunity this organisation cannot apply for.
   await expect(row.getByTestId('fit-score')).toHaveCount(0);
 });
 
 test('screens out an announcement limited to states this organisation is not in', async ({ page }) => {
-  await openBoard(page, test.info().title);
+  const organizationUrl = await openBoard(page, test.info().title);
 
-  const row = page.getByTestId('opportunity-row').filter({ hasText: 'HRSA-26-045' });
-  await expect(row).toBeVisible();
+  const row = await boardRow(page, organizationUrl, 'HRSA-26-045');
   await expect(row.getByTestId('screening-reason')).toContainText('Tennessee');
   await expect(row.getByTestId('screening-reason')).toContainText('North Carolina');
 });
