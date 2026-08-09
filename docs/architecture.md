@@ -46,7 +46,6 @@ Arrows are the only permitted import direction. Nothing points outward, ever.
 Entities, value objects, and pure policy. **Zero third-party runtime dependencies** — not even
 Zod. Its one permitted import is `@merit/shared`, which is itself dependency-free and holds
 `Result`, `Brand`, and `DomainError`; see
-[ADR 0004](decisions/0004-domain-may-import-shared.md) for why, and
 `tools/assert-domain-pure.mjs` for the check that keeps it true.
 
 ```
@@ -144,7 +143,7 @@ Frontend rules:
 - **View-models are pure and unit-tested.** Formatting, bucketing, and label logic live there, never inside JSX.
 - **Components take data, not queries.** A component that fetches is a component you cannot test.
 - **Loading, empty, and error states are part of the component, not a follow-up.** A prospect list with no results must say *why* — "no comparable organisations found in this state" — never render blank.
-- **Score components are never collapsed.** See the product rules in [CLAUDE.md](../CLAUDE.md).
+- **Score components are never collapsed.** Openness, affinity, geography, and size fit are always four separate values, with the underlying grantee rows one click away. A development director has to defend a prospect list to a board.
 
 ---
 

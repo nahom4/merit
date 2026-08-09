@@ -126,7 +126,7 @@ This project makes claims that must be measured, not asserted. The eval harness 
 
 Evals run against the real corpus, which is not committed — it is reproducible with
 `pnpm worker ingest && pnpm worker load-bmf && pnpm worker resolve`
-([ADR 0008](decisions/0008-evals-run-against-the-real-corpus.md)).
+(ADR 0008).
 
 Thresholds live in `evals/thresholds.json` and are committed. Results go to `eval_runs` with the
 commit SHA. **A metric that drops below its threshold fails the build** exactly like a unit test.
@@ -135,7 +135,7 @@ The linker's own thresholds are fitted rather than chosen: `pnpm eval:fit` sweep
 against the withheld-EIN labels, selects on one half of the sample, verifies on the other, and
 commits the curve to `evals/link-threshold-curve.json`. A refit changes what the graph should
 contain, so it is followed by `pnpm worker resolve --reset`
-([ADR 0009](decisions/0009-link-thresholds-are-fitted-and-the-review-band-is-a-budget.md)).
+(ADR 0009).
 
 ---
 

@@ -129,9 +129,9 @@ names the filing behind it — verified by an E2E test that opens each claim and
 citation, rather than by inspection.
 
 **Decisions this slice forced:** the brief is composed from filing rows rather than generated
-by a model ([ADR 0010](decisions/0010-the-funder-brief-is-composed-not-generated.md)), and
+by a model (ADR 0010), and
 ProPublica degrades rather than failing the page
-([ADR 0011](decisions/0011-propublica-is-a-degradable-dependency.md)).
+(ADR 0011).
 
 **A note on the E2E fixture.** The committed bundle is one year of filings: no funder in it
 appears in two tax years, and exactly one of its entities has more than one funder. Turnover
@@ -169,9 +169,9 @@ a reason and no score.
 eight states that do not include North Carolina) without a model call, and scores the survivors.
 
 **Decisions this slice forced:** eligibility is a rule and fit is a judgement, with "undecided"
-as a real third answer ([ADR 0012](decisions/0012-eligibility-is-a-rule-and-fit-is-a-judgement.md)),
+as a real third answer (ADR 0012),
 and every model call goes through one orchestrator whose quota exhaustion is a persisted queue
-([ADR 0013](decisions/0013-every-model-call-goes-through-one-orchestrator.md)).
+(ADR 0013).
 
 **Two limits, stated rather than hidden.** Grants.gov has no structured field for geography, so
 the geographic check is a conservative scan of the announcement's eligibility prose: it
@@ -208,7 +208,7 @@ stated total. A three-call revision budget covers 88% of the points recoverable.
 
 **Decisions this slice forced:** rubric extraction reads layout-preserving text and its
 self-reported confidence is capped by arithmetic it cannot influence
-([ADR 0014](decisions/0014-rubric-extraction-is-layout-text-and-a-checked-confidence.md)).
+(ADR 0014).
 
 **Three limits, stated rather than hidden.**
 

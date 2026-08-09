@@ -24,12 +24,10 @@ nothing, anywhere. Details in [`validation/RESULTS.txt`](validation/RESULTS.txt)
 | Document | What it is |
 |---|---|
 | **[Merit.md](Merit.md)** | The product spec. Source of truth for *what* we build |
-| **[CLAUDE.md](CLAUDE.md)** | The working rules. Read before writing a line |
 | [docs/architecture.md](docs/architecture.md) | Layers, the dependency rule, how it is enforced |
 | [docs/testing.md](docs/testing.md) | TDD cycle, the five test tiers, what may be mocked |
 | [docs/conventions.md](docs/conventions.md) | Naming, types, errors, React, git |
 | [docs/roadmap.md](docs/roadmap.md) | Vertical slices and acceptance criteria. **Start at the current one** |
-| [docs/decisions/](docs/decisions/) | ADRs — why things are the way they are |
 
 Earlier drafts of the spec (`SRS.md`, `SRS-v2.md`, `SRS-v3.md`) are kept for history.
 `Merit.md` supersedes them.
@@ -126,21 +124,6 @@ pnpm eval           # measurement harness
 pnpm eval:fit       # refit the link thresholds against the labelled set
 pnpm gate           # everything CI runs. green before every commit
 ```
-
----
-
-## Skills
-
-Repeatable workflows live in [`.claude/skills/`](.claude/skills/) and are invoked by name:
-
-| Skill | Use it to |
-|---|---|
-| `/slice` | Plan and drive a vertical slice end to end |
-| `/tdd` | Run one Red → Green → Refactor cycle properly |
-| `/use-case` | Scaffold a use case across all layers, tests first |
-| `/adapter` | Scaffold an infrastructure adapter with integration and contract tests |
-| `/gate` | Run the full quality gate and report honestly |
-| `/adr` | Record an architectural decision |
 
 ---
 

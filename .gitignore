@@ -19,6 +19,5 @@ playwright-report/
 .vercel
 .env*
 
-# Agent tooling and submission materials are not part of the product.
-.claude/
+# Submission materials are not part of the product.
 docs/submission_docs/
